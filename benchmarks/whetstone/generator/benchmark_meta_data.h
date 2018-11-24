@@ -1,0 +1,10 @@
+
+#define FROM	0x400e30
+#define TO		0x401cc0
+
+#define SIGNATURE_QUEUE_SIZE	1200000 	// one
+//#define SIGNATURE_QUEUE_SIZE	600000 	// two
+//#define SIGNATURE_QUEUE_SIZE	400000 	// three 
+//#define SIGNATURE_QUEUE_SIZE	300000 	// four 
+
+#define CFE_INJECTION_BOUND SIGNATURE_QUEUE_SIZE * 2.7
