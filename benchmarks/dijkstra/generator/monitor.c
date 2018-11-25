@@ -347,7 +347,9 @@ void* monitor_routine(void*arg)
 }
 
 
+#define DEC
 
+#ifndef DEC
 
 /* 	Name: init_monitor */
 /*
@@ -359,6 +361,10 @@ void* monitor_routine(void*arg)
 */
 void init_monitor()
 {
+
+
+
+
 	#ifndef OVERHEAD_TEST
 	printf(" [monitor] monitor_init!\n");
 	#endif
@@ -427,6 +433,8 @@ void init_monitor()
 
 }
 
+#endif
+
 
 /* 	Name: Monitor_thread_generator */
 /*
@@ -482,6 +490,195 @@ void monitor_thread_generator()
 	4. enqueue_signature_with_remainder : Program Exit type
 */
 
+
+
+/* DEC code */
+
+#define DEC
+
+#define energy_restore_routine 50000
+#define energy_preserve_routine 50000
+
+unsigned int Eb = energy_restore_routine;
+unsigned int E_max = 700000 - energy_preserve_routine; 
+
+#define DEC_GRAPH
+#define DEC_GRAPH_X 15000
+unsigned int execute_block = 15000;
+
+void init_monitor()
+{
+		#ifdef DEC_GRAPH
+		FILE *f = fopen("energy_consumption.txt", "w");
+		fprintf(f, "%d, %d\n", execute_block, Eb);
+		fclose(f);
+		#endif	
+}
+
+void preserve_routine()
+{
+	printf("[DEC]preserve_routine: %d\n", Eb);
+}
+
+void restore_routine()
+{
+	printf("[DEC]restore_routine: %d\n", Eb);
+	Eb = energy_restore_routine;
+	execute_block += 15000;
+}
+
+
+void enqueue_signature(int e)
+{
+
+		
+	if(Eb + e > E_max)
+	{
+		preserve_routine();
+		#ifdef DEC_GRAPH
+		FILE *f = fopen("energy_consumption.txt", "a");
+		fprintf(f, "%d, %d\n", execute_block, Eb);
+		fclose(f);
+		#endif	
+		
+		Eb = 0;
+		restore_routine();
+		#ifdef DEC_GRAPH
+		f = fopen("energy_consumption.txt", "a");
+		fprintf(f, "%d, %d\n", execute_block, Eb);
+		fclose(f);
+		#endif	
+	}
+	else
+	{
+		Eb += e;
+		#ifdef DEC_GRAPH
+ 		execute_block += 1;	
+		if(execute_block % DEC_GRAPH_X == 0)
+		{
+			FILE *f = fopen("energy_consumption.txt", "a");
+			fprintf(f, "%d, %d\n", execute_block, Eb);
+			printf("[DEC]GRAPH: %d\n", Eb);
+			fclose(f);
+		}
+		#endif	
+	}
+}
+
+
+void enqueue_signature_with_call(int e)
+{
+	if(Eb + e > E_max)
+	{
+		preserve_routine();
+		#ifdef DEC_GRAPH
+		FILE *f = fopen("energy_consumption.txt", "a");
+		fprintf(f, "%d, %d\n", execute_block, Eb);
+		fclose(f);
+		#endif	
+		
+		Eb = 0;
+		restore_routine();
+		#ifdef DEC_GRAPH
+		f = fopen("energy_consumption.txt", "a");
+		fprintf(f, "%d, %d\n", execute_block, Eb);
+		fclose(f);
+		#endif	
+	}
+	else
+	{
+ 		Eb += e;
+		#ifdef DEC_GRAPH
+ 		execute_block += 1;	
+		if(execute_block % DEC_GRAPH_X == 0)
+		{
+			FILE *f = fopen("energy_consumption.txt", "a");
+			fprintf(f, "%d, %d\n", execute_block, Eb);
+			printf("[DEC]GRAPH: %d\n", Eb);
+			fclose(f);
+		}
+		#endif	
+	}
+}
+
+
+
+void enqueue_signature_with_return(int e)
+{
+	if(Eb + e > E_max)
+	{
+		preserve_routine();
+		#ifdef DEC_GRAPH
+		FILE *f = fopen("energy_consumption.txt", "a");
+		fprintf(f, "%d, %d\n", execute_block, Eb);
+		fclose(f);
+		#endif	
+		
+		Eb = 0;
+		restore_routine();
+		#ifdef DEC_GRAPH
+		f = fopen("energy_consumption.txt", "a");
+		fprintf(f, "%d, %d\n", execute_block, Eb);
+		fclose(f);
+		#endif	
+	}
+	else
+	{
+ 		Eb += e;
+		#ifdef DEC_GRAPH
+ 		execute_block += 1;	
+		if(execute_block % DEC_GRAPH_X == 0)
+		{
+			FILE *f = fopen("energy_consumption.txt", "a");
+			fprintf(f, "%d, %d\n", execute_block, Eb);
+			printf("[DEC]GRAPH: %d\n", Eb);
+			fclose(f);
+		}
+		#endif	
+	}
+}
+
+
+
+void enqueue_signature_with_remainder_process(int e)
+{
+	if(Eb + e > E_max)
+	{
+		preserve_routine();
+		#ifdef DEC_GRAPH
+		FILE *f = fopen("energy_consumption.txt", "a");
+		fprintf(f, "%d, %d\n", execute_block, Eb);
+		fclose(f);
+		#endif	
+		
+		Eb = 0;
+		restore_routine();
+		#ifdef DEC_GRAPH
+		f = fopen("energy_consumption.txt", "a");
+		fprintf(f, "%d, %d\n", execute_block, Eb);
+		fclose(f);
+		#endif	
+	}
+	else
+	{
+ 		Eb += e;
+		#ifdef DEC_GRAPH
+ 		execute_block += 1;	
+		if(execute_block % DEC_GRAPH_X == 0)
+		{
+			FILE *f = fopen("energy_consumption.txt", "a");
+			fprintf(f, "%d, %d\n", execute_block, Eb);
+			printf("[DEC]GRAPH: %d\n", Eb);
+			fclose(f);
+		}
+		#endif	
+	}
+}
+
+
+
+#ifndef DEC
+
 void enqueue_signature(int i)
 {
 	#ifdef ACES_APP_DEBUG
@@ -495,7 +692,6 @@ void enqueue_signature(int i)
 	signature_queue[current_queue_size] = i;
 	current_queue_size++;
 
-	/* 	If signature_queue is full */
 	/*
 		1. Provoke monitor thread
 		2. Select the next signature queue
@@ -647,7 +843,7 @@ void enqueue_signature_with_remainder_process(int i)
 	#endif
 }
 
-
+#endif
 
 
 

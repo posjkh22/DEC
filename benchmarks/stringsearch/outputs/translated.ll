@@ -241,7 +241,7 @@ target triple = "x86_64-unknown-linux-gnu"
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define void @bmha_init(i8*) #0 {
-  call void @enqueue_signature(i32 65537)
+  call void @enqueue_signature(i32 14)
   %2 = alloca i8*, align 8
   %3 = alloca i32, align 4
   %4 = alloca i32, align 4
@@ -253,20 +253,20 @@ define void @bmha_init(i8*) #0 {
   br label %8
 
 ; <label>:8:                                      ; preds = %1
-  call void @enqueue_signature(i32 65538)
+  call void @enqueue_signature(i32 7)
   %9 = trunc i64 %7 to i32
   store i32 %9, i32* @patlen, align 4
   store i32 0, i32* %3, align 4
   br label %10
 
 ; <label>:10:                                     ; preds = %66, %8
-  call void @enqueue_signature(i32 65539)
+  call void @enqueue_signature(i32 5)
   %11 = load i32, i32* %3, align 4
   %12 = icmp sle i32 %11, 255
   br i1 %12, label %13, label %69
 
 ; <label>:13:                                     ; preds = %10
-  call void @enqueue_signature(i32 65540)
+  call void @enqueue_signature(i32 13)
   %14 = load i32, i32* @patlen, align 4
   %15 = load i32, i32* %3, align 4
   %16 = sext i32 %15 to i64
@@ -278,13 +278,13 @@ define void @bmha_init(i8*) #0 {
   br label %20
 
 ; <label>:20:                                     ; preds = %42, %13
-  call void @enqueue_signature(i32 65541)
+  call void @enqueue_signature(i32 5)
   %21 = load i32, i32* %4, align 4
   %22 = icmp sge i32 %21, 0
   br i1 %22, label %23, label %45
 
 ; <label>:23:                                     ; preds = %20
-  call void @enqueue_signature(i32 65542)
+  call void @enqueue_signature(i32 15)
   %24 = load i32, i32* %3, align 4
   %25 = trunc i32 %24 to i8
   %26 = zext i8 %25 to i64
@@ -304,28 +304,28 @@ define void @bmha_init(i8*) #0 {
   br i1 %39, label %40, label %41
 
 ; <label>:40:                                     ; preds = %23
-  call void @enqueue_signature(i32 65543)
+  call void @enqueue_signature(i32 1)
   br label %45
 
 ; <label>:41:                                     ; preds = %23
-  call void @enqueue_signature(i32 65544)
+  call void @enqueue_signature(i32 1)
   br label %42
 
 ; <label>:42:                                     ; preds = %41
-  call void @enqueue_signature(i32 65545)
+  call void @enqueue_signature(i32 9)
   %43 = load i32, i32* %4, align 4
   %44 = add nsw i32 %43, -1
   store i32 %44, i32* %4, align 4
   br label %20
 
 ; <label>:45:                                     ; preds = %40, %20
-  call void @enqueue_signature(i32 65546)
+  call void @enqueue_signature(i32 5)
   %46 = load i32, i32* %4, align 4
   %47 = icmp sge i32 %46, 0
   br i1 %47, label %48, label %56
 
 ; <label>:48:                                     ; preds = %45
-  call void @enqueue_signature(i32 65547)
+  call void @enqueue_signature(i32 10)
   %49 = load i32, i32* @patlen, align 4
   %50 = load i32, i32* %4, align 4
   %51 = sub nsw i32 %49, %50
@@ -337,7 +337,7 @@ define void @bmha_init(i8*) #0 {
   br label %56
 
 ; <label>:56:                                     ; preds = %48, %45
-  call void @enqueue_signature(i32 65548)
+  call void @enqueue_signature(i32 7)
   %57 = load i32, i32* %4, align 4
   %58 = load i32, i32* @patlen, align 4
   %59 = sub nsw i32 %58, 1
@@ -345,7 +345,7 @@ define void @bmha_init(i8*) #0 {
   br i1 %60, label %61, label %65
 
 ; <label>:61:                                     ; preds = %56
-  call void @enqueue_signature(i32 65549)
+  call void @enqueue_signature(i32 6)
   %62 = load i32, i32* %3, align 4
   %63 = sext i32 %62 to i64
   %64 = getelementptr inbounds [256 x i32], [256 x i32]* @skip, i64 0, i64 %63
@@ -353,25 +353,25 @@ define void @bmha_init(i8*) #0 {
   br label %65
 
 ; <label>:65:                                     ; preds = %61, %56
-  call void @enqueue_signature(i32 65550)
+  call void @enqueue_signature(i32 1)
   br label %66
 
 ; <label>:66:                                     ; preds = %65
-  call void @enqueue_signature(i32 65551)
+  call void @enqueue_signature(i32 9)
   %67 = load i32, i32* %3, align 4
   %68 = add nsw i32 %67, 1
   store i32 %68, i32* %3, align 4
   br label %10
 
 ; <label>:69:                                     ; preds = %10
-  call void @enqueue_signature(i32 65552)
+  call void @enqueue_signature(i32 9)
   %70 = load i32, i32* @patlen, align 4
   store i32 %70, i32* @skip2, align 4
   store i32 0, i32* %3, align 4
   br label %71
 
 ; <label>:71:                                     ; preds = %103, %69
-  call void @enqueue_signature(i32 65553)
+  call void @enqueue_signature(i32 7)
   %72 = load i32, i32* %3, align 4
   %73 = load i32, i32* @patlen, align 4
   %74 = sub nsw i32 %73, 1
@@ -379,7 +379,7 @@ define void @bmha_init(i8*) #0 {
   br i1 %75, label %76, label %106
 
 ; <label>:76:                                     ; preds = %71
-  call void @enqueue_signature(i32 65554)
+  call void @enqueue_signature(i32 19)
   %77 = load i8*, i8** @pat, align 8
   %78 = load i32, i32* %3, align 4
   %79 = sext i32 %78 to i64
@@ -403,7 +403,7 @@ define void @bmha_init(i8*) #0 {
   br i1 %96, label %97, label %102
 
 ; <label>:97:                                     ; preds = %76
-  call void @enqueue_signature(i32 65555)
+  call void @enqueue_signature(i32 8)
   %98 = load i32, i32* @patlen, align 4
   %99 = load i32, i32* %3, align 4
   %100 = sub nsw i32 %98, %99
@@ -412,18 +412,18 @@ define void @bmha_init(i8*) #0 {
   br label %102
 
 ; <label>:102:                                    ; preds = %97, %76
-  call void @enqueue_signature(i32 65556)
+  call void @enqueue_signature(i32 1)
   br label %103
 
 ; <label>:103:                                    ; preds = %102
-  call void @enqueue_signature(i32 65557)
+  call void @enqueue_signature(i32 9)
   %104 = load i32, i32* %3, align 4
   %105 = add nsw i32 %104, 1
   store i32 %105, i32* %3, align 4
   br label %71
 
 ; <label>:106:                                    ; preds = %71
-  call void @enqueue_signature_with_return(i32 65558)
+  call void @enqueue_signature_with_return(i32 1)
   ret void
 }
 
@@ -432,7 +432,7 @@ declare i64 @strlen(i8*) #1
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define i8* @bmha_search(i8*, i32) #0 {
-  call void @enqueue_signature(i32 196609)
+  call void @enqueue_signature(i32 24)
   %3 = alloca i8*, align 8
   %4 = alloca i8*, align 8
   %5 = alloca i32, align 4
@@ -451,12 +451,12 @@ define i8* @bmha_search(i8*, i32) #0 {
   br i1 %14, label %15, label %16
 
 ; <label>:15:                                     ; preds = %2
-  call void @enqueue_signature(i32 196610)
+  call void @enqueue_signature(i32 4)
   store i8* null, i8** %3, align 8
   br label %91
 
 ; <label>:16:                                     ; preds = %2
-  call void @enqueue_signature(i32 196611)
+  call void @enqueue_signature(i32 8)
   %17 = load i32, i32* %5, align 4
   %18 = load i8*, i8** %4, align 8
   %19 = sext i32 %17 to i64
@@ -465,11 +465,11 @@ define i8* @bmha_search(i8*, i32) #0 {
   br label %21
 
 ; <label>:21:                                     ; preds = %90, %16
-  call void @enqueue_signature(i32 196612)
+  call void @enqueue_signature(i32 1)
   br label %22
 
 ; <label>:22:                                     ; preds = %34, %21
-  call void @enqueue_signature(i32 196613)
+  call void @enqueue_signature(i32 19)
   %23 = load i8*, i8** %4, align 8
   %24 = load i32, i32* %6, align 4
   %25 = sext i32 %24 to i64
@@ -485,11 +485,11 @@ define i8* @bmha_search(i8*, i32) #0 {
   br i1 %33, label %34, label %35
 
 ; <label>:34:                                     ; preds = %22
-  call void @enqueue_signature(i32 196614)
+  call void @enqueue_signature(i32 1)
   br label %22
 
 ; <label>:35:                                     ; preds = %22
-  call void @enqueue_signature(i32 196615)
+  call void @enqueue_signature(i32 7)
   %36 = load i32, i32* %6, align 4
   %37 = load i32, i32* %5, align 4
   %38 = sub nsw i32 32767, %37
@@ -497,12 +497,12 @@ define i8* @bmha_search(i8*, i32) #0 {
   br i1 %39, label %40, label %41
 
 ; <label>:40:                                     ; preds = %35
-  call void @enqueue_signature(i32 196616)
+  call void @enqueue_signature(i32 4)
   store i8* null, i8** %3, align 8
   br label %91
 
 ; <label>:41:                                     ; preds = %35
-  call void @enqueue_signature(i32 196617)
+  call void @enqueue_signature(i32 20)
   %42 = load i32, i32* %6, align 4
   %43 = sub nsw i32 %42, 32767
   store i32 %43, i32* %6, align 4
@@ -519,7 +519,7 @@ define i8* @bmha_search(i8*, i32) #0 {
   br label %52
 
 ; <label>:52:                                     ; preds = %78, %41
-  call void @enqueue_signature(i32 196618)
+  call void @enqueue_signature(i32 11)
   %53 = load i32, i32* %7, align 4
   %54 = add nsw i32 %53, -1
   store i32 %54, i32* %7, align 4
@@ -527,7 +527,7 @@ define i8* @bmha_search(i8*, i32) #0 {
   br i1 %55, label %56, label %76
 
 ; <label>:56:                                     ; preds = %52
-  call void @enqueue_signature(i32 196619)
+  call void @enqueue_signature(i32 19)
   %57 = load i8*, i8** %8, align 8
   %58 = load i32, i32* %7, align 4
   %59 = sext i32 %58 to i64
@@ -551,27 +551,27 @@ define i8* @bmha_search(i8*, i32) #0 {
 
 ; <label>:76:                                     ; preds = %56, %52
   %77 = phi i1 [ false, %52 ], [ %75, %56 ]
-  call void @enqueue_signature(i32 196620)
+  call void @enqueue_signature(i32 1)
   br i1 %77, label %78, label %79
 
 ; <label>:78:                                     ; preds = %76
-  call void @enqueue_signature(i32 196621)
+  call void @enqueue_signature(i32 1)
   br label %52
 
 ; <label>:79:                                     ; preds = %76
-  call void @enqueue_signature(i32 196622)
+  call void @enqueue_signature(i32 5)
   %80 = load i32, i32* %7, align 4
   %81 = icmp slt i32 %80, 0
   br i1 %81, label %82, label %84
 
 ; <label>:82:                                     ; preds = %79
-  call void @enqueue_signature(i32 196623)
+  call void @enqueue_signature(i32 6)
   %83 = load i8*, i8** %8, align 8
   store i8* %83, i8** %3, align 8
   br label %91
 
 ; <label>:84:                                     ; preds = %79
-  call void @enqueue_signature(i32 196624)
+  call void @enqueue_signature(i32 13)
   %85 = load i32, i32* @skip2, align 4
   %86 = load i32, i32* %6, align 4
   %87 = add nsw i32 %86, %85
@@ -580,23 +580,23 @@ define i8* @bmha_search(i8*, i32) #0 {
   br i1 %88, label %89, label %90
 
 ; <label>:89:                                     ; preds = %84
-  call void @enqueue_signature(i32 196625)
+  call void @enqueue_signature(i32 4)
   store i8* null, i8** %3, align 8
   br label %91
 
 ; <label>:90:                                     ; preds = %84
-  call void @enqueue_signature(i32 196626)
+  call void @enqueue_signature(i32 1)
   br label %21
 
 ; <label>:91:                                     ; preds = %89, %82, %40, %15
-  call void @enqueue_signature_with_return(i32 196627)
+  call void @enqueue_signature_with_return(i32 3)
   %92 = load i8*, i8** %3, align 8
   ret i8* %92
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define void @bmhi_init(i8*) #0 {
-  call void @enqueue_signature(i32 262145)
+  call void @enqueue_signature(i32 9)
   %2 = alloca i8*, align 8
   %3 = alloca i32, align 4
   %4 = alloca i32, align 4
@@ -606,7 +606,7 @@ define void @bmhi_init(i8*) #0 {
   br label %7
 
 ; <label>:7:                                      ; preds = %1
-  call void @enqueue_signature(i32 262146)
+  call void @enqueue_signature(i32 8)
   %8 = trunc i64 %6 to i32
   store i32 %8, i32* @patlen.1, align 4
   %9 = load i8*, i8** @pat.2, align 8
@@ -616,35 +616,35 @@ define void @bmhi_init(i8*) #0 {
   br label %13
 
 ; <label>:13:                                     ; preds = %7
-  call void @enqueue_signature(i32 262147)
+  call void @enqueue_signature(i32 8)
   store i8* %12, i8** @pat.2, align 8
   %14 = load i8*, i8** @pat.2, align 8
   %15 = icmp ne i8* %14, null
   br i1 %15, label %17, label %16
 
 ; <label>:16:                                     ; preds = %13
-  call void @enqueue_signature(i32 262148)
+  call void @enqueue_signature(i32 1)
   br label %19
 
 ; <label>:17:                                     ; preds = %13
-  call void @enqueue_signature(i32 262149)
+  call void @enqueue_signature(i32 1)
   %18 = call i32 @atexit(void ()* @bhmi_cleanup) #6
   br label %19
 
 ; <label>:19:                                     ; preds = %17, %16
-  call void @enqueue_signature(i32 262150)
+  call void @enqueue_signature(i32 4)
   store i32 0, i32* %3, align 4
   br label %20
 
 ; <label>:20:                                     ; preds = %38, %19
-  call void @enqueue_signature(i32 262151)
+  call void @enqueue_signature(i32 7)
   %21 = load i32, i32* %3, align 4
   %22 = load i32, i32* @patlen.1, align 4
   %23 = icmp slt i32 %21, %22
   br i1 %23, label %24, label %41
 
 ; <label>:24:                                     ; preds = %20
-  call void @enqueue_signature(i32 262152)
+  call void @enqueue_signature(i32 7)
   %25 = load i8*, i8** %2, align 8
   %26 = load i32, i32* %3, align 4
   %27 = sext i32 %26 to i64
@@ -655,7 +655,7 @@ define void @bmhi_init(i8*) #0 {
   br label %32
 
 ; <label>:32:                                     ; preds = %24
-  call void @enqueue_signature(i32 262153)
+  call void @enqueue_signature(i32 8)
   %33 = trunc i32 %31 to i8
   %34 = load i8*, i8** @pat.2, align 8
   %35 = load i32, i32* %3, align 4
@@ -665,25 +665,25 @@ define void @bmhi_init(i8*) #0 {
   br label %38
 
 ; <label>:38:                                     ; preds = %32
-  call void @enqueue_signature(i32 262154)
+  call void @enqueue_signature(i32 9)
   %39 = load i32, i32* %3, align 4
   %40 = add nsw i32 %39, 1
   store i32 %40, i32* %3, align 4
   br label %20
 
 ; <label>:41:                                     ; preds = %20
-  call void @enqueue_signature(i32 262155)
+  call void @enqueue_signature(i32 4)
   store i32 0, i32* %3, align 4
   br label %42
 
 ; <label>:42:                                     ; preds = %50, %41
-  call void @enqueue_signature(i32 262156)
+  call void @enqueue_signature(i32 5)
   %43 = load i32, i32* %3, align 4
   %44 = icmp sle i32 %43, 255
   br i1 %44, label %45, label %53
 
 ; <label>:45:                                     ; preds = %42
-  call void @enqueue_signature(i32 262157)
+  call void @enqueue_signature(i32 8)
   %46 = load i32, i32* @patlen.1, align 4
   %47 = load i32, i32* %3, align 4
   %48 = sext i32 %47 to i64
@@ -692,19 +692,19 @@ define void @bmhi_init(i8*) #0 {
   br label %50
 
 ; <label>:50:                                     ; preds = %45
-  call void @enqueue_signature(i32 262158)
+  call void @enqueue_signature(i32 9)
   %51 = load i32, i32* %3, align 4
   %52 = add nsw i32 %51, 1
   store i32 %52, i32* %3, align 4
   br label %42
 
 ; <label>:53:                                     ; preds = %42
-  call void @enqueue_signature(i32 262159)
+  call void @enqueue_signature(i32 4)
   store i32 0, i32* %3, align 4
   br label %54
 
 ; <label>:54:                                     ; preds = %85, %53
-  call void @enqueue_signature(i32 262160)
+  call void @enqueue_signature(i32 7)
   %55 = load i32, i32* %3, align 4
   %56 = load i32, i32* @patlen.1, align 4
   %57 = sub nsw i32 %56, 1
@@ -712,7 +712,7 @@ define void @bmhi_init(i8*) #0 {
   br i1 %58, label %59, label %88
 
 ; <label>:59:                                     ; preds = %54
-  call void @enqueue_signature(i32 262161)
+  call void @enqueue_signature(i32 24)
   %60 = load i32, i32* @patlen.1, align 4
   %61 = load i32, i32* %3, align 4
   %62 = sub nsw i32 %60, %61
@@ -739,21 +739,21 @@ define void @bmhi_init(i8*) #0 {
   br label %82
 
 ; <label>:82:                                     ; preds = %59
-  call void @enqueue_signature(i32 262162)
+  call void @enqueue_signature(i32 4)
   %83 = sext i32 %81 to i64
   %84 = getelementptr inbounds [256 x i32], [256 x i32]* @skip.3, i64 0, i64 %83
   store i32 %74, i32* %84, align 4
   br label %85
 
 ; <label>:85:                                     ; preds = %82
-  call void @enqueue_signature(i32 262163)
+  call void @enqueue_signature(i32 9)
   %86 = load i32, i32* %3, align 4
   %87 = add nsw i32 %86, 1
   store i32 %87, i32* %3, align 4
   br label %54
 
 ; <label>:88:                                     ; preds = %54
-  call void @enqueue_signature(i32 262164)
+  call void @enqueue_signature(i32 17)
   %89 = load i8*, i8** @pat.2, align 8
   %90 = load i32, i32* @patlen.1, align 4
   %91 = sub nsw i32 %90, 1
@@ -771,7 +771,7 @@ define void @bmhi_init(i8*) #0 {
   br label %101
 
 ; <label>:101:                                    ; preds = %88
-  call void @enqueue_signature(i32 262165)
+  call void @enqueue_signature(i32 12)
   %102 = sext i32 %100 to i64
   %103 = getelementptr inbounds [256 x i32], [256 x i32]* @skip.3, i64 0, i64 %102
   store i32 32767, i32* %103, align 4
@@ -781,7 +781,7 @@ define void @bmhi_init(i8*) #0 {
   br label %105
 
 ; <label>:105:                                    ; preds = %125, %101
-  call void @enqueue_signature(i32 262166)
+  call void @enqueue_signature(i32 7)
   %106 = load i32, i32* %3, align 4
   %107 = load i32, i32* @patlen.1, align 4
   %108 = sub nsw i32 %107, 1
@@ -789,7 +789,7 @@ define void @bmhi_init(i8*) #0 {
   br i1 %109, label %110, label %128
 
 ; <label>:110:                                    ; preds = %105
-  call void @enqueue_signature(i32 262167)
+  call void @enqueue_signature(i32 11)
   %111 = load i8*, i8** @pat.2, align 8
   %112 = load i32, i32* %3, align 4
   %113 = sext i32 %112 to i64
@@ -801,7 +801,7 @@ define void @bmhi_init(i8*) #0 {
   br i1 %118, label %119, label %124
 
 ; <label>:119:                                    ; preds = %110
-  call void @enqueue_signature(i32 262168)
+  call void @enqueue_signature(i32 8)
   %120 = load i32, i32* @patlen.1, align 4
   %121 = load i32, i32* %3, align 4
   %122 = sub nsw i32 %120, %121
@@ -810,18 +810,18 @@ define void @bmhi_init(i8*) #0 {
   br label %124
 
 ; <label>:124:                                    ; preds = %119, %110
-  call void @enqueue_signature(i32 262169)
+  call void @enqueue_signature(i32 1)
   br label %125
 
 ; <label>:125:                                    ; preds = %124
-  call void @enqueue_signature(i32 262170)
+  call void @enqueue_signature(i32 9)
   %126 = load i32, i32* %3, align 4
   %127 = add nsw i32 %126, 1
   store i32 %127, i32* %3, align 4
   br label %105
 
 ; <label>:128:                                    ; preds = %105
-  call void @enqueue_signature_with_return(i32 262171)
+  call void @enqueue_signature_with_return(i32 1)
   ret void
 }
 
@@ -830,13 +830,13 @@ declare i8* @realloc(i8*, i64) #2
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define void @bhmi_cleanup() #0 {
-  call void @enqueue_signature(i32 393217)
+  call void @enqueue_signature(i32 3)
   %1 = load i8*, i8** @pat.2, align 8
   call void @free(i8* %1) #6
   br label %2
 
 ; <label>:2:                                      ; preds = %0
-  call void @enqueue_signature_with_return(i32 393218)
+  call void @enqueue_signature_with_return(i32 1)
   ret void
 }
 
@@ -854,7 +854,7 @@ declare void @free(i8*) #2
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define i8* @bmhi_search(i8*, i32) #0 {
-  call void @enqueue_signature(i32 720897)
+  call void @enqueue_signature(i32 24)
   %3 = alloca i8*, align 8
   %4 = alloca i8*, align 8
   %5 = alloca i32, align 4
@@ -873,12 +873,12 @@ define i8* @bmhi_search(i8*, i32) #0 {
   br i1 %14, label %15, label %16
 
 ; <label>:15:                                     ; preds = %2
-  call void @enqueue_signature(i32 720898)
+  call void @enqueue_signature(i32 4)
   store i8* null, i8** %3, align 8
   br label %87
 
 ; <label>:16:                                     ; preds = %2
-  call void @enqueue_signature(i32 720899)
+  call void @enqueue_signature(i32 8)
   %17 = load i32, i32* %5, align 4
   %18 = load i8*, i8** %4, align 8
   %19 = sext i32 %17 to i64
@@ -887,11 +887,11 @@ define i8* @bmhi_search(i8*, i32) #0 {
   br label %21
 
 ; <label>:21:                                     ; preds = %86, %16
-  call void @enqueue_signature(i32 720900)
+  call void @enqueue_signature(i32 1)
   br label %22
 
 ; <label>:22:                                     ; preds = %34, %21
-  call void @enqueue_signature(i32 720901)
+  call void @enqueue_signature(i32 19)
   %23 = load i8*, i8** %4, align 8
   %24 = load i32, i32* %6, align 4
   %25 = sext i32 %24 to i64
@@ -907,11 +907,11 @@ define i8* @bmhi_search(i8*, i32) #0 {
   br i1 %33, label %34, label %35
 
 ; <label>:34:                                     ; preds = %22
-  call void @enqueue_signature(i32 720902)
+  call void @enqueue_signature(i32 1)
   br label %22
 
 ; <label>:35:                                     ; preds = %22
-  call void @enqueue_signature(i32 720903)
+  call void @enqueue_signature(i32 7)
   %36 = load i32, i32* %6, align 4
   %37 = load i32, i32* %5, align 4
   %38 = sub nsw i32 32767, %37
@@ -919,12 +919,12 @@ define i8* @bmhi_search(i8*, i32) #0 {
   br i1 %39, label %40, label %41
 
 ; <label>:40:                                     ; preds = %35
-  call void @enqueue_signature(i32 720904)
+  call void @enqueue_signature(i32 4)
   store i8* null, i8** %3, align 8
   br label %87
 
 ; <label>:41:                                     ; preds = %35
-  call void @enqueue_signature(i32 720905)
+  call void @enqueue_signature(i32 20)
   %42 = load i32, i32* %6, align 4
   %43 = sub nsw i32 %42, 32767
   store i32 %43, i32* %6, align 4
@@ -941,7 +941,7 @@ define i8* @bmhi_search(i8*, i32) #0 {
   br label %52
 
 ; <label>:52:                                     ; preds = %74, %41
-  call void @enqueue_signature(i32 720906)
+  call void @enqueue_signature(i32 11)
   %53 = load i32, i32* %7, align 4
   %54 = add nsw i32 %53, -1
   store i32 %54, i32* %7, align 4
@@ -949,7 +949,7 @@ define i8* @bmhi_search(i8*, i32) #0 {
   br i1 %55, label %56, label %72
 
 ; <label>:56:                                     ; preds = %52
-  call void @enqueue_signature(i32 720907)
+  call void @enqueue_signature(i32 7)
   %57 = load i8*, i8** %8, align 8
   %58 = load i32, i32* %7, align 4
   %59 = sext i32 %58 to i64
@@ -960,7 +960,7 @@ define i8* @bmhi_search(i8*, i32) #0 {
   br label %64
 
 ; <label>:64:                                     ; preds = %56
-  call void @enqueue_signature(i32 720908)
+  call void @enqueue_signature(i32 9)
   %65 = load i8*, i8** @pat.2, align 8
   %66 = load i32, i32* %7, align 4
   %67 = sext i32 %66 to i64
@@ -972,27 +972,27 @@ define i8* @bmhi_search(i8*, i32) #0 {
 
 ; <label>:72:                                     ; preds = %64, %52
   %73 = phi i1 [ false, %52 ], [ %71, %64 ]
-  call void @enqueue_signature(i32 720909)
+  call void @enqueue_signature(i32 1)
   br i1 %73, label %74, label %75
 
 ; <label>:74:                                     ; preds = %72
-  call void @enqueue_signature(i32 720910)
+  call void @enqueue_signature(i32 1)
   br label %52
 
 ; <label>:75:                                     ; preds = %72
-  call void @enqueue_signature(i32 720911)
+  call void @enqueue_signature(i32 5)
   %76 = load i32, i32* %7, align 4
   %77 = icmp slt i32 %76, 0
   br i1 %77, label %78, label %80
 
 ; <label>:78:                                     ; preds = %75
-  call void @enqueue_signature(i32 720912)
+  call void @enqueue_signature(i32 6)
   %79 = load i8*, i8** %8, align 8
   store i8* %79, i8** %3, align 8
   br label %87
 
 ; <label>:80:                                     ; preds = %75
-  call void @enqueue_signature(i32 720913)
+  call void @enqueue_signature(i32 13)
   %81 = load i32, i32* @skip2.4, align 4
   %82 = load i32, i32* %6, align 4
   %83 = add nsw i32 %82, %81
@@ -1001,23 +1001,23 @@ define i8* @bmhi_search(i8*, i32) #0 {
   br i1 %84, label %85, label %86
 
 ; <label>:85:                                     ; preds = %80
-  call void @enqueue_signature(i32 720914)
+  call void @enqueue_signature(i32 4)
   store i8* null, i8** %3, align 8
   br label %87
 
 ; <label>:86:                                     ; preds = %80
-  call void @enqueue_signature(i32 720915)
+  call void @enqueue_signature(i32 1)
   br label %21
 
 ; <label>:87:                                     ; preds = %85, %78, %40, %15
-  call void @enqueue_signature_with_return(i32 720916)
+  call void @enqueue_signature_with_return(i32 3)
   %88 = load i8*, i8** %3, align 8
   ret i8* %88
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define void @bmh_init(i8*) #0 {
-  call void @enqueue_signature(i32 786433)
+  call void @enqueue_signature(i32 14)
   %2 = alloca i8*, align 8
   %3 = alloca i32, align 4
   %4 = alloca i32, align 4
@@ -1029,20 +1029,20 @@ define void @bmh_init(i8*) #0 {
   br label %8
 
 ; <label>:8:                                      ; preds = %1
-  call void @enqueue_signature(i32 786434)
+  call void @enqueue_signature(i32 7)
   %9 = trunc i64 %7 to i32
   store i32 %9, i32* @patlen.6, align 4
   store i32 0, i32* %3, align 4
   br label %10
 
 ; <label>:10:                                     ; preds = %18, %8
-  call void @enqueue_signature(i32 786435)
+  call void @enqueue_signature(i32 5)
   %11 = load i32, i32* %3, align 4
   %12 = icmp sle i32 %11, 255
   br i1 %12, label %13, label %21
 
 ; <label>:13:                                     ; preds = %10
-  call void @enqueue_signature(i32 786436)
+  call void @enqueue_signature(i32 8)
   %14 = load i32, i32* @patlen.6, align 4
   %15 = load i32, i32* %3, align 4
   %16 = sext i32 %15 to i64
@@ -1051,26 +1051,26 @@ define void @bmh_init(i8*) #0 {
   br label %18
 
 ; <label>:18:                                     ; preds = %13
-  call void @enqueue_signature(i32 786437)
+  call void @enqueue_signature(i32 9)
   %19 = load i32, i32* %3, align 4
   %20 = add nsw i32 %19, 1
   store i32 %20, i32* %3, align 4
   br label %10
 
 ; <label>:21:                                     ; preds = %10
-  call void @enqueue_signature(i32 786438)
+  call void @enqueue_signature(i32 4)
   store i32 0, i32* %3, align 4
   br label %22
 
 ; <label>:22:                                     ; preds = %38, %21
-  call void @enqueue_signature(i32 786439)
+  call void @enqueue_signature(i32 7)
   %23 = load i32, i32* %3, align 4
   %24 = load i32, i32* @patlen.6, align 4
   %25 = icmp slt i32 %23, %24
   br i1 %25, label %26, label %41
 
 ; <label>:26:                                     ; preds = %22
-  call void @enqueue_signature(i32 786440)
+  call void @enqueue_signature(i32 14)
   %27 = load i32, i32* @patlen.6, align 4
   %28 = load i32, i32* %3, align 4
   %29 = sub nsw i32 %27, %28
@@ -1086,14 +1086,14 @@ define void @bmh_init(i8*) #0 {
   br label %38
 
 ; <label>:38:                                     ; preds = %26
-  call void @enqueue_signature(i32 786441)
+  call void @enqueue_signature(i32 9)
   %39 = load i32, i32* %3, align 4
   %40 = add nsw i32 %39, 1
   store i32 %40, i32* %3, align 4
   br label %22
 
 ; <label>:41:                                     ; preds = %22
-  call void @enqueue_signature(i32 786442)
+  call void @enqueue_signature(i32 23)
   %42 = load i8*, i8** @pat.5, align 8
   %43 = load i32, i32* @patlen.6, align 4
   %44 = sub nsw i32 %43, 1
@@ -1112,7 +1112,7 @@ define void @bmh_init(i8*) #0 {
   br label %53
 
 ; <label>:53:                                     ; preds = %73, %41
-  call void @enqueue_signature(i32 786443)
+  call void @enqueue_signature(i32 7)
   %54 = load i32, i32* %3, align 4
   %55 = load i32, i32* @patlen.6, align 4
   %56 = sub nsw i32 %55, 1
@@ -1120,7 +1120,7 @@ define void @bmh_init(i8*) #0 {
   br i1 %57, label %58, label %76
 
 ; <label>:58:                                     ; preds = %53
-  call void @enqueue_signature(i32 786444)
+  call void @enqueue_signature(i32 11)
   %59 = load i8*, i8** @pat.5, align 8
   %60 = load i32, i32* %3, align 4
   %61 = sext i32 %60 to i64
@@ -1132,7 +1132,7 @@ define void @bmh_init(i8*) #0 {
   br i1 %66, label %67, label %72
 
 ; <label>:67:                                     ; preds = %58
-  call void @enqueue_signature(i32 786445)
+  call void @enqueue_signature(i32 8)
   %68 = load i32, i32* @patlen.6, align 4
   %69 = load i32, i32* %3, align 4
   %70 = sub nsw i32 %68, %69
@@ -1141,24 +1141,24 @@ define void @bmh_init(i8*) #0 {
   br label %72
 
 ; <label>:72:                                     ; preds = %67, %58
-  call void @enqueue_signature(i32 786446)
+  call void @enqueue_signature(i32 1)
   br label %73
 
 ; <label>:73:                                     ; preds = %72
-  call void @enqueue_signature(i32 786447)
+  call void @enqueue_signature(i32 9)
   %74 = load i32, i32* %3, align 4
   %75 = add nsw i32 %74, 1
   store i32 %75, i32* %3, align 4
   br label %53
 
 ; <label>:76:                                     ; preds = %53
-  call void @enqueue_signature_with_return(i32 786448)
+  call void @enqueue_signature_with_return(i32 1)
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define i8* @bmh_search(i8*, i32) #0 {
-  call void @enqueue_signature(i32 851969)
+  call void @enqueue_signature(i32 24)
   %3 = alloca i8*, align 8
   %4 = alloca i8*, align 8
   %5 = alloca i32, align 4
@@ -1177,12 +1177,12 @@ define i8* @bmh_search(i8*, i32) #0 {
   br i1 %14, label %15, label %16
 
 ; <label>:15:                                     ; preds = %2
-  call void @enqueue_signature(i32 851970)
+  call void @enqueue_signature(i32 4)
   store i8* null, i8** %3, align 8
   br label %85
 
 ; <label>:16:                                     ; preds = %2
-  call void @enqueue_signature(i32 851971)
+  call void @enqueue_signature(i32 8)
   %17 = load i32, i32* %5, align 4
   %18 = load i8*, i8** %4, align 8
   %19 = sext i32 %17 to i64
@@ -1191,11 +1191,11 @@ define i8* @bmh_search(i8*, i32) #0 {
   br label %21
 
 ; <label>:21:                                     ; preds = %84, %16
-  call void @enqueue_signature(i32 851972)
+  call void @enqueue_signature(i32 1)
   br label %22
 
 ; <label>:22:                                     ; preds = %34, %21
-  call void @enqueue_signature(i32 851973)
+  call void @enqueue_signature(i32 19)
   %23 = load i8*, i8** %4, align 8
   %24 = load i32, i32* %6, align 4
   %25 = sext i32 %24 to i64
@@ -1211,11 +1211,11 @@ define i8* @bmh_search(i8*, i32) #0 {
   br i1 %33, label %34, label %35
 
 ; <label>:34:                                     ; preds = %22
-  call void @enqueue_signature(i32 851974)
+  call void @enqueue_signature(i32 1)
   br label %22
 
 ; <label>:35:                                     ; preds = %22
-  call void @enqueue_signature(i32 851975)
+  call void @enqueue_signature(i32 7)
   %36 = load i32, i32* %6, align 4
   %37 = load i32, i32* %5, align 4
   %38 = sub nsw i32 32767, %37
@@ -1223,12 +1223,12 @@ define i8* @bmh_search(i8*, i32) #0 {
   br i1 %39, label %40, label %41
 
 ; <label>:40:                                     ; preds = %35
-  call void @enqueue_signature(i32 851976)
+  call void @enqueue_signature(i32 4)
   store i8* null, i8** %3, align 8
   br label %85
 
 ; <label>:41:                                     ; preds = %35
-  call void @enqueue_signature(i32 851977)
+  call void @enqueue_signature(i32 20)
   %42 = load i32, i32* %6, align 4
   %43 = sub nsw i32 %42, 32767
   store i32 %43, i32* %6, align 4
@@ -1245,7 +1245,7 @@ define i8* @bmh_search(i8*, i32) #0 {
   br label %52
 
 ; <label>:52:                                     ; preds = %72, %41
-  call void @enqueue_signature(i32 851978)
+  call void @enqueue_signature(i32 11)
   %53 = load i32, i32* %7, align 4
   %54 = add nsw i32 %53, -1
   store i32 %54, i32* %7, align 4
@@ -1253,7 +1253,7 @@ define i8* @bmh_search(i8*, i32) #0 {
   br i1 %55, label %56, label %70
 
 ; <label>:56:                                     ; preds = %52
-  call void @enqueue_signature(i32 851979)
+  call void @enqueue_signature(i32 15)
   %57 = load i8*, i8** %8, align 8
   %58 = load i32, i32* %7, align 4
   %59 = sext i32 %58 to i64
@@ -1271,27 +1271,27 @@ define i8* @bmh_search(i8*, i32) #0 {
 
 ; <label>:70:                                     ; preds = %56, %52
   %71 = phi i1 [ false, %52 ], [ %69, %56 ]
-  call void @enqueue_signature(i32 851980)
+  call void @enqueue_signature(i32 1)
   br i1 %71, label %72, label %73
 
 ; <label>:72:                                     ; preds = %70
-  call void @enqueue_signature(i32 851981)
+  call void @enqueue_signature(i32 1)
   br label %52
 
 ; <label>:73:                                     ; preds = %70
-  call void @enqueue_signature(i32 851982)
+  call void @enqueue_signature(i32 5)
   %74 = load i32, i32* %7, align 4
   %75 = icmp slt i32 %74, 0
   br i1 %75, label %76, label %78
 
 ; <label>:76:                                     ; preds = %73
-  call void @enqueue_signature(i32 851983)
+  call void @enqueue_signature(i32 6)
   %77 = load i8*, i8** %8, align 8
   store i8* %77, i8** %3, align 8
   br label %85
 
 ; <label>:78:                                     ; preds = %73
-  call void @enqueue_signature(i32 851984)
+  call void @enqueue_signature(i32 13)
   %79 = load i32, i32* @skip2.8, align 4
   %80 = load i32, i32* %6, align 4
   %81 = add nsw i32 %80, %79
@@ -1300,23 +1300,23 @@ define i8* @bmh_search(i8*, i32) #0 {
   br i1 %82, label %83, label %84
 
 ; <label>:83:                                     ; preds = %78
-  call void @enqueue_signature(i32 851985)
+  call void @enqueue_signature(i32 4)
   store i8* null, i8** %3, align 8
   br label %85
 
 ; <label>:84:                                     ; preds = %78
-  call void @enqueue_signature(i32 851986)
+  call void @enqueue_signature(i32 1)
   br label %21
 
 ; <label>:85:                                     ; preds = %83, %76, %40, %15
-  call void @enqueue_signature_with_return(i32 851987)
+  call void @enqueue_signature_with_return(i32 3)
   %86 = load i8*, i8** %3, align 8
   ret i8* %86
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define void @init_search(i8*) #0 {
-  call void @enqueue_signature(i32 917505)
+  call void @enqueue_signature(i32 8)
   %2 = alloca i8*, align 8
   %3 = alloca i64, align 8
   store i8* %0, i8** %2, align 8
@@ -1325,19 +1325,19 @@ define void @init_search(i8*) #0 {
   br label %6
 
 ; <label>:6:                                      ; preds = %1
-  call void @enqueue_signature(i32 917506)
+  call void @enqueue_signature(i32 7)
   store i64 %5, i64* @len, align 8
   store i64 0, i64* %3, align 8
   br label %7
 
 ; <label>:7:                                      ; preds = %14, %6
-  call void @enqueue_signature(i32 917507)
+  call void @enqueue_signature(i32 5)
   %8 = load i64, i64* %3, align 8
   %9 = icmp ule i64 %8, 255
   br i1 %9, label %10, label %17
 
 ; <label>:10:                                     ; preds = %7
-  call void @enqueue_signature(i32 917508)
+  call void @enqueue_signature(i32 8)
   %11 = load i64, i64* @len, align 8
   %12 = load i64, i64* %3, align 8
   %13 = getelementptr inbounds [256 x i64], [256 x i64]* @table, i64 0, i64 %12
@@ -1345,26 +1345,26 @@ define void @init_search(i8*) #0 {
   br label %14
 
 ; <label>:14:                                     ; preds = %10
-  call void @enqueue_signature(i32 917509)
+  call void @enqueue_signature(i32 9)
   %15 = load i64, i64* %3, align 8
   %16 = add i64 %15, 1
   store i64 %16, i64* %3, align 8
   br label %7
 
 ; <label>:17:                                     ; preds = %7
-  call void @enqueue_signature(i32 917510)
+  call void @enqueue_signature(i32 4)
   store i64 0, i64* %3, align 8
   br label %18
 
 ; <label>:18:                                     ; preds = %33, %17
-  call void @enqueue_signature(i32 917511)
+  call void @enqueue_signature(i32 7)
   %19 = load i64, i64* %3, align 8
   %20 = load i64, i64* @len, align 8
   %21 = icmp ult i64 %19, %20
   br i1 %21, label %22, label %36
 
 ; <label>:22:                                     ; preds = %18
-  call void @enqueue_signature(i32 917512)
+  call void @enqueue_signature(i32 14)
   %23 = load i64, i64* @len, align 8
   %24 = load i64, i64* %3, align 8
   %25 = sub i64 %23, %24
@@ -1379,14 +1379,14 @@ define void @init_search(i8*) #0 {
   br label %33
 
 ; <label>:33:                                     ; preds = %22
-  call void @enqueue_signature(i32 917513)
+  call void @enqueue_signature(i32 9)
   %34 = load i64, i64* %3, align 8
   %35 = add i64 %34, 1
   store i64 %35, i64* %3, align 8
   br label %18
 
 ; <label>:36:                                     ; preds = %18
-  call void @enqueue_signature_with_return(i32 917514)
+  call void @enqueue_signature_with_return(i32 6)
   %37 = load i8*, i8** %2, align 8
   store i8* %37, i8** @findme, align 8
   ret void
@@ -1394,7 +1394,7 @@ define void @init_search(i8*) #0 {
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define i8* @strsearch(i8*) #0 {
-  call void @enqueue_signature(i32 983041)
+  call void @enqueue_signature(i32 17)
   %2 = alloca i8*, align 8
   %3 = alloca i8*, align 8
   %4 = alloca i64, align 8
@@ -1410,30 +1410,30 @@ define i8* @strsearch(i8*) #0 {
   br label %12
 
 ; <label>:12:                                     ; preds = %1
-  call void @enqueue_signature(i32 983042)
+  call void @enqueue_signature(i32 4)
   store i64 %11, i64* %7, align 8
   br label %13
 
 ; <label>:13:                                     ; preds = %58, %12
-  call void @enqueue_signature(i32 983043)
+  call void @enqueue_signature(i32 7)
   %14 = load i64, i64* %5, align 8
   %15 = load i64, i64* %7, align 8
   %16 = icmp ult i64 %14, %15
   br i1 %16, label %17, label %59
 
 ; <label>:17:                                     ; preds = %13
-  call void @enqueue_signature(i32 983044)
+  call void @enqueue_signature(i32 1)
   br label %18
 
 ; <label>:18:                                     ; preds = %33, %17
-  call void @enqueue_signature(i32 983045)
+  call void @enqueue_signature(i32 7)
   %19 = load i64, i64* %5, align 8
   %20 = load i64, i64* %7, align 8
   %21 = icmp ult i64 %19, %20
   br i1 %21, label %22, label %31
 
 ; <label>:22:                                     ; preds = %18
-  call void @enqueue_signature(i32 983046)
+  call void @enqueue_signature(i32 14)
   %23 = load i8*, i8** %3, align 8
   %24 = load i64, i64* %5, align 8
   %25 = getelementptr inbounds i8, i8* %23, i64 %24
@@ -1447,11 +1447,11 @@ define i8* @strsearch(i8*) #0 {
 
 ; <label>:31:                                     ; preds = %22, %18
   %32 = phi i1 [ false, %18 ], [ %30, %22 ]
-  call void @enqueue_signature(i32 983047)
+  call void @enqueue_signature(i32 1)
   br i1 %32, label %33, label %37
 
 ; <label>:33:                                     ; preds = %31
-  call void @enqueue_signature(i32 983048)
+  call void @enqueue_signature(i32 11)
   %34 = load i64, i64* %4, align 8
   %35 = load i64, i64* %5, align 8
   %36 = add i64 %35, %34
@@ -1459,13 +1459,13 @@ define i8* @strsearch(i8*) #0 {
   br label %18
 
 ; <label>:37:                                     ; preds = %31
-  call void @enqueue_signature(i32 983049)
+  call void @enqueue_signature(i32 5)
   %38 = load i64, i64* %4, align 8
   %39 = icmp eq i64 0, %38
   br i1 %39, label %40, label %58
 
 ; <label>:40:                                     ; preds = %37
-  call void @enqueue_signature(i32 983050)
+  call void @enqueue_signature(i32 17)
   %41 = load i8*, i8** @findme, align 8
   %42 = load i8*, i8** %3, align 8
   %43 = load i64, i64* %5, align 8
@@ -1479,38 +1479,38 @@ define i8* @strsearch(i8*) #0 {
   br label %50
 
 ; <label>:50:                                     ; preds = %40
-  call void @enqueue_signature(i32 983051)
+  call void @enqueue_signature(i32 3)
   %51 = icmp eq i32 0, %49
   br i1 %51, label %52, label %54
 
 ; <label>:52:                                     ; preds = %50
-  call void @enqueue_signature(i32 983052)
+  call void @enqueue_signature(i32 6)
   %53 = load i8*, i8** %6, align 8
   store i8* %53, i8** %2, align 8
   br label %60
 
 ; <label>:54:                                     ; preds = %50
-  call void @enqueue_signature(i32 983053)
+  call void @enqueue_signature(i32 9)
   %55 = load i64, i64* %5, align 8
   %56 = add i64 %55, 1
   store i64 %56, i64* %5, align 8
   br label %57
 
 ; <label>:57:                                     ; preds = %54
-  call void @enqueue_signature(i32 983054)
+  call void @enqueue_signature(i32 1)
   br label %58
 
 ; <label>:58:                                     ; preds = %57, %37
-  call void @enqueue_signature(i32 983055)
+  call void @enqueue_signature(i32 1)
   br label %13
 
 ; <label>:59:                                     ; preds = %13
-  call void @enqueue_signature(i32 983056)
+  call void @enqueue_signature(i32 4)
   store i8* null, i8** %2, align 8
   br label %60
 
 ; <label>:60:                                     ; preds = %59, %52
-  call void @enqueue_signature_with_return(i32 983057)
+  call void @enqueue_signature_with_return(i32 3)
   %61 = load i8*, i8** %2, align 8
   ret i8* %61
 }
@@ -1521,7 +1521,7 @@ declare i32 @strncmp(i8*, i8*, i64) #1
 ; Function Attrs: noinline nounwind optnone uwtable
 define i32 @main() #0 {
   call void @init_monitor()
-  call void @enqueue_signature(i32 1114113)
+  call void @enqueue_signature(i32 11)
   %1 = alloca i32, align 4
   %2 = alloca i8*, align 8
   %3 = alloca [1333 x i8*], align 16
@@ -1535,23 +1535,23 @@ define i32 @main() #0 {
   br label %9
 
 ; <label>:9:                                      ; preds = %0
-  call void @enqueue_signature(i32 1114114)
+  call void @enqueue_signature(i32 1)
   %10 = bitcast [1332 x i8*]* %4 to i8*
   call void @llvm.memcpy.p0i8.p0i8.i64(i8* %10, i8* bitcast ([1332 x i8*]* @main.search_strings to i8*), i64 10656, i32 16, i1 false)
   br label %11
 
 ; <label>:11:                                     ; preds = %9
-  call void @enqueue_signature(i32 1114115)
+  call void @enqueue_signature(i32 1)
   %12 = call i32 @gettimeofday(%struct.timeval* %5, %struct.timezone* null) #6
   br label %13
 
 ; <label>:13:                                     ; preds = %11
-  call void @enqueue_signature(i32 1114116)
+  call void @enqueue_signature(i32 4)
   store i32 0, i32* %7, align 4
   br label %14
 
 ; <label>:14:                                     ; preds = %32, %13
-  call void @enqueue_signature(i32 1114117)
+  call void @enqueue_signature(i32 7)
   %15 = load i32, i32* %7, align 4
   %16 = sext i32 %15 to i64
   %17 = getelementptr inbounds [1333 x i8*], [1333 x i8*]* %3, i64 0, i64 %16
@@ -1560,7 +1560,7 @@ define i32 @main() #0 {
   br i1 %19, label %20, label %35
 
 ; <label>:20:                                     ; preds = %14
-  call void @enqueue_signature_with_call(i32 1114118)
+  call void @enqueue_signature_with_call(i32 5)
   %21 = load i32, i32* %7, align 4
   %22 = sext i32 %21 to i64
   %23 = getelementptr inbounds [1333 x i8*], [1333 x i8*]* %3, i64 0, i64 %22
@@ -1569,7 +1569,7 @@ define i32 @main() #0 {
   br label %25
 
 ; <label>:25:                                     ; preds = %20
-  call void @enqueue_signature_with_call(i32 1114119)
+  call void @enqueue_signature_with_call(i32 5)
   %26 = load i32, i32* %7, align 4
   %27 = sext i32 %26 to i64
   %28 = getelementptr inbounds [1332 x i8*], [1332 x i8*]* %4, i64 0, i64 %27
@@ -1578,29 +1578,29 @@ define i32 @main() #0 {
   br label %31
 
 ; <label>:31:                                     ; preds = %25
-  call void @enqueue_signature(i32 1114120)
+  call void @enqueue_signature(i32 4)
   store i8* %30, i8** %2, align 8
   br label %32
 
 ; <label>:32:                                     ; preds = %31
-  call void @enqueue_signature(i32 1114121)
+  call void @enqueue_signature(i32 9)
   %33 = load i32, i32* %7, align 4
   %34 = add nsw i32 %33, 1
   store i32 %34, i32* %7, align 4
   br label %14
 
 ; <label>:35:                                     ; preds = %14
-  call void @enqueue_signature(i32 1114122)
+  call void @enqueue_signature(i32 1)
   %36 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([21 x i8], [21 x i8]* @.str.211, i32 0, i32 0))
   br label %37
 
 ; <label>:37:                                     ; preds = %35
-  call void @enqueue_signature(i32 1114123)
+  call void @enqueue_signature(i32 1)
   %38 = call i32 @gettimeofday(%struct.timeval* %6, %struct.timezone* null) #6
   br label %39
 
 ; <label>:39:                                     ; preds = %37
-  call void @enqueue_signature(i32 1114124)
+  call void @enqueue_signature(i32 16)
   %40 = getelementptr inbounds %struct.timeval, %struct.timeval* %6, i32 0, i32 0
   %41 = load i64, i64* %40, align 8
   %42 = getelementptr inbounds %struct.timeval, %struct.timeval* %5, i32 0, i32 0
@@ -1617,7 +1617,7 @@ define i32 @main() #0 {
   br label %53
 
 ; <label>:53:                                     ; preds = %39
-  call void @enqueue_signature_with_remainder_process(i32 1114125)
+  call void @enqueue_signature_with_remainder_process(i32 4)
   store i32 1, i32* @is_signature_queue_full, align 4
   ret i32 0
 }

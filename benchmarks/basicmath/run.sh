@@ -35,7 +35,7 @@ echo
 make -C $BENCH_MARK_FOLDER clean
 make -C $GENERATOR clean 
 make -C $FINAL_OUTPUT clean
-
+rm -f energy_consumption.txt
 
 # BENCHMARK SET-UP #
 echo

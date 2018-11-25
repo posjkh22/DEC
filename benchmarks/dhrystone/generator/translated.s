@@ -31,7 +31,7 @@ main:                                   # @main
 .Lcfi4:
 	.cfi_offset %r14, -24
 	callq	init_monitor
-	movl	$65537, %edi            # imm = 0x10001
+	movl	$17, %edi
 	callq	enqueue_signature
 	leaq	-88(%rbp), %rdi
 	movl	$0, -52(%rbp)
@@ -39,14 +39,14 @@ main:                                   # @main
 	movb	$0, %al
 	callq	gettimeofday
 # BB#1:
-	movl	$65538, %edi            # imm = 0x10002
+	movl	$1, %edi
 	callq	enqueue_signature
 	movl	$56, %edi
 	movb	$0, %al
 	callq	malloc
 	movq	%rax, %rbx
 # BB#2:
-	movl	$65539, %edi            # imm = 0x10003
+	movl	$4, %edi
 	callq	enqueue_signature
 	movq	%rbx, Next_Ptr_Glob
 	movl	$56, %edi
@@ -54,7 +54,7 @@ main:                                   # @main
 	callq	malloc
 	movq	%rax, %rbx
 # BB#3:
-	movl	$65540, %edi            # imm = 0x10004
+	movl	$28, %edi
 	callq	enqueue_signature
 	movq	%rbx, Ptr_Glob
 	movq	Next_Ptr_Glob, %rax
@@ -72,26 +72,26 @@ main:                                   # @main
 	movl	$.L.str, %esi
 	callq	strcpy
 # BB#4:
-	movl	$65541, %edi            # imm = 0x10005
+	movl	$1, %edi
 	callq	enqueue_signature
 	leaq	-160(%rbp), %rdi
 	movl	$.L.str.1, %esi
 	callq	strcpy
 # BB#5:
-	movl	$65542, %edi            # imm = 0x10006
+	movl	$8, %edi
 	callq	enqueue_signature
 	movl	$10, Arr_2_Glob+1628
 	cmpl	$0, Reg
 	je	.LBB0_7
 # BB#6:
-	movl	$65543, %edi            # imm = 0x10007
+	movl	$1, %edi
 	callq	enqueue_signature
 	jmp	.LBB0_8
 .LBB0_7:
-	movl	$65544, %edi            # imm = 0x10008
+	movl	$1, %edi
 	callq	enqueue_signature
 .LBB0_8:
-	movl	$65545, %edi            # imm = 0x10009
+	movl	$12, %edi
 	callq	enqueue_signature
 	movl	$1000, -48(%rbp)        # imm = 0x3E8
 	movl	-48(%rbp), %eax
@@ -100,21 +100,21 @@ main:                                   # @main
 .LBB0_9:                                # =>This Loop Header: Depth=1
                                         #     Child Loop BB0_15 Depth 2
                                         #     Child Loop BB0_21 Depth 2
-	movl	$65546, %edi            # imm = 0x1000A
+	movl	$7, %edi
 	callq	enqueue_signature
 	movl	-32(%rbp), %eax
 	cmpl	-40(%rbp), %eax
 	jg	.LBB0_31
 # BB#10:                                #   in Loop: Header=BB0_9 Depth=1
-	movl	$65547, %edi            # imm = 0x1000B
+	movl	$1, %edi
 	callq	enqueue_signature_with_call
 	callq	Proc_5
 # BB#11:                                #   in Loop: Header=BB0_9 Depth=1
-	movl	$65548, %edi            # imm = 0x1000C
+	movl	$1, %edi
 	callq	enqueue_signature_with_call
 	callq	Proc_4
 # BB#12:                                #   in Loop: Header=BB0_9 Depth=1
-	movl	$65549, %edi            # imm = 0x1000D
+	movl	$7, %edi
 	callq	enqueue_signature
 	leaq	-128(%rbp), %rdi
 	movl	$2, -24(%rbp)
@@ -122,7 +122,7 @@ main:                                   # @main
 	movl	$.L.str.2, %esi
 	callq	strcpy
 # BB#13:                                #   in Loop: Header=BB0_9 Depth=1
-	movl	$65550, %edi            # imm = 0x1000E
+	movl	$4, %edi
 	callq	enqueue_signature_with_call
 	leaq	-128(%rbp), %rsi
 	leaq	-160(%rbp), %rdi
@@ -131,7 +131,7 @@ main:                                   # @main
 	callq	Func_2
 	movl	%eax, %ebx
 # BB#14:                                #   in Loop: Header=BB0_9 Depth=1
-	movl	$65551, %edi            # imm = 0x1000F
+	movl	$6, %edi
 	callq	enqueue_signature
 	cmpl	$0, %ebx
 	setne	%al
@@ -141,13 +141,13 @@ main:                                   # @main
 	movl	%eax, Bool_Glob
 .LBB0_15:                               #   Parent Loop BB0_9 Depth=1
                                         # =>  This Inner Loop Header: Depth=2
-	movl	$65552, %edi            # imm = 0x10010
+	movl	$7, %edi
 	callq	enqueue_signature
 	movl	-24(%rbp), %eax
 	cmpl	-28(%rbp), %eax
 	jge	.LBB0_18
 # BB#16:                                #   in Loop: Header=BB0_15 Depth=2
-	movl	$65553, %edi            # imm = 0x10011
+	movl	$16, %edi
 	callq	enqueue_signature_with_call
 	leaq	-36(%rbp), %rdx
 	imull	$5, -24(%rbp), %eax
@@ -158,14 +158,14 @@ main:                                   # @main
 	movb	$0, %al
 	callq	Proc_7
 # BB#17:                                #   in Loop: Header=BB0_15 Depth=2
-	movl	$65554, %edi            # imm = 0x10012
+	movl	$9, %edi
 	callq	enqueue_signature
 	movl	-24(%rbp), %eax
 	addl	$1, %eax
 	movl	%eax, -24(%rbp)
 	jmp	.LBB0_15
 .LBB0_18:                               #   in Loop: Header=BB0_9 Depth=1
-	movl	$65555, %edi            # imm = 0x10013
+	movl	$5, %edi
 	callq	enqueue_signature_with_call
 	movabsq	$Arr_1_Glob, %rdi
 	movabsq	$Arr_2_Glob, %rsi
@@ -174,24 +174,24 @@ main:                                   # @main
 	movb	$0, %al
 	callq	Proc_8
 # BB#19:                                #   in Loop: Header=BB0_9 Depth=1
-	movl	$65556, %edi            # imm = 0x10014
+	movl	$3, %edi
 	callq	enqueue_signature_with_call
 	movq	Ptr_Glob, %rdi
 	callq	Proc_1
 # BB#20:                                #   in Loop: Header=BB0_9 Depth=1
-	movl	$65557, %edi            # imm = 0x10015
+	movl	$4, %edi
 	callq	enqueue_signature
 	movb	$65, -17(%rbp)
 .LBB0_21:                               #   Parent Loop BB0_9 Depth=1
                                         # =>  This Inner Loop Header: Depth=2
-	movl	$65558, %edi            # imm = 0x10016
+	movl	$7, %edi
 	callq	enqueue_signature
 	movsbl	-17(%rbp), %eax
 	movsbl	Ch_2_Glob, %ecx
 	cmpl	%ecx, %eax
 	jg	.LBB0_29
 # BB#22:                                #   in Loop: Header=BB0_21 Depth=2
-	movl	$65559, %edi            # imm = 0x10017
+	movl	$5, %edi
 	callq	enqueue_signature_with_call
 	movl	-44(%rbp), %r14d
 	movsbl	-17(%rbp), %edi
@@ -200,42 +200,42 @@ main:                                   # @main
 	callq	Func_1
 	movl	%eax, %ebx
 # BB#23:                                #   in Loop: Header=BB0_21 Depth=2
-	movl	$65560, %edi            # imm = 0x10018
+	movl	$3, %edi
 	callq	enqueue_signature
 	cmpl	%ebx, %r14d
 	jne	.LBB0_27
 # BB#24:                                #   in Loop: Header=BB0_21 Depth=2
-	movl	$65561, %edi            # imm = 0x10019
+	movl	$1, %edi
 	callq	enqueue_signature_with_call
 	leaq	-44(%rbp), %rsi
 	xorl	%edi, %edi
 	movb	$0, %al
 	callq	Proc_6
 # BB#25:                                #   in Loop: Header=BB0_21 Depth=2
-	movl	$65562, %edi            # imm = 0x1001A
+	movl	$1, %edi
 	callq	enqueue_signature
 	leaq	-128(%rbp), %rdi
 	movl	$.L.str.3, %esi
 	callq	strcpy
 # BB#26:                                #   in Loop: Header=BB0_21 Depth=2
-	movl	$65563, %edi            # imm = 0x1001B
+	movl	$11, %edi
 	callq	enqueue_signature
 	movl	-32(%rbp), %eax
 	movl	%eax, -28(%rbp)
 	movl	-32(%rbp), %eax
 	movl	%eax, Int_Glob
 .LBB0_27:                               #   in Loop: Header=BB0_21 Depth=2
-	movl	$65564, %edi            # imm = 0x1001C
+	movl	$1, %edi
 	callq	enqueue_signature
 # BB#28:                                #   in Loop: Header=BB0_21 Depth=2
-	movl	$65565, %edi            # imm = 0x1001D
+	movl	$9, %edi
 	callq	enqueue_signature
 	movb	-17(%rbp), %al
 	addb	$1, %al
 	movb	%al, -17(%rbp)
 	jmp	.LBB0_21
 .LBB0_29:                               #   in Loop: Header=BB0_9 Depth=1
-	movl	$65566, %edi            # imm = 0x1001E
+	movl	$36, %edi
 	callq	enqueue_signature_with_call
 	leaq	-24(%rbp), %rdi
 	movl	-28(%rbp), %eax
@@ -252,14 +252,14 @@ main:                                   # @main
 	movl	%eax, -28(%rbp)
 	callq	Proc_2
 # BB#30:                                #   in Loop: Header=BB0_9 Depth=1
-	movl	$65567, %edi            # imm = 0x1001F
+	movl	$9, %edi
 	callq	enqueue_signature
 	movl	-32(%rbp), %eax
 	addl	$1, %eax
 	movl	%eax, -32(%rbp)
 	jmp	.LBB0_9
 .LBB0_31:
-	movl	$65568, %edi            # imm = 0x10020
+	movl	$12, %edi
 	callq	enqueue_signature
 	movq	End_Time, %rax
 	subq	Begin_Time, %rax
@@ -267,11 +267,11 @@ main:                                   # @main
 	cmpq	$1000, User_Time        # imm = 0x3E8
 	jge	.LBB0_33
 # BB#32:
-	movl	$65569, %edi            # imm = 0x10021
+	movl	$1, %edi
 	callq	enqueue_signature
 	jmp	.LBB0_34
 .LBB0_33:
-	movl	$65570, %edi            # imm = 0x10022
+	movl	$15, %edi
 	callq	enqueue_signature
 	movss	.LCPI0_0(%rip), %xmm0   # xmm0 = mem[0],zero,zero,zero
 	movsd	.LCPI0_1(%rip), %xmm1   # xmm1 = mem[0],zero
@@ -290,20 +290,20 @@ main:                                   # @main
 	divss	%xmm0, %xmm1
 	movss	%xmm1, Dhrystones_Per_Second
 .LBB0_34:
-	movl	$65571, %edi            # imm = 0x10023
+	movl	$1, %edi
 	callq	enqueue_signature
 	leaq	-72(%rbp), %rdi
 	xorl	%esi, %esi
 	movb	$0, %al
 	callq	gettimeofday
 # BB#35:
-	movl	$65572, %edi            # imm = 0x10024
+	movl	$1, %edi
 	callq	enqueue_signature
 	movabsq	$.L.str.4, %rdi
 	movb	$0, %al
 	callq	printf
 # BB#36:
-	movl	$65573, %edi            # imm = 0x10025
+	movl	$16, %edi
 	callq	enqueue_signature
 	movabsq	$.L.str.5, %rdi
 	movq	-72(%rbp), %rax
@@ -315,7 +315,7 @@ main:                                   # @main
 	movb	$0, %al
 	callq	printf
 # BB#37:
-	movl	$65574, %edi            # imm = 0x10026
+	movl	$3, %edi
 	callq	enqueue_signature_with_remainder_process
 	movl	-52(%rbp), %eax
 	addq	$144, %rsp
@@ -342,7 +342,7 @@ Proc_5:                                 # @Proc_5
 .Lcfi7:
 	.cfi_def_cfa_register %rbp
 	subq	$16, %rsp
-	movl	$327681, %edi           # imm = 0x50001
+	movl	$10, %edi
 	callq	enqueue_signature_with_return
 	movb	$65, Ch_1_Glob
 	movl	$0, Bool_Glob
@@ -369,7 +369,7 @@ Proc_4:                                 # @Proc_4
 .Lcfi10:
 	.cfi_def_cfa_register %rbp
 	subq	$16, %rsp
-	movl	$393217, %edi           # imm = 0x60001
+	movl	$22, %edi
 	callq	enqueue_signature_with_return
 	movsbl	Ch_1_Glob, %eax
 	cmpl	$65, %eax
@@ -408,7 +408,7 @@ Proc_1:                                 # @Proc_1
 .Lcfi14:
 	.cfi_offset %rbx, -24
 	movq	%rdi, %rbx
-	movl	$458753, %edi           # imm = 0x70001
+	movl	$20, %edi
 	callq	enqueue_signature
 	movq	%rbx, -24(%rbp)
 	movq	-24(%rbp), %rax
@@ -420,7 +420,7 @@ Proc_1:                                 # @Proc_1
 	movl	$56, %edx
 	callq	memcpy
 # BB#1:
-	movl	$458754, %edi           # imm = 0x70002
+	movl	$26, %edi
 	callq	enqueue_signature_with_call
 	movq	-24(%rbp), %rax
 	movl	$5, 16(%rax)
@@ -435,13 +435,13 @@ Proc_1:                                 # @Proc_1
 	movq	-16(%rbp), %rdi
 	callq	Proc_3
 # BB#2:
-	movl	$458755, %edi           # imm = 0x70003
+	movl	$7, %edi
 	callq	enqueue_signature
 	movq	-16(%rbp), %rax
 	cmpl	$0, 8(%rax)
 	jne	.LBB3_5
 # BB#3:
-	movl	$458756, %edi           # imm = 0x70004
+	movl	$12, %edi
 	callq	enqueue_signature_with_call
 	movq	-16(%rbp), %rax
 	movl	$6, 16(%rax)
@@ -452,7 +452,7 @@ Proc_1:                                 # @Proc_1
 	movb	$0, %al
 	callq	Proc_6
 # BB#4:
-	movl	$458757, %edi           # imm = 0x70005
+	movl	$16, %edi
 	callq	enqueue_signature_with_call
 	movq	Ptr_Glob, %rax
 	movq	(%rax), %rax
@@ -468,7 +468,7 @@ Proc_1:                                 # @Proc_1
 	callq	Proc_7
 	jmp	.LBB3_6
 .LBB3_5:
-	movl	$458758, %edi           # imm = 0x70006
+	movl	$7, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rdi
 	movq	-24(%rbp), %rax
@@ -476,7 +476,7 @@ Proc_1:                                 # @Proc_1
 	movl	$56, %edx
 	callq	memcpy
 .LBB3_6:
-	movl	$458759, %edi           # imm = 0x70007
+	movl	$3, %edi
 	callq	enqueue_signature_with_return
 	movl	-28(%rbp), %eax
 	addq	$24, %rsp
@@ -506,7 +506,7 @@ Proc_2:                                 # @Proc_2
 .Lcfi18:
 	.cfi_offset %rbx, -24
 	movq	%rdi, %rbx
-	movl	$524289, %edi           # imm = 0x80001
+	movl	$18, %edi
 	callq	enqueue_signature
 	movq	%rbx, -24(%rbp)
 	movq	-24(%rbp), %rax
@@ -514,13 +514,13 @@ Proc_2:                                 # @Proc_2
 	addl	$10, %eax
 	movl	%eax, -12(%rbp)
 .LBB4_1:                                # =>This Inner Loop Header: Depth=1
-	movl	$524290, %edi           # imm = 0x80002
+	movl	$5, %edi
 	callq	enqueue_signature
 	movsbl	Ch_1_Glob, %eax
 	cmpl	$65, %eax
 	jne	.LBB4_3
 # BB#2:                                 #   in Loop: Header=BB4_1 Depth=1
-	movl	$524291, %edi           # imm = 0x80003
+	movl	$18, %edi
 	callq	enqueue_signature
 	movl	-12(%rbp), %eax
 	subl	$1, %eax
@@ -531,15 +531,15 @@ Proc_2:                                 # @Proc_2
 	movl	%eax, (%rcx)
 	movl	$0, -16(%rbp)
 .LBB4_3:                                #   in Loop: Header=BB4_1 Depth=1
-	movl	$524292, %edi           # imm = 0x80004
+	movl	$1, %edi
 	callq	enqueue_signature
 # BB#4:                                 #   in Loop: Header=BB4_1 Depth=1
-	movl	$524293, %edi           # imm = 0x80005
+	movl	$5, %edi
 	callq	enqueue_signature
 	cmpl	$0, -16(%rbp)
 	jne	.LBB4_1
 # BB#5:
-	movl	$524294, %edi           # imm = 0x80006
+	movl	$3, %edi
 	callq	enqueue_signature_with_return
 	movl	-28(%rbp), %eax
 	addq	$24, %rsp
@@ -569,20 +569,20 @@ Proc_3:                                 # @Proc_3
 .Lcfi22:
 	.cfi_offset %rbx, -24
 	movq	%rdi, %rbx
-	movl	$720897, %edi           # imm = 0xB0001
+	movl	$10, %edi
 	callq	enqueue_signature
 	movq	%rbx, -16(%rbp)
 	cmpq	$0, Ptr_Glob
 	je	.LBB5_2
 # BB#1:
-	movl	$720898, %edi           # imm = 0xB0002
+	movl	$10, %edi
 	callq	enqueue_signature
 	movq	Ptr_Glob, %rax
 	movq	(%rax), %rax
 	movq	-16(%rbp), %rcx
 	movq	%rax, (%rcx)
 .LBB5_2:
-	movl	$720899, %edi           # imm = 0xB0003
+	movl	$5, %edi
 	callq	enqueue_signature_with_call
 	movl	Int_Glob, %esi
 	movq	Ptr_Glob, %rdx
@@ -592,7 +592,7 @@ Proc_3:                                 # @Proc_3
 	movb	$0, %al
 	callq	Proc_7
 # BB#3:
-	movl	$720900, %edi           # imm = 0xB0004
+	movl	$3, %edi
 	callq	enqueue_signature_with_return
 	movl	-20(%rbp), %eax
 	addq	$24, %rsp
@@ -626,7 +626,7 @@ Proc_6:                                 # @Proc_6
 	.cfi_offset %r14, -24
 	movq	%rsi, %r14
 	movl	%edi, %ebx
-	movl	$786433, %edi           # imm = 0xC0001
+	movl	$19, %edi
 	callq	enqueue_signature_with_call
 	movl	%ebx, -20(%rbp)
 	movq	%r14, -32(%rbp)
@@ -637,17 +637,17 @@ Proc_6:                                 # @Proc_6
 	callq	Func_3
 	movl	%eax, %ebx
 # BB#1:
-	movl	$786434, %edi           # imm = 0xC0002
+	movl	$3, %edi
 	callq	enqueue_signature
 	cmpl	$0, %ebx
 	jne	.LBB6_3
 # BB#2:
-	movl	$786435, %edi           # imm = 0xC0003
+	movl	$6, %edi
 	callq	enqueue_signature
 	movq	-32(%rbp), %rax
 	movl	$3, (%rax)
 .LBB6_3:
-	movl	$786436, %edi           # imm = 0xC0004
+	movl	$3, %edi
 	callq	enqueue_signature_with_return
 	movl	-36(%rbp), %eax
 	addq	$32, %rsp
@@ -678,7 +678,7 @@ Func_3:                                 # @Func_3
 .Lcfi31:
 	.cfi_offset %rbx, -24
 	movl	%edi, %ebx
-	movl	$851969, %edi           # imm = 0xD0001
+	movl	$16, %edi
 	callq	enqueue_signature
 	movl	%ebx, -20(%rbp)
 	movl	-20(%rbp), %eax
@@ -686,16 +686,16 @@ Func_3:                                 # @Func_3
 	cmpl	$2, -16(%rbp)
 	jne	.LBB7_2
 # BB#1:
-	movl	$851970, %edi           # imm = 0xD0002
+	movl	$4, %edi
 	callq	enqueue_signature
 	movl	$1, -12(%rbp)
 	jmp	.LBB7_3
 .LBB7_2:
-	movl	$851971, %edi           # imm = 0xD0003
+	movl	$4, %edi
 	callq	enqueue_signature
 	movl	$0, -12(%rbp)
 .LBB7_3:
-	movl	$851972, %edi           # imm = 0xD0004
+	movl	$3, %edi
 	callq	enqueue_signature_with_return
 	movl	-12(%rbp), %eax
 	addq	$24, %rsp
@@ -733,7 +733,7 @@ Proc_7:                                 # @Proc_7
 	movq	%rdx, %r14
 	movl	%esi, %r15d
 	movl	%edi, %ebx
-	movl	$917505, %edi           # imm = 0xE0001
+	movl	$37, %edi
 	callq	enqueue_signature_with_return
 	movl	%ebx, -36(%rbp)
 	movl	%r15d, -32(%rbp)
@@ -787,7 +787,7 @@ Proc_8:                                 # @Proc_8
 	movl	%edx, %r15d
 	movq	%rsi, %r12
 	movq	%rdi, %rbx
-	movl	$983041, %edi           # imm = 0xF0001
+	movl	$70, %edi
 	callq	enqueue_signature
 	movq	%rbx, -48(%rbp)
 	movq	%r12, -56(%rbp)
@@ -817,7 +817,7 @@ Proc_8:                                 # @Proc_8
 	movl	-36(%rbp), %eax
 	movl	%eax, -40(%rbp)
 .LBB9_1:                                # =>This Inner Loop Header: Depth=1
-	movl	$983042, %edi           # imm = 0xF0002
+	movl	$10, %edi
 	callq	enqueue_signature
 	movl	-40(%rbp), %eax
 	movl	-36(%rbp), %ecx
@@ -825,7 +825,7 @@ Proc_8:                                 # @Proc_8
 	cmpl	%ecx, %eax
 	jg	.LBB9_4
 # BB#2:                                 #   in Loop: Header=BB9_1 Depth=1
-	movl	$983043, %edi           # imm = 0xF0003
+	movl	$12, %edi
 	callq	enqueue_signature
 	movl	-36(%rbp), %eax
 	movq	-56(%rbp), %rcx
@@ -835,14 +835,14 @@ Proc_8:                                 # @Proc_8
 	movslq	-40(%rbp), %rcx
 	movl	%eax, (%rdx,%rcx,4)
 # BB#3:                                 #   in Loop: Header=BB9_1 Depth=1
-	movl	$983044, %edi           # imm = 0xF0004
+	movl	$9, %edi
 	callq	enqueue_signature
 	movl	-40(%rbp), %eax
 	addl	$1, %eax
 	movl	%eax, -40(%rbp)
 	jmp	.LBB9_1
 .LBB9_4:
-	movl	$983045, %edi           # imm = 0xF0005
+	movl	$38, %edi
 	callq	enqueue_signature_with_return
 	movq	-56(%rbp), %rax
 	movslq	-36(%rbp), %rcx
@@ -901,7 +901,7 @@ Func_1:                                 # @Func_1
 	.cfi_offset %r14, -24
 	movl	%esi, %r14d
 	movl	%edi, %ebx
-	movl	$1048577, %edi          # imm = 0x100001
+	movl	$28, %edi
 	callq	enqueue_signature
 	movb	%bl, -20(%rbp)
 	movb	%r14b, -19(%rbp)
@@ -914,18 +914,18 @@ Func_1:                                 # @Func_1
 	cmpl	%ecx, %eax
 	je	.LBB10_2
 # BB#1:
-	movl	$1048578, %edi          # imm = 0x100002
+	movl	$4, %edi
 	callq	enqueue_signature
 	movl	$0, -24(%rbp)
 	jmp	.LBB10_3
 .LBB10_2:
-	movl	$1048579, %edi          # imm = 0x100003
+	movl	$9, %edi
 	callq	enqueue_signature
 	movb	-17(%rbp), %al
 	movb	%al, Ch_1_Glob
 	movl	$1, -24(%rbp)
 .LBB10_3:
-	movl	$1048580, %edi          # imm = 0x100004
+	movl	$3, %edi
 	callq	enqueue_signature_with_return
 	movl	-24(%rbp), %eax
 	addq	$16, %rsp
@@ -960,18 +960,18 @@ Func_2:                                 # @Func_2
 	.cfi_offset %r14, -24
 	movq	%rsi, %r14
 	movq	%rdi, %rbx
-	movl	$1114113, %edi          # imm = 0x110001
+	movl	$15, %edi
 	callq	enqueue_signature
 	movq	%rbx, -48(%rbp)
 	movq	%r14, -40(%rbp)
 	movl	$2, -24(%rbp)
 .LBB11_1:                               # =>This Inner Loop Header: Depth=1
-	movl	$1114114, %edi          # imm = 0x110002
+	movl	$5, %edi
 	callq	enqueue_signature
 	cmpl	$2, -24(%rbp)
 	jg	.LBB11_6
 # BB#2:                                 #   in Loop: Header=BB11_1 Depth=1
-	movl	$1114115, %edi          # imm = 0x110003
+	movl	$16, %edi
 	callq	enqueue_signature_with_call
 	movq	-48(%rbp), %rax
 	movslq	-24(%rbp), %rcx
@@ -984,62 +984,62 @@ Func_2:                                 # @Func_2
 	callq	Func_1
 	movl	%eax, %ebx
 # BB#3:                                 #   in Loop: Header=BB11_1 Depth=1
-	movl	$1114116, %edi          # imm = 0x110004
+	movl	$3, %edi
 	callq	enqueue_signature
 	cmpl	$0, %ebx
 	jne	.LBB11_5
 # BB#4:                                 #   in Loop: Header=BB11_1 Depth=1
-	movl	$1114117, %edi          # imm = 0x110005
+	movl	$12, %edi
 	callq	enqueue_signature
 	movb	$65, -17(%rbp)
 	movl	-24(%rbp), %eax
 	addl	$1, %eax
 	movl	%eax, -24(%rbp)
 .LBB11_5:                               #   in Loop: Header=BB11_1 Depth=1
-	movl	$1114118, %edi          # imm = 0x110006
+	movl	$1, %edi
 	callq	enqueue_signature
 	jmp	.LBB11_1
 .LBB11_6:
-	movl	$1114119, %edi          # imm = 0x110007
+	movl	$5, %edi
 	callq	enqueue_signature
 	movsbl	-17(%rbp), %eax
 	cmpl	$87, %eax
 	jl	.LBB11_9
 # BB#7:
-	movl	$1114120, %edi          # imm = 0x110008
+	movl	$5, %edi
 	callq	enqueue_signature
 	movsbl	-17(%rbp), %eax
 	cmpl	$90, %eax
 	jge	.LBB11_9
 # BB#8:
-	movl	$1114121, %edi          # imm = 0x110009
+	movl	$4, %edi
 	callq	enqueue_signature
 	movl	$7, -24(%rbp)
 .LBB11_9:
-	movl	$1114122, %edi          # imm = 0x11000A
+	movl	$5, %edi
 	callq	enqueue_signature
 	movsbl	-17(%rbp), %eax
 	cmpl	$82, %eax
 	jne	.LBB11_11
 # BB#10:
-	movl	$1114123, %edi          # imm = 0x11000B
+	movl	$4, %edi
 	callq	enqueue_signature
 	movl	$1, -28(%rbp)
 	jmp	.LBB11_15
 .LBB11_11:
-	movl	$1114124, %edi          # imm = 0x11000C
+	movl	$5, %edi
 	callq	enqueue_signature
 	movq	-48(%rbp), %rdi
 	movq	-40(%rbp), %rsi
 	callq	strcmp
 	movl	%eax, %ebx
 # BB#12:
-	movl	$1114125, %edi          # imm = 0x11000D
+	movl	$3, %edi
 	callq	enqueue_signature
 	cmpl	$0, %ebx
 	jle	.LBB11_14
 # BB#13:
-	movl	$1114126, %edi          # imm = 0x11000E
+	movl	$17, %edi
 	callq	enqueue_signature
 	movl	-24(%rbp), %eax
 	addl	$7, %eax
@@ -1049,11 +1049,11 @@ Func_2:                                 # @Func_2
 	movl	$1, -28(%rbp)
 	jmp	.LBB11_15
 .LBB11_14:
-	movl	$1114127, %edi          # imm = 0x11000F
+	movl	$4, %edi
 	callq	enqueue_signature
 	movl	$0, -28(%rbp)
 .LBB11_15:
-	movl	$1114128, %edi          # imm = 0x110010
+	movl	$3, %edi
 	callq	enqueue_signature_with_return
 	movl	-28(%rbp), %eax
 	addq	$32, %rsp

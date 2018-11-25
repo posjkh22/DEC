@@ -17,7 +17,7 @@ target triple = "x86_64-unknown-linux-gnu"
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define void @sha_init(%struct.SHA_INFO*) #0 {
-  call void @enqueue_signature_with_return(i32 65537)
+  call void @enqueue_signature_with_return(i32 40)
   %2 = alloca %struct.SHA_INFO*, align 8
   store %struct.SHA_INFO* %0, %struct.SHA_INFO** %2, align 8
   %3 = load %struct.SHA_INFO*, %struct.SHA_INFO** %2, align 8
@@ -51,7 +51,7 @@ define void @sha_init(%struct.SHA_INFO*) #0 {
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define void @sha_update(%struct.SHA_INFO*, i8*, i32) #0 {
-  call void @enqueue_signature(i32 131073)
+  call void @enqueue_signature(i32 28)
   %4 = alloca %struct.SHA_INFO*, align 8
   %5 = alloca i8*, align 8
   %6 = alloca i32, align 4
@@ -72,7 +72,7 @@ define void @sha_update(%struct.SHA_INFO*, i8*, i32) #0 {
   br i1 %17, label %18, label %23
 
 ; <label>:18:                                     ; preds = %3
-  call void @enqueue_signature(i32 131074)
+  call void @enqueue_signature(i32 11)
   %19 = load %struct.SHA_INFO*, %struct.SHA_INFO** %4, align 8
   %20 = getelementptr inbounds %struct.SHA_INFO, %struct.SHA_INFO* %19, i32 0, i32 2
   %21 = load i64, i64* %20, align 8
@@ -81,7 +81,7 @@ define void @sha_update(%struct.SHA_INFO*, i8*, i32) #0 {
   br label %23
 
 ; <label>:23:                                     ; preds = %18, %3
-  call void @enqueue_signature(i32 131075)
+  call void @enqueue_signature(i32 25)
   %24 = load i32, i32* %6, align 4
   %25 = sext i32 %24 to i64
   %26 = shl i64 %25, 3
@@ -101,13 +101,13 @@ define void @sha_update(%struct.SHA_INFO*, i8*, i32) #0 {
   br label %38
 
 ; <label>:38:                                     ; preds = %53, %23
-  call void @enqueue_signature(i32 131076)
+  call void @enqueue_signature(i32 5)
   %39 = load i32, i32* %6, align 4
   %40 = icmp sge i32 %39, 64
   br i1 %40, label %41, label %58
 
 ; <label>:41:                                     ; preds = %38
-  call void @enqueue_signature(i32 131077)
+  call void @enqueue_signature(i32 5)
   %42 = load %struct.SHA_INFO*, %struct.SHA_INFO** %4, align 8
   %43 = getelementptr inbounds %struct.SHA_INFO, %struct.SHA_INFO* %42, i32 0, i32 3
   %44 = getelementptr inbounds [16 x i64], [16 x i64]* %43, i32 0, i32 0
@@ -117,7 +117,7 @@ define void @sha_update(%struct.SHA_INFO*, i8*, i32) #0 {
   br label %47
 
 ; <label>:47:                                     ; preds = %41
-  call void @enqueue_signature_with_call(i32 131078)
+  call void @enqueue_signature_with_call(i32 3)
   %48 = load %struct.SHA_INFO*, %struct.SHA_INFO** %4, align 8
   %49 = getelementptr inbounds %struct.SHA_INFO, %struct.SHA_INFO* %48, i32 0, i32 3
   %50 = getelementptr inbounds [16 x i64], [16 x i64]* %49, i32 0, i32 0
@@ -125,13 +125,13 @@ define void @sha_update(%struct.SHA_INFO*, i8*, i32) #0 {
   br label %51
 
 ; <label>:51:                                     ; preds = %47
-  call void @enqueue_signature_with_call(i32 131079)
+  call void @enqueue_signature_with_call(i32 3)
   %52 = load %struct.SHA_INFO*, %struct.SHA_INFO** %4, align 8
   call void @sha_transform(%struct.SHA_INFO* %52)
   br label %53
 
 ; <label>:53:                                     ; preds = %51
-  call void @enqueue_signature(i32 131080)
+  call void @enqueue_signature(i32 11)
   %54 = load i8*, i8** %5, align 8
   %55 = getelementptr inbounds i8, i8* %54, i64 64
   store i8* %55, i8** %5, align 8
@@ -141,7 +141,7 @@ define void @sha_update(%struct.SHA_INFO*, i8*, i32) #0 {
   br label %38
 
 ; <label>:58:                                     ; preds = %38
-  call void @enqueue_signature(i32 131081)
+  call void @enqueue_signature(i32 7)
   %59 = load %struct.SHA_INFO*, %struct.SHA_INFO** %4, align 8
   %60 = getelementptr inbounds %struct.SHA_INFO, %struct.SHA_INFO* %59, i32 0, i32 3
   %61 = getelementptr inbounds [16 x i64], [16 x i64]* %60, i32 0, i32 0
@@ -153,7 +153,7 @@ define void @sha_update(%struct.SHA_INFO*, i8*, i32) #0 {
   br label %66
 
 ; <label>:66:                                     ; preds = %58
-  call void @enqueue_signature_with_return(i32 131082)
+  call void @enqueue_signature_with_return(i32 1)
   ret void
 }
 
@@ -162,7 +162,7 @@ declare void @llvm.memcpy.p0i8.p0i8.i64(i8* nocapture writeonly, i8* nocapture r
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define internal void @byte_reverse(i64*, i32) #0 {
-  call void @enqueue_signature(i32 262145)
+  call void @enqueue_signature(i32 25)
   %3 = alloca i64*, align 8
   %4 = alloca i32, align 4
   %5 = alloca i32, align 4
@@ -182,14 +182,14 @@ define internal void @byte_reverse(i64*, i32) #0 {
   br label %14
 
 ; <label>:14:                                     ; preds = %53, %2
-  call void @enqueue_signature(i32 262146)
+  call void @enqueue_signature(i32 7)
   %15 = load i32, i32* %5, align 4
   %16 = load i32, i32* %4, align 4
   %17 = icmp slt i32 %15, %16
   br i1 %17, label %18, label %56
 
 ; <label>:18:                                     ; preds = %14
-  call void @enqueue_signature(i32 262147)
+  call void @enqueue_signature(i32 62)
   %19 = load i8*, i8** %7, align 8
   %20 = getelementptr inbounds i8, i8* %19, i64 0
   %21 = load i8, i8* %20, align 1
@@ -236,20 +236,20 @@ define internal void @byte_reverse(i64*, i32) #0 {
   br label %53
 
 ; <label>:53:                                     ; preds = %18
-  call void @enqueue_signature(i32 262148)
+  call void @enqueue_signature(i32 9)
   %54 = load i32, i32* %5, align 4
   %55 = add nsw i32 %54, 1
   store i32 %55, i32* %5, align 4
   br label %14
 
 ; <label>:56:                                     ; preds = %14
-  call void @enqueue_signature_with_return(i32 262149)
+  call void @enqueue_signature_with_return(i32 1)
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define internal void @sha_transform(%struct.SHA_INFO*) #0 {
-  call void @enqueue_signature(i32 327681)
+  call void @enqueue_signature(i32 16)
   %2 = alloca %struct.SHA_INFO*, align 8
   %3 = alloca i32, align 4
   %4 = alloca i64, align 8
@@ -264,13 +264,13 @@ define internal void @sha_transform(%struct.SHA_INFO*) #0 {
   br label %11
 
 ; <label>:11:                                     ; preds = %24, %1
-  call void @enqueue_signature(i32 327682)
+  call void @enqueue_signature(i32 5)
   %12 = load i32, i32* %3, align 4
   %13 = icmp slt i32 %12, 16
   br i1 %13, label %14, label %27
 
 ; <label>:14:                                     ; preds = %11
-  call void @enqueue_signature(i32 327683)
+  call void @enqueue_signature(i32 12)
   %15 = load %struct.SHA_INFO*, %struct.SHA_INFO** %2, align 8
   %16 = getelementptr inbounds %struct.SHA_INFO, %struct.SHA_INFO* %15, i32 0, i32 3
   %17 = load i32, i32* %3, align 4
@@ -284,25 +284,25 @@ define internal void @sha_transform(%struct.SHA_INFO*) #0 {
   br label %24
 
 ; <label>:24:                                     ; preds = %14
-  call void @enqueue_signature(i32 327684)
+  call void @enqueue_signature(i32 9)
   %25 = load i32, i32* %3, align 4
   %26 = add nsw i32 %25, 1
   store i32 %26, i32* %3, align 4
   br label %11
 
 ; <label>:27:                                     ; preds = %11
-  call void @enqueue_signature(i32 327685)
+  call void @enqueue_signature(i32 4)
   store i32 16, i32* %3, align 4
   br label %28
 
 ; <label>:28:                                     ; preds = %58, %27
-  call void @enqueue_signature(i32 327686)
+  call void @enqueue_signature(i32 5)
   %29 = load i32, i32* %3, align 4
   %30 = icmp slt i32 %29, 80
   br i1 %30, label %31, label %61
 
 ; <label>:31:                                     ; preds = %28
-  call void @enqueue_signature(i32 327687)
+  call void @enqueue_signature(i32 22)
   %32 = load i32, i32* %3, align 4
   %33 = sub nsw i32 %32, 3
   %34 = sext i32 %33 to i64
@@ -333,14 +333,14 @@ define internal void @sha_transform(%struct.SHA_INFO*) #0 {
   br label %58
 
 ; <label>:58:                                     ; preds = %31
-  call void @enqueue_signature(i32 327688)
+  call void @enqueue_signature(i32 9)
   %59 = load i32, i32* %3, align 4
   %60 = add nsw i32 %59, 1
   store i32 %60, i32* %3, align 4
   br label %28
 
 ; <label>:61:                                     ; preds = %28
-  call void @enqueue_signature(i32 327689)
+  call void @enqueue_signature(i32 39)
   %62 = load %struct.SHA_INFO*, %struct.SHA_INFO** %2, align 8
   %63 = getelementptr inbounds %struct.SHA_INFO, %struct.SHA_INFO* %62, i32 0, i32 0
   %64 = getelementptr inbounds [5 x i64], [5 x i64]* %63, i64 0, i64 0
@@ -370,13 +370,13 @@ define internal void @sha_transform(%struct.SHA_INFO*) #0 {
   br label %82
 
 ; <label>:82:                                     ; preds = %117, %61
-  call void @enqueue_signature(i32 327690)
+  call void @enqueue_signature(i32 5)
   %83 = load i32, i32* %3, align 4
   %84 = icmp slt i32 %83, 20
   br i1 %84, label %85, label %120
 
 ; <label>:85:                                     ; preds = %82
-  call void @enqueue_signature(i32 327691)
+  call void @enqueue_signature(i32 61)
   %86 = load i64, i64* %5, align 8
   %87 = shl i64 %86, 5
   %88 = load i64, i64* %5, align 8
@@ -417,25 +417,25 @@ define internal void @sha_transform(%struct.SHA_INFO*) #0 {
   br label %117
 
 ; <label>:117:                                    ; preds = %85
-  call void @enqueue_signature(i32 327692)
+  call void @enqueue_signature(i32 9)
   %118 = load i32, i32* %3, align 4
   %119 = add nsw i32 %118, 1
   store i32 %119, i32* %3, align 4
   br label %82
 
 ; <label>:120:                                    ; preds = %82
-  call void @enqueue_signature(i32 327693)
+  call void @enqueue_signature(i32 4)
   store i32 20, i32* %3, align 4
   br label %121
 
 ; <label>:121:                                    ; preds = %153, %120
-  call void @enqueue_signature(i32 327694)
+  call void @enqueue_signature(i32 5)
   %122 = load i32, i32* %3, align 4
   %123 = icmp slt i32 %122, 40
   br i1 %123, label %124, label %156
 
 ; <label>:124:                                    ; preds = %121
-  call void @enqueue_signature(i32 327695)
+  call void @enqueue_signature(i32 59)
   %125 = load i64, i64* %5, align 8
   %126 = shl i64 %125, 5
   %127 = load i64, i64* %5, align 8
@@ -473,25 +473,25 @@ define internal void @sha_transform(%struct.SHA_INFO*) #0 {
   br label %153
 
 ; <label>:153:                                    ; preds = %124
-  call void @enqueue_signature(i32 327696)
+  call void @enqueue_signature(i32 9)
   %154 = load i32, i32* %3, align 4
   %155 = add nsw i32 %154, 1
   store i32 %155, i32* %3, align 4
   br label %121
 
 ; <label>:156:                                    ; preds = %121
-  call void @enqueue_signature(i32 327697)
+  call void @enqueue_signature(i32 4)
   store i32 40, i32* %3, align 4
   br label %157
 
 ; <label>:157:                                    ; preds = %195, %156
-  call void @enqueue_signature(i32 327698)
+  call void @enqueue_signature(i32 5)
   %158 = load i32, i32* %3, align 4
   %159 = icmp slt i32 %158, 60
   br i1 %159, label %160, label %198
 
 ; <label>:160:                                    ; preds = %157
-  call void @enqueue_signature(i32 327699)
+  call void @enqueue_signature(i32 65)
   %161 = load i64, i64* %5, align 8
   %162 = shl i64 %161, 5
   %163 = load i64, i64* %5, align 8
@@ -535,25 +535,25 @@ define internal void @sha_transform(%struct.SHA_INFO*) #0 {
   br label %195
 
 ; <label>:195:                                    ; preds = %160
-  call void @enqueue_signature(i32 327700)
+  call void @enqueue_signature(i32 9)
   %196 = load i32, i32* %3, align 4
   %197 = add nsw i32 %196, 1
   store i32 %197, i32* %3, align 4
   br label %157
 
 ; <label>:198:                                    ; preds = %157
-  call void @enqueue_signature(i32 327701)
+  call void @enqueue_signature(i32 4)
   store i32 60, i32* %3, align 4
   br label %199
 
 ; <label>:199:                                    ; preds = %231, %198
-  call void @enqueue_signature(i32 327702)
+  call void @enqueue_signature(i32 5)
   %200 = load i32, i32* %3, align 4
   %201 = icmp slt i32 %200, 80
   br i1 %201, label %202, label %234
 
 ; <label>:202:                                    ; preds = %199
-  call void @enqueue_signature(i32 327703)
+  call void @enqueue_signature(i32 59)
   %203 = load i64, i64* %5, align 8
   %204 = shl i64 %203, 5
   %205 = load i64, i64* %5, align 8
@@ -591,14 +591,14 @@ define internal void @sha_transform(%struct.SHA_INFO*) #0 {
   br label %231
 
 ; <label>:231:                                    ; preds = %202
-  call void @enqueue_signature(i32 327704)
+  call void @enqueue_signature(i32 9)
   %232 = load i32, i32* %3, align 4
   %233 = add nsw i32 %232, 1
   store i32 %233, i32* %3, align 4
   br label %199
 
 ; <label>:234:                                    ; preds = %199
-  call void @enqueue_signature_with_return(i32 327705)
+  call void @enqueue_signature_with_return(i32 61)
   %235 = load i64, i64* %5, align 8
   %236 = load %struct.SHA_INFO*, %struct.SHA_INFO** %2, align 8
   %237 = getelementptr inbounds %struct.SHA_INFO, %struct.SHA_INFO* %236, i32 0, i32 0
@@ -639,7 +639,7 @@ define internal void @sha_transform(%struct.SHA_INFO*) #0 {
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define void @sha_final(%struct.SHA_INFO*) #0 {
-  call void @enqueue_signature(i32 393217)
+  call void @enqueue_signature(i32 44)
   %2 = alloca %struct.SHA_INFO*, align 8
   %3 = alloca i32, align 4
   %4 = alloca i64, align 8
@@ -673,7 +673,7 @@ define void @sha_final(%struct.SHA_INFO*) #0 {
   br i1 %25, label %26, label %46
 
 ; <label>:26:                                     ; preds = %1
-  call void @enqueue_signature(i32 393218)
+  call void @enqueue_signature(i32 7)
   %27 = load %struct.SHA_INFO*, %struct.SHA_INFO** %2, align 8
   %28 = getelementptr inbounds %struct.SHA_INFO, %struct.SHA_INFO* %27, i32 0, i32 3
   %29 = bitcast [16 x i64]* %28 to i8*
@@ -687,7 +687,7 @@ define void @sha_final(%struct.SHA_INFO*) #0 {
   br label %36
 
 ; <label>:36:                                     ; preds = %26
-  call void @enqueue_signature_with_call(i32 393219)
+  call void @enqueue_signature_with_call(i32 3)
   %37 = load %struct.SHA_INFO*, %struct.SHA_INFO** %2, align 8
   %38 = getelementptr inbounds %struct.SHA_INFO, %struct.SHA_INFO* %37, i32 0, i32 3
   %39 = getelementptr inbounds [16 x i64], [16 x i64]* %38, i32 0, i32 0
@@ -695,13 +695,13 @@ define void @sha_final(%struct.SHA_INFO*) #0 {
   br label %40
 
 ; <label>:40:                                     ; preds = %36
-  call void @enqueue_signature_with_call(i32 393220)
+  call void @enqueue_signature_with_call(i32 3)
   %41 = load %struct.SHA_INFO*, %struct.SHA_INFO** %2, align 8
   call void @sha_transform(%struct.SHA_INFO* %41)
   br label %42
 
 ; <label>:42:                                     ; preds = %40
-  call void @enqueue_signature(i32 393221)
+  call void @enqueue_signature(i32 3)
   %43 = load %struct.SHA_INFO*, %struct.SHA_INFO** %2, align 8
   %44 = getelementptr inbounds %struct.SHA_INFO, %struct.SHA_INFO* %43, i32 0, i32 3
   %45 = bitcast [16 x i64]* %44 to i8*
@@ -709,7 +709,7 @@ define void @sha_final(%struct.SHA_INFO*) #0 {
   br label %56
 
 ; <label>:46:                                     ; preds = %1
-  call void @enqueue_signature(i32 393222)
+  call void @enqueue_signature(i32 7)
   %47 = load %struct.SHA_INFO*, %struct.SHA_INFO** %2, align 8
   %48 = getelementptr inbounds %struct.SHA_INFO, %struct.SHA_INFO* %47, i32 0, i32 3
   %49 = bitcast [16 x i64]* %48 to i8*
@@ -723,7 +723,7 @@ define void @sha_final(%struct.SHA_INFO*) #0 {
   br label %56
 
 ; <label>:56:                                     ; preds = %46, %42
-  call void @enqueue_signature_with_call(i32 393223)
+  call void @enqueue_signature_with_call(i32 3)
   %57 = load %struct.SHA_INFO*, %struct.SHA_INFO** %2, align 8
   %58 = getelementptr inbounds %struct.SHA_INFO, %struct.SHA_INFO* %57, i32 0, i32 3
   %59 = getelementptr inbounds [16 x i64], [16 x i64]* %58, i32 0, i32 0
@@ -731,7 +731,7 @@ define void @sha_final(%struct.SHA_INFO*) #0 {
   br label %60
 
 ; <label>:60:                                     ; preds = %56
-  call void @enqueue_signature_with_call(i32 393224)
+  call void @enqueue_signature_with_call(i32 17)
   %61 = load i64, i64* %5, align 8
   %62 = load %struct.SHA_INFO*, %struct.SHA_INFO** %2, align 8
   %63 = getelementptr inbounds %struct.SHA_INFO, %struct.SHA_INFO* %62, i32 0, i32 3
@@ -747,7 +747,7 @@ define void @sha_final(%struct.SHA_INFO*) #0 {
   br label %70
 
 ; <label>:70:                                     ; preds = %60
-  call void @enqueue_signature_with_return(i32 393225)
+  call void @enqueue_signature_with_return(i32 1)
   ret void
 }
 
@@ -756,7 +756,7 @@ declare void @llvm.memset.p0i8.i64(i8* nocapture writeonly, i8, i64, i32, i1) #1
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define void @sha_stream(%struct.SHA_INFO*, %struct._IO_FILE*) #0 {
-  call void @enqueue_signature_with_call(i32 524289)
+  call void @enqueue_signature_with_call(i32 13)
   %3 = alloca %struct.SHA_INFO*, align 8
   %4 = alloca %struct._IO_FILE*, align 8
   %5 = alloca i32, align 4
@@ -768,21 +768,21 @@ define void @sha_stream(%struct.SHA_INFO*, %struct._IO_FILE*) #0 {
   br label %8
 
 ; <label>:8:                                      ; preds = %15, %2
-  call void @enqueue_signature(i32 524290)
+  call void @enqueue_signature(i32 3)
   %9 = getelementptr inbounds [8192 x i8], [8192 x i8]* %6, i32 0, i32 0
   %10 = load %struct._IO_FILE*, %struct._IO_FILE** %4, align 8
   %11 = call i64 @fread(i8* %9, i64 1, i64 8192, %struct._IO_FILE* %10)
   br label %12
 
 ; <label>:12:                                     ; preds = %8
-  call void @enqueue_signature(i32 524291)
+  call void @enqueue_signature(i32 6)
   %13 = trunc i64 %11 to i32
   store i32 %13, i32* %5, align 4
   %14 = icmp sgt i32 %13, 0
   br i1 %14, label %15, label %19
 
 ; <label>:15:                                     ; preds = %12
-  call void @enqueue_signature_with_call(i32 524292)
+  call void @enqueue_signature_with_call(i32 5)
   %16 = load %struct.SHA_INFO*, %struct.SHA_INFO** %3, align 8
   %17 = getelementptr inbounds [8192 x i8], [8192 x i8]* %6, i32 0, i32 0
   %18 = load i32, i32* %5, align 4
@@ -790,13 +790,13 @@ define void @sha_stream(%struct.SHA_INFO*, %struct._IO_FILE*) #0 {
   br label %8
 
 ; <label>:19:                                     ; preds = %12
-  call void @enqueue_signature_with_call(i32 524293)
+  call void @enqueue_signature_with_call(i32 3)
   %20 = load %struct.SHA_INFO*, %struct.SHA_INFO** %3, align 8
   call void @sha_final(%struct.SHA_INFO* %20)
   br label %21
 
 ; <label>:21:                                     ; preds = %19
-  call void @enqueue_signature_with_return(i32 524294)
+  call void @enqueue_signature_with_return(i32 1)
   ret void
 }
 
@@ -804,7 +804,7 @@ declare i64 @fread(i8*, i64, i64, %struct._IO_FILE*) #2
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define void @sha_print(%struct.SHA_INFO*) #0 {
-  call void @enqueue_signature_with_return(i32 655361)
+  call void @enqueue_signature_with_return(i32 5)
   %2 = alloca %struct.SHA_INFO*, align 8
   store %struct.SHA_INFO* %0, %struct.SHA_INFO** %2, align 8
   ret void
@@ -813,7 +813,7 @@ define void @sha_print(%struct.SHA_INFO*) #0 {
 ; Function Attrs: noinline nounwind optnone uwtable
 define i32 @main(i32, i8**) #0 {
   call void @init_monitor()
-  call void @enqueue_signature(i32 720897)
+  call void @enqueue_signature(i32 17)
   %3 = alloca i32, align 4
   %4 = alloca i32, align 4
   %5 = alloca i8**, align 8
@@ -828,40 +828,40 @@ define i32 @main(i32, i8**) #0 {
   br label %11
 
 ; <label>:11:                                     ; preds = %2
-  call void @enqueue_signature(i32 720898)
+  call void @enqueue_signature(i32 1)
   %12 = call %struct._IO_FILE* @fopen(i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.1, i32 0, i32 0))
   br label %13
 
 ; <label>:13:                                     ; preds = %11
-  call void @enqueue_signature_with_call(i32 720899)
+  call void @enqueue_signature_with_call(i32 6)
   store %struct._IO_FILE* %12, %struct._IO_FILE** %6, align 8
   %14 = load %struct._IO_FILE*, %struct._IO_FILE** %6, align 8
   call void @sha_stream(%struct.SHA_INFO* %9, %struct._IO_FILE* %14)
   br label %15
 
 ; <label>:15:                                     ; preds = %13
-  call void @enqueue_signature_with_call(i32 720900)
+  call void @enqueue_signature_with_call(i32 1)
   call void @sha_print(%struct.SHA_INFO* %9)
   br label %16
 
 ; <label>:16:                                     ; preds = %15
-  call void @enqueue_signature(i32 720901)
+  call void @enqueue_signature(i32 3)
   %17 = load %struct._IO_FILE*, %struct._IO_FILE** %6, align 8
   %18 = call i32 @fclose(%struct._IO_FILE* %17)
   br label %19
 
 ; <label>:19:                                     ; preds = %16
-  call void @enqueue_signature(i32 720902)
+  call void @enqueue_signature(i32 1)
   %20 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([21 x i8], [21 x i8]* @.str.2, i32 0, i32 0))
   br label %21
 
 ; <label>:21:                                     ; preds = %19
-  call void @enqueue_signature(i32 720903)
+  call void @enqueue_signature(i32 1)
   %22 = call i32 @gettimeofday(%struct.timeval* %8, %struct.timezone* null) #4
   br label %23
 
 ; <label>:23:                                     ; preds = %21
-  call void @enqueue_signature(i32 720904)
+  call void @enqueue_signature(i32 16)
   %24 = getelementptr inbounds %struct.timeval, %struct.timeval* %8, i32 0, i32 0
   %25 = load i64, i64* %24, align 8
   %26 = getelementptr inbounds %struct.timeval, %struct.timeval* %7, i32 0, i32 0
@@ -878,7 +878,7 @@ define i32 @main(i32, i8**) #0 {
   br label %37
 
 ; <label>:37:                                     ; preds = %23
-  call void @enqueue_signature_with_remainder_process(i32 720905)
+  call void @enqueue_signature_with_remainder_process(i32 4)
   store i32 1, i32* @is_signature_queue_full, align 4
   ret i32 0
 }

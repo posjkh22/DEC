@@ -52,10 +52,10 @@ t1:                                     # @t1
 	.size	t1, .Lfunc_end0-t1
 	.cfi_endproc
                                         # -- End function
-	.globl	main                    # -- Begin function main
+	.globl	t2                      # -- Begin function t2
 	.p2align	4, 0x90
-	.type	main,@function
-main:                                   # @main
+	.type	t2,@function
+t2:                                     # @t2
 	.cfi_startproc
 # BB#0:
 	pushq	%rbp
@@ -65,6 +65,84 @@ main:                                   # @main
 	.cfi_offset %rbp, -16
 	movq	%rsp, %rbp
 .Lcfi5:
+	.cfi_def_cfa_register %rbp
+	subq	$16, %rsp
+	movl	$164, %edi
+	callq	enqueue_signature_with_return
+	movl	$1, -4(%rbp)
+	movl	$2, -12(%rbp)
+	movl	$3, -8(%rbp)
+	movl	-4(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -4(%rbp)
+	imull	$3, -4(%rbp), %eax
+	movl	%eax, -4(%rbp)
+	movl	-12(%rbp), %eax
+	cltd
+	idivl	-4(%rbp)
+	movl	%eax, -12(%rbp)
+	movl	-4(%rbp), %eax
+	addl	-8(%rbp), %eax
+	movl	%eax, -8(%rbp)
+	movl	-4(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -4(%rbp)
+	movl	-12(%rbp), %eax
+	cltd
+	idivl	-4(%rbp)
+	movl	%eax, -12(%rbp)
+	movl	-4(%rbp), %eax
+	addl	-8(%rbp), %eax
+	movl	%eax, -12(%rbp)
+	movl	-4(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -4(%rbp)
+	movl	-8(%rbp), %eax
+	shll	$0, %eax
+	movl	%eax, -4(%rbp)
+	movl	-12(%rbp), %eax
+	cltd
+	idivl	-4(%rbp)
+	movl	%eax, -12(%rbp)
+	movl	-4(%rbp), %eax
+	addl	-8(%rbp), %eax
+	movl	%eax, -8(%rbp)
+	movl	-8(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -4(%rbp)
+	movl	-8(%rbp), %eax
+	shll	$0, %eax
+	movl	%eax, -4(%rbp)
+	movl	-12(%rbp), %eax
+	cltd
+	idivl	-4(%rbp)
+	movl	%eax, -12(%rbp)
+	movl	-4(%rbp), %eax
+	addl	-8(%rbp), %eax
+	movl	%eax, -8(%rbp)
+	movl	-8(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -4(%rbp)
+	addq	$16, %rsp
+	popq	%rbp
+	retq
+.Lfunc_end1:
+	.size	t2, .Lfunc_end1-t2
+	.cfi_endproc
+                                        # -- End function
+	.globl	main                    # -- Begin function main
+	.p2align	4, 0x90
+	.type	main,@function
+main:                                   # @main
+	.cfi_startproc
+# BB#0:
+	pushq	%rbp
+.Lcfi6:
+	.cfi_def_cfa_offset 16
+.Lcfi7:
+	.cfi_offset %rbp, -16
+	movq	%rsp, %rbp
+.Lcfi8:
 	.cfi_def_cfa_register %rbp
 	subq	$64, %rsp
 	callq	init_monitor
@@ -81,12 +159,12 @@ main:                                   # @main
 	movl	$1, -8(%rbp)
 	movl	$2, -12(%rbp)
 	movl	$0, -16(%rbp)
-.LBB1_2:                                # =>This Inner Loop Header: Depth=1
+.LBB2_2:                                # =>This Inner Loop Header: Depth=1
 	movl	$5, %edi
 	callq	enqueue_signature
-	cmpl	$5000, -16(%rbp)        # imm = 0x1388
-	jge	.LBB1_6
-# BB#3:                                 #   in Loop: Header=BB1_2 Depth=1
+	cmpl	$50, -16(%rbp)
+	jge	.LBB2_6
+# BB#3:                                 #   in Loop: Header=BB2_2 Depth=1
 	movl	$30, %edi
 	callq	enqueue_signature_with_call
 	movl	-4(%rbp), %eax
@@ -100,9 +178,9 @@ main:                                   # @main
 	addl	-12(%rbp), %eax
 	movl	%eax, -12(%rbp)
 	callq	t1
-# BB#4:                                 #   in Loop: Header=BB1_2 Depth=1
+# BB#4:                                 #   in Loop: Header=BB2_2 Depth=1
 	movl	$32, %edi
-	callq	enqueue_signature
+	callq	enqueue_signature_with_call
 	movl	-4(%rbp), %eax
 	addl	-8(%rbp), %eax
 	movl	%eax, -4(%rbp)
@@ -112,14 +190,15 @@ main:                                   # @main
 	movl	-4(%rbp), %eax
 	addl	-4(%rbp), %eax
 	movl	%eax, -12(%rbp)
-# BB#5:                                 #   in Loop: Header=BB1_2 Depth=1
+	callq	t2
+# BB#5:                                 #   in Loop: Header=BB2_2 Depth=1
 	movl	$9, %edi
 	callq	enqueue_signature
 	movl	-16(%rbp), %eax
 	addl	$1, %eax
 	movl	%eax, -16(%rbp)
-	jmp	.LBB1_2
-.LBB1_6:
+	jmp	.LBB2_2
+.LBB2_6:
 	movl	$1, %edi
 	callq	enqueue_signature
 	movabsq	$.L.str, %rdi
@@ -150,8 +229,8 @@ main:                                   # @main
 	addq	$64, %rsp
 	popq	%rbp
 	retq
-.Lfunc_end1:
-	.size	main, .Lfunc_end1-main
+.Lfunc_end2:
+	.size	main, .Lfunc_end2-main
 	.cfi_endproc
                                         # -- End function
 	.globl	CallcheckerSet          # -- Begin function CallcheckerSet
@@ -161,7 +240,7 @@ CallcheckerSet:                         # @CallcheckerSet
 	.cfi_startproc
 # BB#0:                                 # %entry
 	pushq	%rax
-.Lcfi6:
+.Lcfi9:
 	.cfi_def_cfa_offset 16
 	callq	init_monitor
 	movl	$1, %edi
@@ -174,8 +253,8 @@ CallcheckerSet:                         # @CallcheckerSet
 	callq	enqueue_signature_with_remainder_process
 	popq	%rax
 	retq
-.Lfunc_end2:
-	.size	CallcheckerSet, .Lfunc_end2-CallcheckerSet
+.Lfunc_end3:
+	.size	CallcheckerSet, .Lfunc_end3-CallcheckerSet
 	.cfi_endproc
                                         # -- End function
 	.type	.L.str,@object          # @.str

@@ -19,7 +19,7 @@ target triple = "x86_64-unknown-linux-gnu"
 ; Function Attrs: noinline nounwind optnone uwtable
 define i32 @main() #0 {
   call void @init_monitor()
-  call void @enqueue_signature(i32 65537)
+  call void @enqueue_signature(i32 39)
   %1 = alloca i32, align 4
   %2 = alloca i64, align 8
   %3 = alloca i64, align 8
@@ -56,12 +56,12 @@ define i32 @main() #0 {
   br label %31
 
 ; <label>:31:                                     ; preds = %0
-  call void @enqueue_signature(i32 65538)
+  call void @enqueue_signature(i32 4)
   store i32 1, i32* %21, align 4
   br label %32
 
 ; <label>:32:                                     ; preds = %31
-  call void @enqueue_signature(i32 65539)
+  call void @enqueue_signature(i32 21)
   store double 4.999750e-01, double* @T, align 8
   store double 5.002500e-01, double* @T1, align 8
   store double 2.000000e+00, double* @T2, align 8
@@ -72,7 +72,7 @@ define i32 @main() #0 {
   br label %34
 
 ; <label>:34:                                     ; preds = %356, %32
-  call void @enqueue_signature(i32 65540)
+  call void @enqueue_signature(i32 94)
   store i64 0, i64* %3, align 8
   %35 = load i64, i64* %20, align 8
   %36 = mul nsw i64 12, %35
@@ -107,14 +107,14 @@ define i32 @main() #0 {
   br label %51
 
 ; <label>:51:                                     ; preds = %93, %34
-  call void @enqueue_signature(i32 65541)
+  call void @enqueue_signature(i32 7)
   %52 = load i64, i64* %2, align 8
   %53 = load i64, i64* %3, align 8
   %54 = icmp sle i64 %52, %53
   br i1 %54, label %55, label %96
 
 ; <label>:55:                                     ; preds = %51
-  call void @enqueue_signature(i32 65542)
+  call void @enqueue_signature(i32 53)
   %56 = load double, double* %13, align 8
   %57 = load double, double* %14, align 8
   %58 = fadd double %56, %57
@@ -159,14 +159,14 @@ define i32 @main() #0 {
   br label %93
 
 ; <label>:93:                                     ; preds = %55
-  call void @enqueue_signature(i32 65543)
+  call void @enqueue_signature(i32 9)
   %94 = load i64, i64* %2, align 8
   %95 = add nsw i64 %94, 1
   store i64 %95, i64* %2, align 8
   br label %51
 
 ; <label>:96:                                     ; preds = %51
-  call void @enqueue_signature(i32 65544)
+  call void @enqueue_signature(i32 16)
   store double 1.000000e+00, double* getelementptr inbounds ([5 x double], [5 x double]* @E1, i64 0, i64 1), align 8
   store double -1.000000e+00, double* getelementptr inbounds ([5 x double], [5 x double]* @E1, i64 0, i64 2), align 16
   store double -1.000000e+00, double* getelementptr inbounds ([5 x double], [5 x double]* @E1, i64 0, i64 3), align 8
@@ -175,14 +175,14 @@ define i32 @main() #0 {
   br label %97
 
 ; <label>:97:                                     ; preds = %139, %96
-  call void @enqueue_signature(i32 65545)
+  call void @enqueue_signature(i32 7)
   %98 = load i64, i64* %2, align 8
   %99 = load i64, i64* %4, align 8
   %100 = icmp sle i64 %98, %99
   br i1 %100, label %101, label %142
 
 ; <label>:101:                                    ; preds = %97
-  call void @enqueue_signature(i32 65546)
+  call void @enqueue_signature(i32 53)
   %102 = load double, double* getelementptr inbounds ([5 x double], [5 x double]* @E1, i64 0, i64 1), align 8
   %103 = load double, double* getelementptr inbounds ([5 x double], [5 x double]* @E1, i64 0, i64 2), align 16
   %104 = fadd double %102, %103
@@ -227,110 +227,110 @@ define i32 @main() #0 {
   br label %139
 
 ; <label>:139:                                    ; preds = %101
-  call void @enqueue_signature(i32 65547)
+  call void @enqueue_signature(i32 9)
   %140 = load i64, i64* %2, align 8
   %141 = add nsw i64 %140, 1
   store i64 %141, i64* %2, align 8
   br label %97
 
 ; <label>:142:                                    ; preds = %97
-  call void @enqueue_signature(i32 65548)
+  call void @enqueue_signature(i32 4)
   store i64 1, i64* %2, align 8
   br label %143
 
 ; <label>:143:                                    ; preds = %148, %142
-  call void @enqueue_signature(i32 65549)
+  call void @enqueue_signature(i32 7)
   %144 = load i64, i64* %2, align 8
   %145 = load i64, i64* %5, align 8
   %146 = icmp sle i64 %144, %145
   br i1 %146, label %147, label %151
 
 ; <label>:147:                                    ; preds = %143
-  call void @enqueue_signature_with_call(i32 65550)
+  call void @enqueue_signature_with_call(i32 1)
   call void @PA(double* getelementptr inbounds ([5 x double], [5 x double]* @E1, i32 0, i32 0))
   br label %148
 
 ; <label>:148:                                    ; preds = %147
-  call void @enqueue_signature(i32 65551)
+  call void @enqueue_signature(i32 9)
   %149 = load i64, i64* %2, align 8
   %150 = add nsw i64 %149, 1
   store i64 %150, i64* %2, align 8
   br label %143
 
 ; <label>:151:                                    ; preds = %143
-  call void @enqueue_signature(i32 65552)
+  call void @enqueue_signature(i32 7)
   store i32 1, i32* @J, align 4
   store i64 1, i64* %2, align 8
   br label %152
 
 ; <label>:152:                                    ; preds = %172, %151
-  call void @enqueue_signature(i32 65553)
+  call void @enqueue_signature(i32 7)
   %153 = load i64, i64* %2, align 8
   %154 = load i64, i64* %6, align 8
   %155 = icmp sle i64 %153, %154
   br i1 %155, label %156, label %175
 
 ; <label>:156:                                    ; preds = %152
-  call void @enqueue_signature(i32 65554)
+  call void @enqueue_signature(i32 5)
   %157 = load i32, i32* @J, align 4
   %158 = icmp eq i32 %157, 1
   br i1 %158, label %159, label %160
 
 ; <label>:159:                                    ; preds = %156
-  call void @enqueue_signature(i32 65555)
+  call void @enqueue_signature(i32 4)
   store i32 2, i32* @J, align 4
   br label %161
 
 ; <label>:160:                                    ; preds = %156
-  call void @enqueue_signature(i32 65556)
+  call void @enqueue_signature(i32 4)
   store i32 3, i32* @J, align 4
   br label %161
 
 ; <label>:161:                                    ; preds = %160, %159
-  call void @enqueue_signature(i32 65557)
+  call void @enqueue_signature(i32 5)
   %162 = load i32, i32* @J, align 4
   %163 = icmp sgt i32 %162, 2
   br i1 %163, label %164, label %165
 
 ; <label>:164:                                    ; preds = %161
-  call void @enqueue_signature(i32 65558)
+  call void @enqueue_signature(i32 4)
   store i32 0, i32* @J, align 4
   br label %166
 
 ; <label>:165:                                    ; preds = %161
-  call void @enqueue_signature(i32 65559)
+  call void @enqueue_signature(i32 4)
   store i32 1, i32* @J, align 4
   br label %166
 
 ; <label>:166:                                    ; preds = %165, %164
-  call void @enqueue_signature(i32 65560)
+  call void @enqueue_signature(i32 5)
   %167 = load i32, i32* @J, align 4
   %168 = icmp slt i32 %167, 1
   br i1 %168, label %169, label %170
 
 ; <label>:169:                                    ; preds = %166
-  call void @enqueue_signature(i32 65561)
+  call void @enqueue_signature(i32 4)
   store i32 1, i32* @J, align 4
   br label %171
 
 ; <label>:170:                                    ; preds = %166
-  call void @enqueue_signature(i32 65562)
+  call void @enqueue_signature(i32 4)
   store i32 0, i32* @J, align 4
   br label %171
 
 ; <label>:171:                                    ; preds = %170, %169
-  call void @enqueue_signature(i32 65563)
+  call void @enqueue_signature(i32 1)
   br label %172
 
 ; <label>:172:                                    ; preds = %171
-  call void @enqueue_signature(i32 65564)
+  call void @enqueue_signature(i32 9)
   %173 = load i64, i64* %2, align 8
   %174 = add nsw i64 %173, 1
   store i64 %174, i64* %2, align 8
   br label %152
 
 ; <label>:175:                                    ; preds = %152
-  call void @enqueue_signature(i32 65565)
+  call void @enqueue_signature(i32 13)
   store i32 1, i32* @J, align 4
   store i32 2, i32* @K, align 4
   store i32 3, i32* @L, align 4
@@ -338,14 +338,14 @@ define i32 @main() #0 {
   br label %176
 
 ; <label>:176:                                    ; preds = %226, %175
-  call void @enqueue_signature(i32 65566)
+  call void @enqueue_signature(i32 7)
   %177 = load i64, i64* %2, align 8
   %178 = load i64, i64* %7, align 8
   %179 = icmp sle i64 %177, %178
   br i1 %179, label %180, label %229
 
 ; <label>:180:                                    ; preds = %176
-  call void @enqueue_signature(i32 65567)
+  call void @enqueue_signature(i32 97)
   %181 = load i32, i32* @J, align 4
   %182 = load i32, i32* @K, align 4
   %183 = load i32, i32* @J, align 4
@@ -399,28 +399,28 @@ define i32 @main() #0 {
   br label %226
 
 ; <label>:226:                                    ; preds = %180
-  call void @enqueue_signature(i32 65568)
+  call void @enqueue_signature(i32 9)
   %227 = load i64, i64* %2, align 8
   %228 = add nsw i64 %227, 1
   store i64 %228, i64* %2, align 8
   br label %176
 
 ; <label>:229:                                    ; preds = %176
-  call void @enqueue_signature(i32 65569)
+  call void @enqueue_signature(i32 10)
   store double 5.000000e-01, double* %17, align 8
   store double 5.000000e-01, double* %18, align 8
   store i64 1, i64* %2, align 8
   br label %230
 
 ; <label>:230:                                    ; preds = %287, %229
-  call void @enqueue_signature(i32 65570)
+  call void @enqueue_signature(i32 7)
   %231 = load i64, i64* %2, align 8
   %232 = load i64, i64* %8, align 8
   %233 = icmp sle i64 %231, %232
   br i1 %233, label %234, label %290
 
 ; <label>:234:                                    ; preds = %230
-  call void @enqueue_signature(i32 65571)
+  call void @enqueue_signature(i32 7)
   %235 = load double, double* @T, align 8
   %236 = load double, double* @T2, align 8
   %237 = load double, double* %17, align 8
@@ -428,14 +428,14 @@ define i32 @main() #0 {
   br label %239
 
 ; <label>:239:                                    ; preds = %234
-  call void @enqueue_signature(i32 65572)
+  call void @enqueue_signature(i32 3)
   %240 = fmul double %236, %238
   %241 = load double, double* %17, align 8
   %242 = call double @cos(double %241) #3
   br label %243
 
 ; <label>:243:                                    ; preds = %239
-  call void @enqueue_signature(i32 65573)
+  call void @enqueue_signature(i32 5)
   %244 = fmul double %240, %242
   %245 = load double, double* %17, align 8
   %246 = load double, double* %18, align 8
@@ -444,7 +444,7 @@ define i32 @main() #0 {
   br label %249
 
 ; <label>:249:                                    ; preds = %243
-  call void @enqueue_signature(i32 65574)
+  call void @enqueue_signature(i32 5)
   %250 = load double, double* %17, align 8
   %251 = load double, double* %18, align 8
   %252 = fsub double %250, %251
@@ -452,7 +452,7 @@ define i32 @main() #0 {
   br label %254
 
 ; <label>:254:                                    ; preds = %249
-  call void @enqueue_signature(i32 65575)
+  call void @enqueue_signature(i32 1)
   %255 = fadd double %248, %253
   %256 = fsub double %255, 1.000000e+00
   %257 = fdiv double %244, %256
@@ -460,7 +460,7 @@ define i32 @main() #0 {
   br label %259
 
 ; <label>:259:                                    ; preds = %254
-  call void @enqueue_signature(i32 65576)
+  call void @enqueue_signature(i32 10)
   %260 = fmul double %235, %258
   store double %260, double* %17, align 8
   %261 = load double, double* @T, align 8
@@ -470,14 +470,14 @@ define i32 @main() #0 {
   br label %265
 
 ; <label>:265:                                    ; preds = %259
-  call void @enqueue_signature(i32 65577)
+  call void @enqueue_signature(i32 3)
   %266 = fmul double %262, %264
   %267 = load double, double* %18, align 8
   %268 = call double @cos(double %267) #3
   br label %269
 
 ; <label>:269:                                    ; preds = %265
-  call void @enqueue_signature(i32 65578)
+  call void @enqueue_signature(i32 5)
   %270 = fmul double %266, %268
   %271 = load double, double* %17, align 8
   %272 = load double, double* %18, align 8
@@ -486,7 +486,7 @@ define i32 @main() #0 {
   br label %275
 
 ; <label>:275:                                    ; preds = %269
-  call void @enqueue_signature(i32 65579)
+  call void @enqueue_signature(i32 5)
   %276 = load double, double* %17, align 8
   %277 = load double, double* %18, align 8
   %278 = fsub double %276, %277
@@ -494,7 +494,7 @@ define i32 @main() #0 {
   br label %280
 
 ; <label>:280:                                    ; preds = %275
-  call void @enqueue_signature(i32 65580)
+  call void @enqueue_signature(i32 1)
   %281 = fadd double %274, %279
   %282 = fsub double %281, 1.000000e+00
   %283 = fdiv double %270, %282
@@ -502,20 +502,20 @@ define i32 @main() #0 {
   br label %285
 
 ; <label>:285:                                    ; preds = %280
-  call void @enqueue_signature(i32 65581)
+  call void @enqueue_signature(i32 4)
   %286 = fmul double %261, %284
   store double %286, double* %18, align 8
   br label %287
 
 ; <label>:287:                                    ; preds = %285
-  call void @enqueue_signature(i32 65582)
+  call void @enqueue_signature(i32 9)
   %288 = load i64, i64* %2, align 8
   %289 = add nsw i64 %288, 1
   store i64 %289, i64* %2, align 8
   br label %230
 
 ; <label>:290:                                    ; preds = %230
-  call void @enqueue_signature(i32 65583)
+  call void @enqueue_signature(i32 13)
   store double 1.000000e+00, double* %17, align 8
   store double 1.000000e+00, double* %18, align 8
   store double 1.000000e+00, double* %19, align 8
@@ -523,28 +523,28 @@ define i32 @main() #0 {
   br label %291
 
 ; <label>:291:                                    ; preds = %298, %290
-  call void @enqueue_signature(i32 65584)
+  call void @enqueue_signature(i32 7)
   %292 = load i64, i64* %2, align 8
   %293 = load i64, i64* %9, align 8
   %294 = icmp sle i64 %292, %293
   br i1 %294, label %295, label %301
 
 ; <label>:295:                                    ; preds = %291
-  call void @enqueue_signature_with_call(i32 65585)
+  call void @enqueue_signature_with_call(i32 5)
   %296 = load double, double* %17, align 8
   %297 = load double, double* %18, align 8
   call void @P3(double %296, double %297, double* %19)
   br label %298
 
 ; <label>:298:                                    ; preds = %295
-  call void @enqueue_signature(i32 65586)
+  call void @enqueue_signature(i32 9)
   %299 = load i64, i64* %2, align 8
   %300 = add nsw i64 %299, 1
   store i64 %300, i64* %2, align 8
   br label %291
 
 ; <label>:301:                                    ; preds = %291
-  call void @enqueue_signature(i32 65587)
+  call void @enqueue_signature(i32 22)
   store i32 1, i32* @J, align 4
   store i32 2, i32* @K, align 4
   store i32 3, i32* @L, align 4
@@ -555,40 +555,40 @@ define i32 @main() #0 {
   br label %302
 
 ; <label>:302:                                    ; preds = %307, %301
-  call void @enqueue_signature(i32 65588)
+  call void @enqueue_signature(i32 7)
   %303 = load i64, i64* %2, align 8
   %304 = load i64, i64* %10, align 8
   %305 = icmp sle i64 %303, %304
   br i1 %305, label %306, label %310
 
 ; <label>:306:                                    ; preds = %302
-  call void @enqueue_signature_with_call(i32 65589)
+  call void @enqueue_signature_with_call(i32 1)
   call void @P0()
   br label %307
 
 ; <label>:307:                                    ; preds = %306
-  call void @enqueue_signature(i32 65590)
+  call void @enqueue_signature(i32 9)
   %308 = load i64, i64* %2, align 8
   %309 = add nsw i64 %308, 1
   store i64 %309, i64* %2, align 8
   br label %302
 
 ; <label>:310:                                    ; preds = %302
-  call void @enqueue_signature(i32 65591)
+  call void @enqueue_signature(i32 10)
   store i32 2, i32* @J, align 4
   store i32 3, i32* @K, align 4
   store i64 1, i64* %2, align 8
   br label %311
 
 ; <label>:311:                                    ; preds = %330, %310
-  call void @enqueue_signature(i32 65592)
+  call void @enqueue_signature(i32 7)
   %312 = load i64, i64* %2, align 8
   %313 = load i64, i64* %11, align 8
   %314 = icmp sle i64 %312, %313
   br i1 %314, label %315, label %333
 
 ; <label>:315:                                    ; preds = %311
-  call void @enqueue_signature(i32 65593)
+  call void @enqueue_signature(i32 37)
   %316 = load i32, i32* @J, align 4
   %317 = load i32, i32* @K, align 4
   %318 = add nsw i32 %316, %317
@@ -610,57 +610,57 @@ define i32 @main() #0 {
   br label %330
 
 ; <label>:330:                                    ; preds = %315
-  call void @enqueue_signature(i32 65594)
+  call void @enqueue_signature(i32 9)
   %331 = load i64, i64* %2, align 8
   %332 = add nsw i64 %331, 1
   store i64 %332, i64* %2, align 8
   br label %311
 
 ; <label>:333:                                    ; preds = %311
-  call void @enqueue_signature(i32 65595)
+  call void @enqueue_signature(i32 7)
   store double 7.500000e-01, double* %17, align 8
   store i64 1, i64* %2, align 8
   br label %334
 
 ; <label>:334:                                    ; preds = %348, %333
-  call void @enqueue_signature(i32 65596)
+  call void @enqueue_signature(i32 7)
   %335 = load i64, i64* %2, align 8
   %336 = load i64, i64* %12, align 8
   %337 = icmp sle i64 %335, %336
   br i1 %337, label %338, label %351
 
 ; <label>:338:                                    ; preds = %334
-  call void @enqueue_signature(i32 65597)
+  call void @enqueue_signature(i32 3)
   %339 = load double, double* %17, align 8
   %340 = call double @log(double %339) #3
   br label %341
 
 ; <label>:341:                                    ; preds = %338
-  call void @enqueue_signature(i32 65598)
+  call void @enqueue_signature(i32 3)
   %342 = load double, double* @T1, align 8
   %343 = fdiv double %340, %342
   %344 = call double @exp(double %343) #3
   br label %345
 
 ; <label>:345:                                    ; preds = %341
-  call void @enqueue_signature(i32 65599)
+  call void @enqueue_signature(i32 1)
   %346 = call double @sqrt(double %344) #3
   br label %347
 
 ; <label>:347:                                    ; preds = %345
-  call void @enqueue_signature(i32 65600)
+  call void @enqueue_signature(i32 4)
   store double %346, double* %17, align 8
   br label %348
 
 ; <label>:348:                                    ; preds = %347
-  call void @enqueue_signature(i32 65601)
+  call void @enqueue_signature(i32 9)
   %349 = load i64, i64* %2, align 8
   %350 = add nsw i64 %349, 1
   store i64 %350, i64* %2, align 8
   br label %334
 
 ; <label>:351:                                    ; preds = %334
-  call void @enqueue_signature(i32 65602)
+  call void @enqueue_signature(i32 13)
   %352 = load i32, i32* %22, align 4
   %353 = add nsw i32 %352, 1
   store i32 %353, i32* %22, align 4
@@ -669,21 +669,21 @@ define i32 @main() #0 {
   br i1 %355, label %356, label %357
 
 ; <label>:356:                                    ; preds = %351
-  call void @enqueue_signature(i32 65603)
+  call void @enqueue_signature(i32 1)
   br label %34
 
 ; <label>:357:                                    ; preds = %351
-  call void @enqueue_signature(i32 65604)
+  call void @enqueue_signature(i32 1)
   %358 = call i32 @gettimeofday(%struct.timeval* %29, %struct.timezone* null) #3
   br label %359
 
 ; <label>:359:                                    ; preds = %357
-  call void @enqueue_signature(i32 65605)
+  call void @enqueue_signature(i32 1)
   %360 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([25 x i8], [25 x i8]* @.str, i32 0, i32 0))
   br label %361
 
 ; <label>:361:                                    ; preds = %359
-  call void @enqueue_signature(i32 65606)
+  call void @enqueue_signature(i32 16)
   %362 = getelementptr inbounds %struct.timeval, %struct.timeval* %29, i32 0, i32 0
   %363 = load i64, i64* %362, align 8
   %364 = getelementptr inbounds %struct.timeval, %struct.timeval* %28, i32 0, i32 0
@@ -700,7 +700,7 @@ define i32 @main() #0 {
   br label %375
 
 ; <label>:375:                                    ; preds = %361
-  call void @enqueue_signature_with_remainder_process(i32 65607)
+  call void @enqueue_signature_with_remainder_process(i32 1)
   ret i32 0
 }
 
@@ -709,14 +709,14 @@ declare i32 @gettimeofday(%struct.timeval*, %struct.timezone*) #1
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define void @PA(double*) #0 {
-  call void @enqueue_signature(i32 196609)
+  call void @enqueue_signature(i32 8)
   %2 = alloca double*, align 8
   store double* %0, double** %2, align 8
   store i32 0, i32* @J, align 4
   br label %3
 
 ; <label>:3:                                      ; preds = %85, %1
-  call void @enqueue_signature(i32 196610)
+  call void @enqueue_signature(i32 105)
   %4 = load double*, double** %2, align 8
   %5 = getelementptr inbounds double, double* %4, i64 1
   %6 = load double, double* %5, align 8
@@ -806,11 +806,11 @@ define void @PA(double*) #0 {
   br i1 %84, label %85, label %86
 
 ; <label>:85:                                     ; preds = %3
-  call void @enqueue_signature(i32 196611)
+  call void @enqueue_signature(i32 1)
   br label %3
 
 ; <label>:86:                                     ; preds = %3
-  call void @enqueue_signature_with_return(i32 196612)
+  call void @enqueue_signature_with_return(i32 1)
   ret void
 }
 
@@ -825,7 +825,7 @@ declare double @cos(double) #1
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define void @P3(double, double, double*) #0 {
-  call void @enqueue_signature_with_return(i32 458753)
+  call void @enqueue_signature_with_return(i32 54)
   %4 = alloca double, align 8
   %5 = alloca double, align 8
   %6 = alloca double*, align 8
@@ -862,7 +862,7 @@ define void @P3(double, double, double*) #0 {
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define void @P0() #0 {
-  call void @enqueue_signature_with_return(i32 524289)
+  call void @enqueue_signature_with_return(i32 28)
   %1 = load i32, i32* @K, align 4
   %2 = sext i32 %1 to i64
   %3 = getelementptr inbounds [5 x double], [5 x double]* @E1, i64 0, i64 %2

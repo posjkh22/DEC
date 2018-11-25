@@ -30,7 +30,7 @@ target triple = "x86_64-unknown-linux-gnu"
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define void @print_path(%struct._NODE*, i32) #0 {
-  call void @enqueue_signature(i32 65537)
+  call void @enqueue_signature(i32 17)
   %3 = alloca %struct._NODE*, align 8
   %4 = alloca i32, align 4
   store %struct._NODE* %0, %struct._NODE** %3, align 8
@@ -45,7 +45,7 @@ define void @print_path(%struct._NODE*, i32) #0 {
   br i1 %11, label %12, label %20
 
 ; <label>:12:                                     ; preds = %2
-  call void @enqueue_signature_with_call(i32 65538)
+  call void @enqueue_signature_with_call(i32 9)
   %13 = load %struct._NODE*, %struct._NODE** %3, align 8
   %14 = load %struct._NODE*, %struct._NODE** %3, align 8
   %15 = load i32, i32* %4, align 4
@@ -57,13 +57,13 @@ define void @print_path(%struct._NODE*, i32) #0 {
   br label %20
 
 ; <label>:20:                                     ; preds = %12, %2
-  call void @enqueue_signature_with_return(i32 65539)
+  call void @enqueue_signature_with_return(i32 1)
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define void @enqueue(i32, i32, i32) #0 {
-  call void @enqueue_signature(i32 131073)
+  call void @enqueue_signature(i32 15)
   %4 = alloca i32, align 4
   %5 = alloca i32, align 4
   %6 = alloca i32, align 4
@@ -76,7 +76,7 @@ define void @enqueue(i32, i32, i32) #0 {
   br label %10
 
 ; <label>:10:                                     ; preds = %3
-  call void @enqueue_signature(i32 131074)
+  call void @enqueue_signature(i32 13)
   %11 = bitcast i8* %9 to %struct._QITEM*
   store %struct._QITEM* %11, %struct._QITEM** %7, align 8
   %12 = load %struct._QITEM*, %struct._QITEM** @qHead, align 8
@@ -86,13 +86,13 @@ define void @enqueue(i32, i32, i32) #0 {
   br i1 %14, label %18, label %15
 
 ; <label>:15:                                     ; preds = %10
-  call void @enqueue_signature(i32 131075)
+  call void @enqueue_signature(i32 3)
   %16 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8
   %17 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %16, i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str, i32 0, i32 0))
   br label %18
 
 ; <label>:18:                                     ; preds = %15, %10
-  call void @enqueue_signature(i32 131076)
+  call void @enqueue_signature(i32 31)
   %19 = load i32, i32* %4, align 4
   %20 = load %struct._QITEM*, %struct._QITEM** %7, align 8
   %21 = getelementptr inbounds %struct._QITEM, %struct._QITEM* %20, i32 0, i32 0
@@ -113,17 +113,17 @@ define void @enqueue(i32, i32, i32) #0 {
   br i1 %31, label %34, label %32
 
 ; <label>:32:                                     ; preds = %18
-  call void @enqueue_signature(i32 131077)
+  call void @enqueue_signature(i32 6)
   %33 = load %struct._QITEM*, %struct._QITEM** %7, align 8
   store %struct._QITEM* %33, %struct._QITEM** @qHead, align 8
   br label %48
 
 ; <label>:34:                                     ; preds = %18
-  call void @enqueue_signature(i32 131078)
+  call void @enqueue_signature(i32 1)
   br label %35
 
 ; <label>:35:                                     ; preds = %40, %34
-  call void @enqueue_signature(i32 131079)
+  call void @enqueue_signature(i32 7)
   %36 = load %struct._QITEM*, %struct._QITEM** %8, align 8
   %37 = getelementptr inbounds %struct._QITEM, %struct._QITEM* %36, i32 0, i32 3
   %38 = load %struct._QITEM*, %struct._QITEM** %37, align 8
@@ -131,7 +131,7 @@ define void @enqueue(i32, i32, i32) #0 {
   br i1 %39, label %40, label %44
 
 ; <label>:40:                                     ; preds = %35
-  call void @enqueue_signature(i32 131080)
+  call void @enqueue_signature(i32 8)
   %41 = load %struct._QITEM*, %struct._QITEM** %8, align 8
   %42 = getelementptr inbounds %struct._QITEM, %struct._QITEM* %41, i32 0, i32 3
   %43 = load %struct._QITEM*, %struct._QITEM** %42, align 8
@@ -139,7 +139,7 @@ define void @enqueue(i32, i32, i32) #0 {
   br label %35
 
 ; <label>:44:                                     ; preds = %35
-  call void @enqueue_signature(i32 131081)
+  call void @enqueue_signature(i32 8)
   %45 = load %struct._QITEM*, %struct._QITEM** %7, align 8
   %46 = load %struct._QITEM*, %struct._QITEM** %8, align 8
   %47 = getelementptr inbounds %struct._QITEM, %struct._QITEM* %46, i32 0, i32 3
@@ -147,7 +147,7 @@ define void @enqueue(i32, i32, i32) #0 {
   br label %48
 
 ; <label>:48:                                     ; preds = %44, %32
-  call void @enqueue_signature_with_return(i32 131082)
+  call void @enqueue_signature_with_return(i32 9)
   %49 = load i32, i32* @g_qCount, align 4
   %50 = add nsw i32 %49, 1
   store i32 %50, i32* @g_qCount, align 4
@@ -160,7 +160,7 @@ declare i32 @fprintf(%struct._IO_FILE*, i8*, ...) #1
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define void @dequeue(i32*, i32*, i32*) #0 {
-  call void @enqueue_signature(i32 327681)
+  call void @enqueue_signature(i32 23)
   %4 = alloca i32*, align 8
   %5 = alloca i32*, align 8
   %6 = alloca i32*, align 8
@@ -175,7 +175,7 @@ define void @dequeue(i32*, i32*, i32*) #0 {
   br i1 %10, label %11, label %32
 
 ; <label>:11:                                     ; preds = %3
-  call void @enqueue_signature(i32 327682)
+  call void @enqueue_signature(i32 37)
   %12 = load %struct._QITEM*, %struct._QITEM** @qHead, align 8
   %13 = getelementptr inbounds %struct._QITEM, %struct._QITEM* %12, i32 0, i32 0
   %14 = load i32, i32* %13, align 8
@@ -200,14 +200,14 @@ define void @dequeue(i32*, i32*, i32*) #0 {
   br label %29
 
 ; <label>:29:                                     ; preds = %11
-  call void @enqueue_signature(i32 327683)
+  call void @enqueue_signature(i32 9)
   %30 = load i32, i32* @g_qCount, align 4
   %31 = add nsw i32 %30, -1
   store i32 %31, i32* @g_qCount, align 4
   br label %32
 
 ; <label>:32:                                     ; preds = %29, %3
-  call void @enqueue_signature_with_return(i32 327684)
+  call void @enqueue_signature_with_return(i32 1)
   ret void
 }
 
@@ -215,14 +215,14 @@ declare i32 @free(...) #1
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define i32 @qcount() #0 {
-  call void @enqueue_signature_with_return(i32 458753)
+  call void @enqueue_signature_with_return(i32 3)
   %1 = load i32, i32* @g_qCount, align 4
   ret i32 %1
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define i32 @dijkstra(i32, i32) #0 {
-  call void @enqueue_signature(i32 524289)
+  call void @enqueue_signature(i32 13)
   %3 = alloca i32, align 4
   %4 = alloca i32, align 4
   %5 = alloca i32, align 4
@@ -232,13 +232,13 @@ define i32 @dijkstra(i32, i32) #0 {
   br label %6
 
 ; <label>:6:                                      ; preds = %18, %2
-  call void @enqueue_signature(i32 524290)
+  call void @enqueue_signature(i32 5)
   %7 = load i32, i32* @ch, align 4
   %8 = icmp slt i32 %7, 100
   br i1 %8, label %9, label %21
 
 ; <label>:9:                                      ; preds = %6
-  call void @enqueue_signature(i32 524291)
+  call void @enqueue_signature(i32 11)
   %10 = load i32, i32* @ch, align 4
   %11 = sext i32 %10 to i64
   %12 = getelementptr inbounds [100 x %struct._NODE], [100 x %struct._NODE]* @rgnNodes, i64 0, i64 %11
@@ -252,26 +252,26 @@ define i32 @dijkstra(i32, i32) #0 {
   br label %18
 
 ; <label>:18:                                     ; preds = %9
-  call void @enqueue_signature(i32 524292)
+  call void @enqueue_signature(i32 9)
   %19 = load i32, i32* @ch, align 4
   %20 = add nsw i32 %19, 1
   store i32 %20, i32* @ch, align 4
   br label %6
 
 ; <label>:21:                                     ; preds = %6
-  call void @enqueue_signature(i32 524293)
+  call void @enqueue_signature(i32 7)
   %22 = load i32, i32* %4, align 4
   %23 = load i32, i32* %5, align 4
   %24 = icmp eq i32 %22, %23
   br i1 %24, label %25, label %27
 
 ; <label>:25:                                     ; preds = %21
-  call void @enqueue_signature(i32 524294)
+  call void @enqueue_signature(i32 1)
   %26 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([54 x i8], [54 x i8]* @.str.1, i32 0, i32 0))
   br label %97
 
 ; <label>:27:                                     ; preds = %21
-  call void @enqueue_signature_with_call(i32 524295)
+  call void @enqueue_signature_with_call(i32 13)
   %28 = load i32, i32* %4, align 4
   %29 = sext i32 %28 to i64
   %30 = getelementptr inbounds [100 x %struct._NODE], [100 x %struct._NODE]* @rgnNodes, i64 0, i64 %29
@@ -287,33 +287,33 @@ define i32 @dijkstra(i32, i32) #0 {
   br label %37
 
 ; <label>:37:                                     ; preds = %95, %27
-  call void @enqueue_signature_with_call(i32 524296)
+  call void @enqueue_signature_with_call(i32 1)
   %38 = call i32 @qcount()
   br label %39
 
 ; <label>:39:                                     ; preds = %37
-  call void @enqueue_signature(i32 524297)
+  call void @enqueue_signature(i32 3)
   %40 = icmp sgt i32 %38, 0
   br i1 %40, label %41, label %96
 
 ; <label>:41:                                     ; preds = %39
-  call void @enqueue_signature_with_call(i32 524298)
+  call void @enqueue_signature_with_call(i32 1)
   call void @dequeue(i32* @iNode, i32* @iDist, i32* @iPrev)
   br label %42
 
 ; <label>:42:                                     ; preds = %41
-  call void @enqueue_signature(i32 524299)
+  call void @enqueue_signature(i32 4)
   store i32 0, i32* @i, align 4
   br label %43
 
 ; <label>:43:                                     ; preds = %92, %42
-  call void @enqueue_signature(i32 524300)
+  call void @enqueue_signature(i32 5)
   %44 = load i32, i32* @i, align 4
   %45 = icmp slt i32 %44, 100
   br i1 %45, label %46, label %95
 
 ; <label>:46:                                     ; preds = %43
-  call void @enqueue_signature(i32 524301)
+  call void @enqueue_signature(i32 12)
   %47 = load i32, i32* @iNode, align 4
   %48 = sext i32 %47 to i64
   %49 = getelementptr inbounds [100 x [100 x i32]], [100 x [100 x i32]]* @AdjMatrix, i64 0, i64 %48
@@ -326,7 +326,7 @@ define i32 @dijkstra(i32, i32) #0 {
   br i1 %54, label %55, label %91
 
 ; <label>:55:                                     ; preds = %46
-  call void @enqueue_signature(i32 524302)
+  call void @enqueue_signature(i32 7)
   %56 = load i32, i32* @i, align 4
   %57 = sext i32 %56 to i64
   %58 = getelementptr inbounds [100 x %struct._NODE], [100 x %struct._NODE]* @rgnNodes, i64 0, i64 %57
@@ -336,7 +336,7 @@ define i32 @dijkstra(i32, i32) #0 {
   br i1 %61, label %72, label %62
 
 ; <label>:62:                                     ; preds = %55
-  call void @enqueue_signature(i32 524303)
+  call void @enqueue_signature(i32 14)
   %63 = load i32, i32* @i, align 4
   %64 = sext i32 %63 to i64
   %65 = getelementptr inbounds [100 x %struct._NODE], [100 x %struct._NODE]* @rgnNodes, i64 0, i64 %64
@@ -349,7 +349,7 @@ define i32 @dijkstra(i32, i32) #0 {
   br i1 %71, label %72, label %90
 
 ; <label>:72:                                     ; preds = %62, %55
-  call void @enqueue_signature_with_call(i32 524304)
+  call void @enqueue_signature_with_call(i32 31)
   %73 = load i32, i32* @iDist, align 4
   %74 = load i32, i32* @iCost, align 4
   %75 = add nsw i32 %73, %74
@@ -373,30 +373,30 @@ define i32 @dijkstra(i32, i32) #0 {
   br label %90
 
 ; <label>:90:                                     ; preds = %72, %62
-  call void @enqueue_signature(i32 524305)
+  call void @enqueue_signature(i32 1)
   br label %91
 
 ; <label>:91:                                     ; preds = %90, %46
-  call void @enqueue_signature(i32 524306)
+  call void @enqueue_signature(i32 1)
   br label %92
 
 ; <label>:92:                                     ; preds = %91
-  call void @enqueue_signature(i32 524307)
+  call void @enqueue_signature(i32 9)
   %93 = load i32, i32* @i, align 4
   %94 = add nsw i32 %93, 1
   store i32 %94, i32* @i, align 4
   br label %43
 
 ; <label>:95:                                     ; preds = %43
-  call void @enqueue_signature(i32 524308)
+  call void @enqueue_signature(i32 1)
   br label %37
 
 ; <label>:96:                                     ; preds = %39
-  call void @enqueue_signature(i32 524309)
+  call void @enqueue_signature(i32 1)
   br label %97
 
 ; <label>:97:                                     ; preds = %96, %25
-  call void @enqueue_signature_with_return(i32 524310)
+  call void @enqueue_signature_with_return(i32 3)
   %98 = load i32, i32* %3, align 4
   ret i32 %98
 }
@@ -406,7 +406,7 @@ declare i32 @printf(i8*, ...) #1
 ; Function Attrs: noinline nounwind optnone uwtable
 define i32 @main(i32, i8**) #0 {
   call void @init_monitor()
-  call void @enqueue_signature(i32 655361)
+  call void @enqueue_signature(i32 19)
   %3 = alloca i32, align 4
   %4 = alloca i32, align 4
   %5 = alloca i8**, align 8
@@ -423,41 +423,41 @@ define i32 @main(i32, i8**) #0 {
   br label %13
 
 ; <label>:13:                                     ; preds = %2
-  call void @enqueue_signature(i32 655362)
+  call void @enqueue_signature(i32 1)
   %14 = call %struct._IO_FILE* @fopen(i8* getelementptr inbounds ([12 x i8], [12 x i8]* @.str.2, i32 0, i32 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.3, i32 0, i32 0))
   br label %15
 
 ; <label>:15:                                     ; preds = %13
-  call void @enqueue_signature(i32 655363)
+  call void @enqueue_signature(i32 7)
   store %struct._IO_FILE* %14, %struct._IO_FILE** %9, align 8
   store i32 0, i32* %6, align 4
   br label %16
 
 ; <label>:16:                                     ; preds = %38, %15
-  call void @enqueue_signature(i32 655364)
+  call void @enqueue_signature(i32 5)
   %17 = load i32, i32* %6, align 4
   %18 = icmp slt i32 %17, 100
   br i1 %18, label %19, label %41
 
 ; <label>:19:                                     ; preds = %16
-  call void @enqueue_signature(i32 655365)
+  call void @enqueue_signature(i32 4)
   store i32 0, i32* %7, align 4
   br label %20
 
 ; <label>:20:                                     ; preds = %34, %19
-  call void @enqueue_signature(i32 655366)
+  call void @enqueue_signature(i32 5)
   %21 = load i32, i32* %7, align 4
   %22 = icmp slt i32 %21, 100
   br i1 %22, label %23, label %37
 
 ; <label>:23:                                     ; preds = %20
-  call void @enqueue_signature(i32 655367)
+  call void @enqueue_signature(i32 3)
   %24 = load %struct._IO_FILE*, %struct._IO_FILE** %9, align 8
   %25 = call i32 (%struct._IO_FILE*, i8*, ...) @__isoc99_fscanf(%struct._IO_FILE* %24, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.4, i32 0, i32 0), i32* %8)
   br label %26
 
 ; <label>:26:                                     ; preds = %23
-  call void @enqueue_signature(i32 655368)
+  call void @enqueue_signature(i32 10)
   %27 = load i32, i32* %8, align 4
   %28 = load i32, i32* %6, align 4
   %29 = sext i32 %28 to i64
@@ -469,37 +469,37 @@ define i32 @main(i32, i8**) #0 {
   br label %34
 
 ; <label>:34:                                     ; preds = %26
-  call void @enqueue_signature(i32 655369)
+  call void @enqueue_signature(i32 9)
   %35 = load i32, i32* %7, align 4
   %36 = add nsw i32 %35, 1
   store i32 %36, i32* %7, align 4
   br label %20
 
 ; <label>:37:                                     ; preds = %20
-  call void @enqueue_signature(i32 655370)
+  call void @enqueue_signature(i32 1)
   br label %38
 
 ; <label>:38:                                     ; preds = %37
-  call void @enqueue_signature(i32 655371)
+  call void @enqueue_signature(i32 9)
   %39 = load i32, i32* %6, align 4
   %40 = add nsw i32 %39, 1
   store i32 %40, i32* %6, align 4
   br label %16
 
 ; <label>:41:                                     ; preds = %16
-  call void @enqueue_signature(i32 655372)
+  call void @enqueue_signature(i32 7)
   store i32 0, i32* %6, align 4
   store i32 50, i32* %7, align 4
   br label %42
 
 ; <label>:42:                                     ; preds = %51, %41
-  call void @enqueue_signature(i32 655373)
+  call void @enqueue_signature(i32 5)
   %43 = load i32, i32* %6, align 4
   %44 = icmp slt i32 %43, 20
   br i1 %44, label %45, label %56
 
 ; <label>:45:                                     ; preds = %42
-  call void @enqueue_signature_with_call(i32 655374)
+  call void @enqueue_signature_with_call(i32 10)
   %46 = load i32, i32* %7, align 4
   %47 = srem i32 %46, 100
   store i32 %47, i32* %7, align 4
@@ -509,7 +509,7 @@ define i32 @main(i32, i8**) #0 {
   br label %51
 
 ; <label>:51:                                     ; preds = %45
-  call void @enqueue_signature(i32 655375)
+  call void @enqueue_signature(i32 17)
   %52 = load i32, i32* %6, align 4
   %53 = add nsw i32 %52, 1
   store i32 %53, i32* %6, align 4
@@ -519,17 +519,17 @@ define i32 @main(i32, i8**) #0 {
   br label %42
 
 ; <label>:56:                                     ; preds = %42
-  call void @enqueue_signature(i32 655376)
+  call void @enqueue_signature(i32 1)
   %57 = call i32 @gettimeofday(%struct.timeval* %11, %struct._NODE* null) #3
   br label %58
 
 ; <label>:58:                                     ; preds = %56
-  call void @enqueue_signature(i32 655377)
+  call void @enqueue_signature(i32 1)
   %59 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([25 x i8], [25 x i8]* @.str.5, i32 0, i32 0))
   br label %60
 
 ; <label>:60:                                     ; preds = %58
-  call void @enqueue_signature(i32 655378)
+  call void @enqueue_signature(i32 16)
   %61 = getelementptr inbounds %struct.timeval, %struct.timeval* %11, i32 0, i32 0
   %62 = load i64, i64* %61, align 8
   %63 = getelementptr inbounds %struct.timeval, %struct.timeval* %10, i32 0, i32 0
@@ -546,7 +546,7 @@ define i32 @main(i32, i8**) #0 {
   br label %74
 
 ; <label>:74:                                     ; preds = %60
-  call void @enqueue_signature_with_remainder_process(i32 655379)
+  call void @enqueue_signature_with_remainder_process(i32 3)
   %75 = load i32, i32* %3, align 4
   ret i32 %75
 }

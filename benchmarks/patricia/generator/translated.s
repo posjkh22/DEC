@@ -23,30 +23,30 @@ pat_insert:                             # @pat_insert
 	.cfi_offset %r14, -24
 	movq	%rsi, %r14
 	movq	%rdi, %rbx
-	movl	$65537, %edi            # imm = 0x10001
+	movl	$19, %edi
 	callq	enqueue_signature
 	movq	%rbx, -32(%rbp)
 	movq	%r14, -48(%rbp)
 	cmpq	$0, -48(%rbp)
 	je	.LBB0_3
 # BB#1:
-	movl	$65538, %edi            # imm = 0x10002
+	movl	$5, %edi
 	callq	enqueue_signature
 	cmpq	$0, -32(%rbp)
 	je	.LBB0_3
 # BB#2:
-	movl	$65539, %edi            # imm = 0x10003
+	movl	$7, %edi
 	callq	enqueue_signature
 	movq	-32(%rbp), %rax
 	cmpq	$0, 8(%rax)
 	jne	.LBB0_4
 .LBB0_3:
-	movl	$65540, %edi            # imm = 0x10004
+	movl	$4, %edi
 	callq	enqueue_signature
 	movq	$0, -72(%rbp)
 	jmp	.LBB0_51
 .LBB0_4:
-	movl	$65541, %edi            # imm = 0x10005
+	movl	$19, %edi
 	callq	enqueue_signature
 	movq	-32(%rbp), %rax
 	movq	8(%rax), %rax
@@ -57,7 +57,7 @@ pat_insert:                             # @pat_insert
 	movq	-48(%rbp), %rax
 	movq	%rax, -40(%rbp)
 .LBB0_5:                                # =>This Inner Loop Header: Depth=1
-	movl	$65542, %edi            # imm = 0x10006
+	movl	$16, %edi
 	callq	enqueue_signature_with_call
 	movq	-40(%rbp), %rax
 	movsbl	17(%rax), %eax
@@ -69,27 +69,27 @@ pat_insert:                             # @pat_insert
 	callq	bit
 	movq	%rax, %rbx
 # BB#6:                                 #   in Loop: Header=BB0_5 Depth=1
-	movl	$65543, %edi            # imm = 0x10007
+	movl	$3, %edi
 	callq	enqueue_signature
 	cmpq	$0, %rbx
 	je	.LBB0_8
 # BB#7:                                 #   in Loop: Header=BB0_5 Depth=1
-	movl	$65544, %edi            # imm = 0x10008
+	movl	$5, %edi
 	callq	enqueue_signature
 	movq	-40(%rbp), %rax
 	movq	32(%rax), %rbx
 	jmp	.LBB0_9
 .LBB0_8:                                #   in Loop: Header=BB0_5 Depth=1
-	movl	$65545, %edi            # imm = 0x10009
+	movl	$5, %edi
 	callq	enqueue_signature
 	movq	-40(%rbp), %rax
 	movq	24(%rax), %rbx
 .LBB0_9:                                #   in Loop: Header=BB0_5 Depth=1
-	movl	$65546, %edi            # imm = 0x1000A
+	movl	$4, %edi
 	callq	enqueue_signature
 	movq	%rbx, -40(%rbp)
 # BB#10:                                #   in Loop: Header=BB0_5 Depth=1
-	movl	$65547, %edi            # imm = 0x1000B
+	movl	$9, %edi
 	callq	enqueue_signature
 	movl	-20(%rbp), %eax
 	movq	-40(%rbp), %rcx
@@ -97,7 +97,7 @@ pat_insert:                             # @pat_insert
 	cmpl	%ecx, %eax
 	jl	.LBB0_5
 # BB#11:
-	movl	$65548, %edi            # imm = 0x1000C
+	movl	$11, %edi
 	callq	enqueue_signature
 	movq	-32(%rbp), %rax
 	movq	(%rax), %rax
@@ -105,11 +105,11 @@ pat_insert:                             # @pat_insert
 	cmpq	(%rcx), %rax
 	jne	.LBB0_36
 # BB#12:
-	movl	$65549, %edi            # imm = 0x1000D
+	movl	$4, %edi
 	callq	enqueue_signature
 	movl	$0, -20(%rbp)
 .LBB0_13:                               # =>This Inner Loop Header: Depth=1
-	movl	$65550, %edi            # imm = 0x1000E
+	movl	$9, %edi
 	callq	enqueue_signature
 	movl	-20(%rbp), %eax
 	movq	-40(%rbp), %rcx
@@ -117,7 +117,7 @@ pat_insert:                             # @pat_insert
 	cmpl	%ecx, %eax
 	jge	.LBB0_20
 # BB#14:                                #   in Loop: Header=BB0_13 Depth=1
-	movl	$65551, %edi            # imm = 0x1000F
+	movl	$17, %edi
 	callq	enqueue_signature
 	movq	-32(%rbp), %rax
 	movq	8(%rax), %rax
@@ -130,7 +130,7 @@ pat_insert:                             # @pat_insert
 	cmpq	(%rdx), %rax
 	jne	.LBB0_18
 # BB#15:
-	movl	$65552, %edi            # imm = 0x10010
+	movl	$20, %edi
 	callq	enqueue_signature
 	movq	-32(%rbp), %rax
 	movq	8(%rax), %rax
@@ -145,29 +145,29 @@ pat_insert:                             # @pat_insert
 	movq	8(%rax), %rdi
 	callq	free
 # BB#16:
-	movl	$65553, %edi            # imm = 0x10011
+	movl	$3, %edi
 	callq	enqueue_signature
 	movq	-32(%rbp), %rdi
 	callq	free
 # BB#17:
-	movl	$65554, %edi            # imm = 0x10012
+	movl	$9, %edi
 	callq	enqueue_signature
 	movq	$0, -32(%rbp)
 	movq	-40(%rbp), %rax
 	movq	%rax, -72(%rbp)
 	jmp	.LBB0_51
 .LBB0_18:                               #   in Loop: Header=BB0_13 Depth=1
-	movl	$65555, %edi            # imm = 0x10013
+	movl	$1, %edi
 	callq	enqueue_signature
 # BB#19:                                #   in Loop: Header=BB0_13 Depth=1
-	movl	$65556, %edi            # imm = 0x10014
+	movl	$9, %edi
 	callq	enqueue_signature
 	movl	-20(%rbp), %eax
 	addl	$1, %eax
 	movl	%eax, -20(%rbp)
 	jmp	.LBB0_13
 .LBB0_20:
-	movl	$65557, %edi            # imm = 0x10015
+	movl	$12, %edi
 	callq	enqueue_signature
 	movq	-40(%rbp), %rax
 	movzbl	16(%rax), %eax
@@ -177,7 +177,7 @@ pat_insert:                             # @pat_insert
 	callq	malloc
 	movq	%rax, %rbx
 # BB#21:
-	movl	$65558, %edi            # imm = 0x10016
+	movl	$15, %edi
 	callq	enqueue_signature
 	movq	%rbx, -80(%rbp)
 	movl	$0, -60(%rbp)
@@ -185,7 +185,7 @@ pat_insert:                             # @pat_insert
 	movq	-80(%rbp), %rax
 	movq	%rax, -56(%rbp)
 .LBB0_22:                               # =>This Inner Loop Header: Depth=1
-	movl	$65559, %edi            # imm = 0x10017
+	movl	$9, %edi
 	callq	enqueue_signature
 	movl	-20(%rbp), %eax
 	movq	-40(%rbp), %rcx
@@ -193,7 +193,7 @@ pat_insert:                             # @pat_insert
 	cmpl	%ecx, %eax
 	jge	.LBB0_30
 # BB#23:                                #   in Loop: Header=BB0_22 Depth=1
-	movl	$65560, %edi            # imm = 0x10018
+	movl	$17, %edi
 	callq	enqueue_signature
 	movq	-32(%rbp), %rax
 	movq	8(%rax), %rax
@@ -206,7 +206,7 @@ pat_insert:                             # @pat_insert
 	cmpq	(%rdx), %rax
 	jbe	.LBB0_26
 # BB#24:                                #   in Loop: Header=BB0_22 Depth=1
-	movl	$65561, %edi            # imm = 0x10019
+	movl	$9, %edi
 	callq	enqueue_signature
 	movq	-40(%rbp), %rax
 	movq	8(%rax), %rax
@@ -217,14 +217,14 @@ pat_insert:                             # @pat_insert
 	movl	$16, %edx
 	callq	bcopy
 # BB#25:                                #   in Loop: Header=BB0_22 Depth=1
-	movl	$65562, %edi            # imm = 0x1001A
+	movl	$9, %edi
 	callq	enqueue_signature
 	movl	-20(%rbp), %eax
 	addl	$1, %eax
 	movl	%eax, -20(%rbp)
 	jmp	.LBB0_28
 .LBB0_26:                               #   in Loop: Header=BB0_22 Depth=1
-	movl	$65563, %edi            # imm = 0x1001B
+	movl	$7, %edi
 	callq	enqueue_signature
 	movq	-32(%rbp), %rax
 	movq	8(%rax), %rdi
@@ -232,7 +232,7 @@ pat_insert:                             # @pat_insert
 	movl	$16, %edx
 	callq	bcopy
 # BB#27:                                #   in Loop: Header=BB0_22 Depth=1
-	movl	$65564, %edi            # imm = 0x1001C
+	movl	$11, %edi
 	callq	enqueue_signature
 	movl	$4294967295, %eax       # imm = 0xFFFFFFFF
 	movq	-32(%rbp), %rcx
@@ -240,22 +240,22 @@ pat_insert:                             # @pat_insert
 	movq	%rax, (%rcx)
 	movl	$1, -60(%rbp)
 .LBB0_28:                               #   in Loop: Header=BB0_22 Depth=1
-	movl	$65565, %edi            # imm = 0x1001D
+	movl	$1, %edi
 	callq	enqueue_signature
 # BB#29:                                #   in Loop: Header=BB0_22 Depth=1
-	movl	$65566, %edi            # imm = 0x1001E
+	movl	$6, %edi
 	callq	enqueue_signature
 	movq	-56(%rbp), %rax
 	addq	$16, %rax
 	movq	%rax, -56(%rbp)
 	jmp	.LBB0_22
 .LBB0_30:
-	movl	$65567, %edi            # imm = 0x1001F
+	movl	$5, %edi
 	callq	enqueue_signature
 	cmpl	$0, -60(%rbp)
 	jne	.LBB0_32
 # BB#31:
-	movl	$65568, %edi            # imm = 0x10020
+	movl	$7, %edi
 	callq	enqueue_signature
 	movq	-32(%rbp), %rax
 	movq	8(%rax), %rdi
@@ -263,18 +263,18 @@ pat_insert:                             # @pat_insert
 	movl	$16, %edx
 	callq	bcopy
 .LBB0_32:
-	movl	$65569, %edi            # imm = 0x10021
+	movl	$5, %edi
 	callq	enqueue_signature
 	movq	-32(%rbp), %rax
 	movq	8(%rax), %rdi
 	callq	free
 # BB#33:
-	movl	$65570, %edi            # imm = 0x10022
+	movl	$3, %edi
 	callq	enqueue_signature
 	movq	-32(%rbp), %rdi
 	callq	free
 # BB#34:
-	movl	$65571, %edi            # imm = 0x10023
+	movl	$18, %edi
 	callq	enqueue_signature
 	movq	$0, -32(%rbp)
 	movq	-40(%rbp), %rax
@@ -285,7 +285,7 @@ pat_insert:                             # @pat_insert
 	movq	8(%rax), %rdi
 	callq	free
 # BB#35:
-	movl	$65572, %edi            # imm = 0x10024
+	movl	$13, %edi
 	callq	enqueue_signature
 	movq	-80(%rbp), %rax
 	movq	-40(%rbp), %rcx
@@ -294,17 +294,17 @@ pat_insert:                             # @pat_insert
 	movq	%rax, -72(%rbp)
 	jmp	.LBB0_51
 .LBB0_36:
-	movl	$65573, %edi            # imm = 0x10025
+	movl	$4, %edi
 	callq	enqueue_signature
 	movl	$1, -20(%rbp)
 .LBB0_37:                               # =>This Inner Loop Header: Depth=1
-	movl	$65574, %edi            # imm = 0x10026
+	movl	$5, %edi
 	callq	enqueue_signature
 	xorl	%ebx, %ebx
 	cmpl	$32, -20(%rbp)
 	jge	.LBB0_41
 # BB#38:                                #   in Loop: Header=BB0_37 Depth=1
-	movl	$65575, %edi            # imm = 0x10027
+	movl	$7, %edi
 	callq	enqueue_signature_with_call
 	movl	-20(%rbp), %edi
 	movq	-32(%rbp), %rax
@@ -312,7 +312,7 @@ pat_insert:                             # @pat_insert
 	callq	bit
 	movq	%rax, %r14
 # BB#39:                                #   in Loop: Header=BB0_37 Depth=1
-	movl	$65576, %edi            # imm = 0x10028
+	movl	$7, %edi
 	callq	enqueue_signature_with_call
 	movl	-20(%rbp), %edi
 	movq	-40(%rbp), %rax
@@ -320,28 +320,28 @@ pat_insert:                             # @pat_insert
 	callq	bit
 	movq	%rax, %rbx
 # BB#40:                                #   in Loop: Header=BB0_37 Depth=1
-	movl	$65577, %edi            # imm = 0x10029
+	movl	$3, %edi
 	callq	enqueue_signature
 	cmpq	%rbx, %r14
 	sete	%bl
 .LBB0_41:                               #   in Loop: Header=BB0_37 Depth=1
-	movl	$65578, %edi            # imm = 0x1002A
+	movl	$1, %edi
 	callq	enqueue_signature
 	testb	$1, %bl
 	jne	.LBB0_42
 	jmp	.LBB0_44
 .LBB0_42:                               #   in Loop: Header=BB0_37 Depth=1
-	movl	$65579, %edi            # imm = 0x1002B
+	movl	$1, %edi
 	callq	enqueue_signature
 # BB#43:                                #   in Loop: Header=BB0_37 Depth=1
-	movl	$65580, %edi            # imm = 0x1002C
+	movl	$9, %edi
 	callq	enqueue_signature
 	movl	-20(%rbp), %eax
 	addl	$1, %eax
 	movl	%eax, -20(%rbp)
 	jmp	.LBB0_37
 .LBB0_44:
-	movl	$65581, %edi            # imm = 0x1002D
+	movl	$9, %edi
 	callq	enqueue_signature_with_call
 	movq	-48(%rbp), %rax
 	movsbl	17(%rax), %edi
@@ -350,12 +350,12 @@ pat_insert:                             # @pat_insert
 	callq	bit
 	movq	%rax, %rbx
 # BB#45:
-	movl	$65582, %edi            # imm = 0x1002E
+	movl	$3, %edi
 	callq	enqueue_signature
 	cmpq	$0, %rbx
 	je	.LBB0_48
 # BB#46:
-	movl	$65583, %edi            # imm = 0x1002F
+	movl	$11, %edi
 	callq	enqueue_signature_with_call
 	movq	-48(%rbp), %rax
 	movq	32(%rax), %rdi
@@ -365,13 +365,13 @@ pat_insert:                             # @pat_insert
 	callq	insertR
 	movq	%rax, %rbx
 # BB#47:
-	movl	$65584, %edi            # imm = 0x10030
+	movl	$6, %edi
 	callq	enqueue_signature
 	movq	-48(%rbp), %rax
 	movq	%rbx, 32(%rax)
 	jmp	.LBB0_50
 .LBB0_48:
-	movl	$65585, %edi            # imm = 0x10031
+	movl	$11, %edi
 	callq	enqueue_signature_with_call
 	movq	-48(%rbp), %rax
 	movq	24(%rax), %rdi
@@ -381,17 +381,17 @@ pat_insert:                             # @pat_insert
 	callq	insertR
 	movq	%rax, %rbx
 # BB#49:
-	movl	$65586, %edi            # imm = 0x10032
+	movl	$6, %edi
 	callq	enqueue_signature
 	movq	-48(%rbp), %rax
 	movq	%rbx, 24(%rax)
 .LBB0_50:
-	movl	$65587, %edi            # imm = 0x10033
+	movl	$6, %edi
 	callq	enqueue_signature
 	movq	-32(%rbp), %rax
 	movq	%rax, -72(%rbp)
 .LBB0_51:
-	movl	$65588, %edi            # imm = 0x10034
+	movl	$3, %edi
 	callq	enqueue_signature_with_return
 	movq	-72(%rbp), %rax
 	addq	$64, %rsp
@@ -425,7 +425,7 @@ bit:                                    # @bit
 	.cfi_offset %r14, -24
 	movq	%rsi, %r14
 	movl	%edi, %ebx
-	movl	$131073, %edi           # imm = 0x20001
+	movl	$13, %edi
 	callq	enqueue_signature_with_return
 	movl	$1, %eax
 	movl	$31, %ecx
@@ -476,7 +476,7 @@ insertR:                                # @insertR
 	movl	%edx, %r15d
 	movq	%rsi, %r12
 	movq	%rdi, %rbx
-	movl	$393217, %edi           # imm = 0x60001
+	movl	$26, %edi
 	callq	enqueue_signature
 	movq	%rbx, -48(%rbp)
 	movq	%r12, -56(%rbp)
@@ -487,7 +487,7 @@ insertR:                                # @insertR
 	cmpl	-36(%rbp), %eax
 	jge	.LBB2_2
 # BB#1:
-	movl	$393218, %edi           # imm = 0x60002
+	movl	$11, %edi
 	callq	enqueue_signature
 	movq	-48(%rbp), %rax
 	movsbl	17(%rax), %eax
@@ -496,7 +496,7 @@ insertR:                                # @insertR
 	cmpl	%ecx, %eax
 	jg	.LBB2_11
 .LBB2_2:
-	movl	$393219, %edi           # imm = 0x60003
+	movl	$14, %edi
 	callq	enqueue_signature_with_call
 	movl	-36(%rbp), %eax
 	movq	-56(%rbp), %rcx
@@ -507,21 +507,21 @@ insertR:                                # @insertR
 	callq	bit
 	movq	%rax, %rbx
 # BB#3:
-	movl	$393220, %edi           # imm = 0x60004
+	movl	$3, %edi
 	callq	enqueue_signature
 	cmpq	$0, %rbx
 	je	.LBB2_5
 # BB#4:
-	movl	$393221, %edi           # imm = 0x60005
+	movl	$3, %edi
 	callq	enqueue_signature
 	movq	-48(%rbp), %rbx
 	jmp	.LBB2_6
 .LBB2_5:
-	movl	$393222, %edi           # imm = 0x60006
+	movl	$3, %edi
 	callq	enqueue_signature
 	movq	-56(%rbp), %rbx
 .LBB2_6:
-	movl	$393223, %edi           # imm = 0x60007
+	movl	$12, %edi
 	callq	enqueue_signature_with_call
 	movq	-56(%rbp), %rax
 	movq	%rbx, 24(%rax)
@@ -531,21 +531,21 @@ insertR:                                # @insertR
 	callq	bit
 	movq	%rax, %rbx
 # BB#7:
-	movl	$393224, %edi           # imm = 0x60008
+	movl	$3, %edi
 	callq	enqueue_signature
 	cmpq	$0, %rbx
 	je	.LBB2_9
 # BB#8:
-	movl	$393225, %edi           # imm = 0x60009
+	movl	$3, %edi
 	callq	enqueue_signature
 	movq	-56(%rbp), %rbx
 	jmp	.LBB2_10
 .LBB2_9:
-	movl	$393226, %edi           # imm = 0x6000A
+	movl	$3, %edi
 	callq	enqueue_signature
 	movq	-48(%rbp), %rbx
 .LBB2_10:
-	movl	$393227, %edi           # imm = 0x6000B
+	movl	$11, %edi
 	callq	enqueue_signature
 	movq	-56(%rbp), %rax
 	movq	%rbx, 32(%rax)
@@ -553,7 +553,7 @@ insertR:                                # @insertR
 	movq	%rax, -64(%rbp)
 	jmp	.LBB2_18
 .LBB2_11:
-	movl	$393228, %edi           # imm = 0x6000C
+	movl	$9, %edi
 	callq	enqueue_signature_with_call
 	movq	-48(%rbp), %rax
 	movsbl	17(%rax), %edi
@@ -562,12 +562,12 @@ insertR:                                # @insertR
 	callq	bit
 	movq	%rax, %rbx
 # BB#12:
-	movl	$393229, %edi           # imm = 0x6000D
+	movl	$3, %edi
 	callq	enqueue_signature
 	cmpq	$0, %rbx
 	je	.LBB2_15
 # BB#13:
-	movl	$393230, %edi           # imm = 0x6000E
+	movl	$11, %edi
 	callq	enqueue_signature_with_call
 	movq	-48(%rbp), %rax
 	movq	32(%rax), %rdi
@@ -577,13 +577,13 @@ insertR:                                # @insertR
 	callq	insertR
 	movq	%rax, %rbx
 # BB#14:
-	movl	$393231, %edi           # imm = 0x6000F
+	movl	$6, %edi
 	callq	enqueue_signature
 	movq	-48(%rbp), %rax
 	movq	%rbx, 32(%rax)
 	jmp	.LBB2_17
 .LBB2_15:
-	movl	$393232, %edi           # imm = 0x60010
+	movl	$11, %edi
 	callq	enqueue_signature_with_call
 	movq	-48(%rbp), %rax
 	movq	24(%rax), %rdi
@@ -593,17 +593,17 @@ insertR:                                # @insertR
 	callq	insertR
 	movq	%rax, %rbx
 # BB#16:
-	movl	$393233, %edi           # imm = 0x60011
+	movl	$6, %edi
 	callq	enqueue_signature
 	movq	-48(%rbp), %rax
 	movq	%rbx, 24(%rax)
 .LBB2_17:
-	movl	$393234, %edi           # imm = 0x60012
+	movl	$6, %edi
 	callq	enqueue_signature
 	movq	-48(%rbp), %rax
 	movq	%rax, -64(%rbp)
 .LBB2_18:
-	movl	$393235, %edi           # imm = 0x60013
+	movl	$3, %edi
 	callq	enqueue_signature_with_return
 	movq	-64(%rbp), %rax
 	addq	$48, %rsp
@@ -640,37 +640,37 @@ pat_remove:                             # @pat_remove
 	.cfi_offset %r14, -24
 	movq	%rsi, %r14
 	movq	%rdi, %rbx
-	movl	$458753, %edi           # imm = 0x70001
+	movl	$22, %edi
 	callq	enqueue_signature
 	movq	%rbx, -56(%rbp)
 	movq	%r14, -104(%rbp)
 	cmpq	$0, -56(%rbp)
 	je	.LBB3_3
 # BB#1:
-	movl	$458754, %edi           # imm = 0x70002
+	movl	$7, %edi
 	callq	enqueue_signature
 	movq	-56(%rbp), %rax
 	cmpq	$0, 8(%rax)
 	je	.LBB3_3
 # BB#2:
-	movl	$458755, %edi           # imm = 0x70003
+	movl	$5, %edi
 	callq	enqueue_signature
 	cmpq	$0, -24(%rbp)
 	jne	.LBB3_4
 .LBB3_3:
-	movl	$458756, %edi           # imm = 0x70004
+	movl	$4, %edi
 	callq	enqueue_signature
 	movl	$0, -44(%rbp)
 	jmp	.LBB3_66
 .LBB3_4:
-	movl	$458757, %edi           # imm = 0x70005
+	movl	$12, %edi
 	callq	enqueue_signature
 	movq	-104(%rbp), %rax
 	movq	%rax, -24(%rbp)
 	movq	%rax, -40(%rbp)
 	movq	%rax, -80(%rbp)
 .LBB3_5:                                # =>This Inner Loop Header: Depth=1
-	movl	$458758, %edi           # imm = 0x70006
+	movl	$26, %edi
 	callq	enqueue_signature_with_call
 	movq	-24(%rbp), %rax
 	movsbl	17(%rax), %eax
@@ -686,27 +686,27 @@ pat_remove:                             # @pat_remove
 	callq	bit
 	movq	%rax, %rbx
 # BB#6:                                 #   in Loop: Header=BB3_5 Depth=1
-	movl	$458759, %edi           # imm = 0x70007
+	movl	$3, %edi
 	callq	enqueue_signature
 	cmpq	$0, %rbx
 	je	.LBB3_8
 # BB#7:                                 #   in Loop: Header=BB3_5 Depth=1
-	movl	$458760, %edi           # imm = 0x70008
+	movl	$5, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movq	32(%rax), %rbx
 	jmp	.LBB3_9
 .LBB3_8:                                #   in Loop: Header=BB3_5 Depth=1
-	movl	$458761, %edi           # imm = 0x70009
+	movl	$5, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movq	24(%rax), %rbx
 .LBB3_9:                                #   in Loop: Header=BB3_5 Depth=1
-	movl	$458762, %edi           # imm = 0x7000A
+	movl	$4, %edi
 	callq	enqueue_signature
 	movq	%rbx, -24(%rbp)
 # BB#10:                                #   in Loop: Header=BB3_5 Depth=1
-	movl	$458763, %edi           # imm = 0x7000B
+	movl	$9, %edi
 	callq	enqueue_signature
 	movl	-28(%rbp), %eax
 	movq	-24(%rbp), %rcx
@@ -714,7 +714,7 @@ pat_remove:                             # @pat_remove
 	cmpl	%ecx, %eax
 	jl	.LBB3_5
 # BB#11:
-	movl	$458764, %edi           # imm = 0x7000C
+	movl	$11, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movq	(%rax), %rax
@@ -722,31 +722,31 @@ pat_remove:                             # @pat_remove
 	cmpq	(%rcx), %rax
 	je	.LBB3_13
 # BB#12:
-	movl	$458765, %edi           # imm = 0x7000D
+	movl	$4, %edi
 	callq	enqueue_signature
 	movl	$0, -44(%rbp)
 	jmp	.LBB3_66
 .LBB3_13:
-	movl	$458766, %edi           # imm = 0x7000E
+	movl	$7, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movzbl	16(%rax), %eax
 	cmpl	$1, %eax
 	jne	.LBB3_48
 # BB#14:
-	movl	$458767, %edi           # imm = 0x7000F
+	movl	$7, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movsbl	17(%rax), %eax
 	cmpl	$0, %eax
 	jne	.LBB3_16
 # BB#15:
-	movl	$458768, %edi           # imm = 0x70010
+	movl	$4, %edi
 	callq	enqueue_signature
 	movl	$0, -44(%rbp)
 	jmp	.LBB3_66
 .LBB3_16:
-	movl	$458769, %edi           # imm = 0x70011
+	movl	$15, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movq	8(%rax), %rax
@@ -756,18 +756,18 @@ pat_remove:                             # @pat_remove
 	cmpq	(%rcx), %rax
 	je	.LBB3_18
 # BB#17:
-	movl	$458770, %edi           # imm = 0x70012
+	movl	$4, %edi
 	callq	enqueue_signature
 	movl	$0, -44(%rbp)
 	jmp	.LBB3_66
 .LBB3_18:
-	movl	$458771, %edi           # imm = 0x70013
+	movl	$9, %edi
 	callq	enqueue_signature
 	movq	-40(%rbp), %rax
 	movq	%rax, -64(%rbp)
 	movq	%rax, -72(%rbp)
 .LBB3_19:                               # =>This Inner Loop Header: Depth=1
-	movl	$458772, %edi           # imm = 0x70014
+	movl	$21, %edi
 	callq	enqueue_signature_with_call
 	movq	-64(%rbp), %rax
 	movsbl	17(%rax), %eax
@@ -781,27 +781,27 @@ pat_remove:                             # @pat_remove
 	callq	bit
 	movq	%rax, %rbx
 # BB#20:                                #   in Loop: Header=BB3_19 Depth=1
-	movl	$458773, %edi           # imm = 0x70015
+	movl	$3, %edi
 	callq	enqueue_signature
 	cmpq	$0, %rbx
 	je	.LBB3_22
 # BB#21:                                #   in Loop: Header=BB3_19 Depth=1
-	movl	$458774, %edi           # imm = 0x70016
+	movl	$5, %edi
 	callq	enqueue_signature
 	movq	-64(%rbp), %rax
 	movq	32(%rax), %rbx
 	jmp	.LBB3_23
 .LBB3_22:                               #   in Loop: Header=BB3_19 Depth=1
-	movl	$458775, %edi           # imm = 0x70017
+	movl	$5, %edi
 	callq	enqueue_signature
 	movq	-64(%rbp), %rax
 	movq	24(%rax), %rbx
 .LBB3_23:                               #   in Loop: Header=BB3_19 Depth=1
-	movl	$458776, %edi           # imm = 0x70018
+	movl	$4, %edi
 	callq	enqueue_signature
 	movq	%rbx, -64(%rbp)
 # BB#24:                                #   in Loop: Header=BB3_19 Depth=1
-	movl	$458777, %edi           # imm = 0x70019
+	movl	$9, %edi
 	callq	enqueue_signature
 	movl	-28(%rbp), %eax
 	movq	-64(%rbp), %rcx
@@ -809,7 +809,7 @@ pat_remove:                             # @pat_remove
 	cmpl	%ecx, %eax
 	jl	.LBB3_19
 # BB#25:
-	movl	$458778, %edi           # imm = 0x7001A
+	movl	$9, %edi
 	callq	enqueue_signature_with_call
 	movq	-72(%rbp), %rax
 	movsbl	17(%rax), %edi
@@ -818,25 +818,25 @@ pat_remove:                             # @pat_remove
 	callq	bit
 	movq	%rax, %rbx
 # BB#26:
-	movl	$458779, %edi           # imm = 0x7001B
+	movl	$3, %edi
 	callq	enqueue_signature
 	cmpq	$0, %rbx
 	je	.LBB3_28
 # BB#27:
-	movl	$458780, %edi           # imm = 0x7001C
+	movl	$8, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movq	-72(%rbp), %rcx
 	movq	%rax, 32(%rcx)
 	jmp	.LBB3_29
 .LBB3_28:
-	movl	$458781, %edi           # imm = 0x7001D
+	movl	$8, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movq	-72(%rbp), %rcx
 	movq	%rax, 24(%rcx)
 .LBB3_29:
-	movl	$458782, %edi           # imm = 0x7001E
+	movl	$9, %edi
 	callq	enqueue_signature_with_call
 	movq	-80(%rbp), %rax
 	movsbl	17(%rax), %edi
@@ -845,12 +845,12 @@ pat_remove:                             # @pat_remove
 	callq	bit
 	movq	%rax, %rbx
 # BB#30:
-	movl	$458783, %edi           # imm = 0x7001F
+	movl	$3, %edi
 	callq	enqueue_signature
 	cmpq	$0, %rbx
 	je	.LBB3_36
 # BB#31:
-	movl	$458784, %edi           # imm = 0x70020
+	movl	$9, %edi
 	callq	enqueue_signature_with_call
 	movq	-40(%rbp), %rax
 	movsbl	17(%rax), %edi
@@ -859,29 +859,29 @@ pat_remove:                             # @pat_remove
 	callq	bit
 	movq	%rax, %rbx
 # BB#32:
-	movl	$458785, %edi           # imm = 0x70021
+	movl	$3, %edi
 	callq	enqueue_signature
 	cmpq	$0, %rbx
 	je	.LBB3_34
 # BB#33:
-	movl	$458786, %edi           # imm = 0x70022
+	movl	$5, %edi
 	callq	enqueue_signature
 	movq	-40(%rbp), %rax
 	movq	24(%rax), %rbx
 	jmp	.LBB3_35
 .LBB3_34:
-	movl	$458787, %edi           # imm = 0x70023
+	movl	$5, %edi
 	callq	enqueue_signature
 	movq	-40(%rbp), %rax
 	movq	32(%rax), %rbx
 .LBB3_35:
-	movl	$458788, %edi           # imm = 0x70024
+	movl	$6, %edi
 	callq	enqueue_signature
 	movq	-80(%rbp), %rax
 	movq	%rbx, 32(%rax)
 	jmp	.LBB3_41
 .LBB3_36:
-	movl	$458789, %edi           # imm = 0x70025
+	movl	$9, %edi
 	callq	enqueue_signature_with_call
 	movq	-40(%rbp), %rax
 	movsbl	17(%rax), %edi
@@ -890,54 +890,54 @@ pat_remove:                             # @pat_remove
 	callq	bit
 	movq	%rax, %rbx
 # BB#37:
-	movl	$458790, %edi           # imm = 0x70026
+	movl	$3, %edi
 	callq	enqueue_signature
 	cmpq	$0, %rbx
 	je	.LBB3_39
 # BB#38:
-	movl	$458791, %edi           # imm = 0x70027
+	movl	$5, %edi
 	callq	enqueue_signature
 	movq	-40(%rbp), %rax
 	movq	24(%rax), %rbx
 	jmp	.LBB3_40
 .LBB3_39:
-	movl	$458792, %edi           # imm = 0x70028
+	movl	$5, %edi
 	callq	enqueue_signature
 	movq	-40(%rbp), %rax
 	movq	32(%rax), %rbx
 .LBB3_40:
-	movl	$458793, %edi           # imm = 0x70029
+	movl	$6, %edi
 	callq	enqueue_signature
 	movq	-80(%rbp), %rax
 	movq	%rbx, 24(%rax)
 .LBB3_41:
-	movl	$458794, %edi           # imm = 0x7002A
+	movl	$9, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movq	8(%rax), %rax
 	cmpq	$0, 8(%rax)
 	je	.LBB3_43
 # BB#42:
-	movl	$458795, %edi           # imm = 0x7002B
+	movl	$7, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movq	8(%rax), %rax
 	movq	8(%rax), %rdi
 	callq	free
 .LBB3_43:
-	movl	$458796, %edi           # imm = 0x7002C
+	movl	$5, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movq	8(%rax), %rdi
 	callq	free
 # BB#44:
-	movl	$458797, %edi           # imm = 0x7002D
+	movl	$7, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	cmpq	-40(%rbp), %rax
 	je	.LBB3_46
 # BB#45:
-	movl	$458798, %edi           # imm = 0x7002E
+	movl	$28, %edi
 	callq	enqueue_signature
 	movq	-40(%rbp), %rax
 	movq	(%rax), %rax
@@ -952,21 +952,21 @@ pat_remove:                             # @pat_remove
 	movq	-24(%rbp), %rcx
 	movb	%al, 16(%rcx)
 .LBB3_46:
-	movl	$458799, %edi           # imm = 0x7002F
+	movl	$3, %edi
 	callq	enqueue_signature
 	movq	-40(%rbp), %rdi
 	callq	free
 # BB#47:
-	movl	$458800, %edi           # imm = 0x70030
+	movl	$4, %edi
 	callq	enqueue_signature
 	movl	$1, -44(%rbp)
 	jmp	.LBB3_66
 .LBB3_48:
-	movl	$458801, %edi           # imm = 0x70031
+	movl	$4, %edi
 	callq	enqueue_signature
 	movl	$0, -28(%rbp)
 .LBB3_49:                               # =>This Inner Loop Header: Depth=1
-	movl	$458802, %edi           # imm = 0x70032
+	movl	$9, %edi
 	callq	enqueue_signature
 	movl	-28(%rbp), %eax
 	movq	-24(%rbp), %rcx
@@ -974,7 +974,7 @@ pat_remove:                             # @pat_remove
 	cmpl	%ecx, %eax
 	jge	.LBB3_54
 # BB#50:                                #   in Loop: Header=BB3_49 Depth=1
-	movl	$458803, %edi           # imm = 0x70033
+	movl	$17, %edi
 	callq	enqueue_signature
 	movq	-56(%rbp), %rax
 	movq	8(%rax), %rax
@@ -987,14 +987,14 @@ pat_remove:                             # @pat_remove
 	cmpq	(%rdx), %rax
 	jne	.LBB3_52
 # BB#51:
-	movl	$458804, %edi           # imm = 0x70034
+	movl	$1, %edi
 	callq	enqueue_signature
 	jmp	.LBB3_55
 .LBB3_52:                               #   in Loop: Header=BB3_49 Depth=1
-	movl	$458805, %edi           # imm = 0x70035
+	movl	$1, %edi
 	callq	enqueue_signature
 # BB#53:                                #   in Loop: Header=BB3_49 Depth=1
-	movl	$458806, %edi           # imm = 0x70036
+	movl	$9, %edi
 	callq	enqueue_signature
 	movl	-28(%rbp), %eax
 	addl	$1, %eax
@@ -1003,7 +1003,7 @@ pat_remove:                             # @pat_remove
 .LBB3_54:                               # %.loopexit
 	jmp	.LBB3_55
 .LBB3_55:
-	movl	$458807, %edi           # imm = 0x70037
+	movl	$9, %edi
 	callq	enqueue_signature
 	movl	-28(%rbp), %eax
 	movq	-24(%rbp), %rcx
@@ -1011,12 +1011,12 @@ pat_remove:                             # @pat_remove
 	cmpl	%ecx, %eax
 	jl	.LBB3_57
 # BB#56:
-	movl	$458808, %edi           # imm = 0x70038
+	movl	$4, %edi
 	callq	enqueue_signature
 	movl	$0, -44(%rbp)
 	jmp	.LBB3_66
 .LBB3_57:
-	movl	$458809, %edi           # imm = 0x70039
+	movl	$9, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movzbl	16(%rax), %eax
@@ -1026,14 +1026,14 @@ pat_remove:                             # @pat_remove
 	callq	malloc
 	movq	%rax, %rbx
 # BB#58:
-	movl	$458810, %edi           # imm = 0x7003A
+	movl	$12, %edi
 	callq	enqueue_signature
 	movq	%rbx, -96(%rbp)
 	movl	$0, -28(%rbp)
 	movq	-96(%rbp), %rax
 	movq	%rax, -88(%rbp)
 .LBB3_59:                               # =>This Inner Loop Header: Depth=1
-	movl	$458811, %edi           # imm = 0x7003B
+	movl	$9, %edi
 	callq	enqueue_signature
 	movl	-28(%rbp), %eax
 	movq	-24(%rbp), %rcx
@@ -1041,7 +1041,7 @@ pat_remove:                             # @pat_remove
 	cmpl	%ecx, %eax
 	jge	.LBB3_64
 # BB#60:                                #   in Loop: Header=BB3_59 Depth=1
-	movl	$458812, %edi           # imm = 0x7003C
+	movl	$17, %edi
 	callq	enqueue_signature
 	movq	-56(%rbp), %rax
 	movq	8(%rax), %rax
@@ -1054,7 +1054,7 @@ pat_remove:                             # @pat_remove
 	cmpq	(%rdx), %rax
 	je	.LBB3_62
 # BB#61:                                #   in Loop: Header=BB3_59 Depth=1
-	movl	$458813, %edi           # imm = 0x7003D
+	movl	$12, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movq	8(%rax), %rax
@@ -1067,17 +1067,17 @@ pat_remove:                             # @pat_remove
 	movl	$16, %edx
 	callq	bcopy
 .LBB3_62:                               #   in Loop: Header=BB3_59 Depth=1
-	movl	$458814, %edi           # imm = 0x7003E
+	movl	$1, %edi
 	callq	enqueue_signature
 # BB#63:                                #   in Loop: Header=BB3_59 Depth=1
-	movl	$458815, %edi           # imm = 0x7003F
+	movl	$9, %edi
 	callq	enqueue_signature
 	movl	-28(%rbp), %eax
 	addl	$1, %eax
 	movl	%eax, -28(%rbp)
 	jmp	.LBB3_59
 .LBB3_64:
-	movl	$458816, %edi           # imm = 0x70040
+	movl	$15, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movb	16(%rax), %cl
@@ -1087,14 +1087,14 @@ pat_remove:                             # @pat_remove
 	movq	8(%rax), %rdi
 	callq	free
 # BB#65:
-	movl	$458817, %edi           # imm = 0x70041
+	movl	$11, %edi
 	callq	enqueue_signature
 	movq	-96(%rbp), %rax
 	movq	-24(%rbp), %rcx
 	movq	%rax, 8(%rcx)
 	movl	$1, -44(%rbp)
 .LBB3_66:
-	movl	$458818, %edi           # imm = 0x70042
+	movl	$3, %edi
 	callq	enqueue_signature_with_return
 	movl	-44(%rbp), %eax
 	addq	$96, %rsp
@@ -1129,7 +1129,7 @@ pat_search:                             # @pat_search
 	.cfi_offset %r14, -24
 	movq	%rsi, %r14
 	movq	%rdi, %rbx
-	movl	$524289, %edi           # imm = 0x80001
+	movl	$25, %edi
 	callq	enqueue_signature
 	movq	%rbx, -32(%rbp)
 	movq	%r14, -64(%rbp)
@@ -1139,15 +1139,15 @@ pat_search:                             # @pat_search
 	cmpq	$0, -24(%rbp)
 	jne	.LBB4_2
 # BB#1:
-	movl	$524290, %edi           # imm = 0x80002
+	movl	$4, %edi
 	callq	enqueue_signature
 	movq	$0, -56(%rbp)
 	jmp	.LBB4_15
 .LBB4_2:
-	movl	$524291, %edi           # imm = 0x80003
+	movl	$1, %edi
 	callq	enqueue_signature
 .LBB4_3:                                # =>This Inner Loop Header: Depth=1
-	movl	$524292, %edi           # imm = 0x80004
+	movl	$15, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movq	(%rax), %rax
@@ -1158,12 +1158,12 @@ pat_search:                             # @pat_search
 	cmpq	%rcx, %rax
 	jne	.LBB4_5
 # BB#4:                                 #   in Loop: Header=BB4_3 Depth=1
-	movl	$524293, %edi           # imm = 0x80005
+	movl	$6, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movq	%rax, -48(%rbp)
 .LBB4_5:                                #   in Loop: Header=BB4_3 Depth=1
-	movl	$524294, %edi           # imm = 0x80006
+	movl	$14, %edi
 	callq	enqueue_signature_with_call
 	movq	-24(%rbp), %rax
 	movsbl	17(%rax), %eax
@@ -1174,27 +1174,27 @@ pat_search:                             # @pat_search
 	callq	bit
 	movq	%rax, %rbx
 # BB#6:                                 #   in Loop: Header=BB4_3 Depth=1
-	movl	$524295, %edi           # imm = 0x80007
+	movl	$3, %edi
 	callq	enqueue_signature
 	cmpq	$0, %rbx
 	je	.LBB4_8
 # BB#7:                                 #   in Loop: Header=BB4_3 Depth=1
-	movl	$524296, %edi           # imm = 0x80008
+	movl	$5, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movq	32(%rax), %rbx
 	jmp	.LBB4_9
 .LBB4_8:                                #   in Loop: Header=BB4_3 Depth=1
-	movl	$524297, %edi           # imm = 0x80009
+	movl	$5, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movq	24(%rax), %rbx
 .LBB4_9:                                #   in Loop: Header=BB4_3 Depth=1
-	movl	$524298, %edi           # imm = 0x8000A
+	movl	$4, %edi
 	callq	enqueue_signature
 	movq	%rbx, -24(%rbp)
 # BB#10:                                #   in Loop: Header=BB4_3 Depth=1
-	movl	$524299, %edi           # imm = 0x8000B
+	movl	$9, %edi
 	callq	enqueue_signature
 	movl	-36(%rbp), %eax
 	movq	-24(%rbp), %rcx
@@ -1202,7 +1202,7 @@ pat_search:                             # @pat_search
 	cmpl	%ecx, %eax
 	jl	.LBB4_3
 # BB#11:
-	movl	$524300, %edi           # imm = 0x8000C
+	movl	$15, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movq	(%rax), %rax
@@ -1213,20 +1213,20 @@ pat_search:                             # @pat_search
 	cmpq	%rcx, %rax
 	jne	.LBB4_13
 # BB#12:
-	movl	$524301, %edi           # imm = 0x8000D
+	movl	$3, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rbx
 	jmp	.LBB4_14
 .LBB4_13:
-	movl	$524302, %edi           # imm = 0x8000E
+	movl	$3, %edi
 	callq	enqueue_signature
 	movq	-48(%rbp), %rbx
 .LBB4_14:
-	movl	$524303, %edi           # imm = 0x8000F
+	movl	$4, %edi
 	callq	enqueue_signature
 	movq	%rbx, -56(%rbp)
 .LBB4_15:
-	movl	$524304, %edi           # imm = 0x80010
+	movl	$3, %edi
 	callq	enqueue_signature_with_return
 	movq	-56(%rbp), %rax
 	addq	$48, %rsp
@@ -1262,7 +1262,7 @@ main:                                   # @main
 	movq	%rsi, %r14
 	movl	%edi, %ebx
 	callq	init_monitor
-	movl	$589825, %edi           # imm = 0x90001
+	movl	$28, %edi
 	callq	enqueue_signature
 	leaq	-128(%rbp), %rdi
 	movl	$4294967295, %eax       # imm = 0xFFFFFFFF
@@ -1273,20 +1273,20 @@ main:                                   # @main
 	xorl	%esi, %esi
 	callq	gettimeofday
 # BB#1:
-	movl	$589826, %edi           # imm = 0x90002
+	movl	$1, %edi
 	callq	enqueue_signature
 	movabsq	$.L.str, %rdi
 	movabsq	$.L.str.1, %rsi
 	callq	fopen
 	movq	%rax, %rbx
 # BB#2:
-	movl	$589827, %edi           # imm = 0x90003
+	movl	$6, %edi
 	callq	enqueue_signature
 	movq	%rbx, -72(%rbp)
 	cmpq	$0, %rbx
 	jne	.LBB5_6
 # BB#3:
-	movl	$589828, %edi           # imm = 0x90004
+	movl	$5, %edi
 	callq	enqueue_signature
 	movabsq	$.L.str.2, %rdi
 	movq	-88(%rbp), %rax
@@ -1294,53 +1294,53 @@ main:                                   # @main
 	movb	$0, %al
 	callq	printf
 # BB#4:
-	movl	$589829, %edi           # imm = 0x90005
+	movl	$1, %edi
 	callq	enqueue_signature
 	xorl	%edi, %edi
 	callq	exit
 # BB#5:
-	movl	$589830, %edi           # imm = 0x90006
+	xorl	%edi, %edi
 	callq	enqueue_signature_with_return
 .LBB5_6:
-	movl	$589831, %edi           # imm = 0x90007
+	movl	$1, %edi
 	callq	enqueue_signature
 	movl	$40, %edi
 	callq	malloc
 	movq	%rax, %rbx
 # BB#7:
-	movl	$589832, %edi           # imm = 0x90008
+	movl	$8, %edi
 	callq	enqueue_signature
 	movq	%rbx, -24(%rbp)
 	cmpq	$0, -24(%rbp)
 	jne	.LBB5_11
 # BB#8:
-	movl	$589833, %edi           # imm = 0x90009
+	movl	$1, %edi
 	callq	enqueue_signature
 	movabsq	$.L.str.3, %rdi
 	callq	perror
 # BB#9:
-	movl	$589834, %edi           # imm = 0x9000A
+	movl	$1, %edi
 	callq	enqueue_signature
 	xorl	%edi, %edi
 	callq	exit
 # BB#10:
-	movl	$589835, %edi           # imm = 0x9000B
+	xorl	%edi, %edi
 	callq	enqueue_signature_with_return
 .LBB5_11:
-	movl	$589836, %edi           # imm = 0x9000C
+	movl	$3, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rdi
 	xorl	%esi, %esi
 	movl	$40, %edx
 	callq	memset
 # BB#12:
-	movl	$589837, %edi           # imm = 0x9000D
+	movl	$1, %edi
 	callq	enqueue_signature
 	movl	$16, %edi
 	callq	malloc
 	movq	%rax, %rbx
 # BB#13:
-	movl	$589838, %edi           # imm = 0x9000E
+	movl	$12, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movq	%rbx, 8(%rax)
@@ -1348,20 +1348,20 @@ main:                                   # @main
 	cmpq	$0, 8(%rax)
 	jne	.LBB5_17
 # BB#14:
-	movl	$589839, %edi           # imm = 0x9000F
+	movl	$1, %edi
 	callq	enqueue_signature
 	movabsq	$.L.str.4, %rdi
 	callq	perror
 # BB#15:
-	movl	$589840, %edi           # imm = 0x90010
+	movl	$1, %edi
 	callq	enqueue_signature
 	xorl	%edi, %edi
 	callq	exit
 # BB#16:
-	movl	$589841, %edi           # imm = 0x90011
+	xorl	%edi, %edi
 	callq	enqueue_signature_with_return
 .LBB5_17:
-	movl	$589842, %edi           # imm = 0x90012
+	movl	$5, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movq	8(%rax), %rdi
@@ -1369,7 +1369,7 @@ main:                                   # @main
 	movl	$16, %edx
 	callq	memset
 # BB#18:
-	movl	$589843, %edi           # imm = 0x90013
+	movl	$8, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movq	8(%rax), %rax
@@ -1378,7 +1378,7 @@ main:                                   # @main
 	callq	malloc
 	movq	%rax, %rbx
 # BB#19:
-	movl	$589844, %edi           # imm = 0x90014
+	movl	$12, %edi
 	callq	enqueue_signature
 	movq	-48(%rbp), %rax
 	movq	%rbx, 8(%rax)
@@ -1386,20 +1386,20 @@ main:                                   # @main
 	cmpq	$0, 8(%rax)
 	jne	.LBB5_23
 # BB#20:
-	movl	$589845, %edi           # imm = 0x90015
+	movl	$1, %edi
 	callq	enqueue_signature
 	movabsq	$.L.str.5, %rdi
 	callq	perror
 # BB#21:
-	movl	$589846, %edi           # imm = 0x90016
+	movl	$1, %edi
 	callq	enqueue_signature
 	xorl	%edi, %edi
 	callq	exit
 # BB#22:
-	movl	$589847, %edi           # imm = 0x90017
+	xorl	%edi, %edi
 	callq	enqueue_signature_with_return
 .LBB5_23:
-	movl	$589848, %edi           # imm = 0x90018
+	movl	$5, %edi
 	callq	enqueue_signature
 	movq	-48(%rbp), %rax
 	movq	8(%rax), %rdi
@@ -1407,7 +1407,7 @@ main:                                   # @main
 	movl	$1, %edx
 	callq	memset
 # BB#24:
-	movl	$589849, %edi           # imm = 0x90019
+	movl	$18, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movb	$1, 16(%rax)
@@ -1417,7 +1417,7 @@ main:                                   # @main
 	movq	-24(%rbp), %rcx
 	movq	%rax, 24(%rcx)
 .LBB5_25:                               # =>This Inner Loop Header: Depth=1
-	movl	$589850, %edi           # imm = 0x9001A
+	movl	$3, %edi
 	callq	enqueue_signature
 	leaq	-256(%rbp), %rdi
 	movq	-72(%rbp), %rdx
@@ -1425,12 +1425,12 @@ main:                                   # @main
 	callq	fgets
 	movq	%rax, %rbx
 # BB#26:                                #   in Loop: Header=BB5_25 Depth=1
-	movl	$589851, %edi           # imm = 0x9001B
+	movl	$3, %edi
 	callq	enqueue_signature
 	cmpq	$0, %rbx
 	je	.LBB5_54
 # BB#27:                                #   in Loop: Header=BB5_25 Depth=1
-	movl	$589852, %edi           # imm = 0x9001C
+	movl	$1, %edi
 	callq	enqueue_signature
 	movabsq	$.L.str.6, %rsi
 	leaq	-92(%rbp), %rdx
@@ -1439,45 +1439,45 @@ main:                                   # @main
 	movb	$0, %al
 	callq	__isoc99_sscanf
 # BB#28:                                #   in Loop: Header=BB5_25 Depth=1
-	movl	$589853, %edi           # imm = 0x9001D
+	movl	$1, %edi
 	callq	enqueue_signature
 	movl	$40, %edi
 	callq	malloc
 	movq	%rax, %rbx
 # BB#29:                                #   in Loop: Header=BB5_25 Depth=1
-	movl	$589854, %edi           # imm = 0x9001E
+	movl	$8, %edi
 	callq	enqueue_signature
 	movq	%rbx, -32(%rbp)
 	cmpq	$0, -32(%rbp)
 	jne	.LBB5_33
 # BB#30:
-	movl	$589855, %edi           # imm = 0x9001F
+	movl	$1, %edi
 	callq	enqueue_signature
 	movabsq	$.L.str.3, %rdi
 	callq	perror
 # BB#31:
-	movl	$589856, %edi           # imm = 0x90020
+	movl	$1, %edi
 	callq	enqueue_signature
 	xorl	%edi, %edi
 	callq	exit
 # BB#32:
-	movl	$589857, %edi           # imm = 0x90021
+	xorl	%edi, %edi
 	callq	enqueue_signature_with_return
 .LBB5_33:                               #   in Loop: Header=BB5_25 Depth=1
-	movl	$589858, %edi           # imm = 0x90022
+	movl	$3, %edi
 	callq	enqueue_signature
 	movq	-32(%rbp), %rdi
 	xorl	%esi, %esi
 	movl	$40, %edx
 	callq	memset
 # BB#34:                                #   in Loop: Header=BB5_25 Depth=1
-	movl	$589859, %edi           # imm = 0x90023
+	movl	$1, %edi
 	callq	enqueue_signature
 	movl	$16, %edi
 	callq	malloc
 	movq	%rax, %rbx
 # BB#35:                                #   in Loop: Header=BB5_25 Depth=1
-	movl	$589860, %edi           # imm = 0x90024
+	movl	$12, %edi
 	callq	enqueue_signature
 	movq	-32(%rbp), %rax
 	movq	%rbx, 8(%rax)
@@ -1485,20 +1485,20 @@ main:                                   # @main
 	cmpq	$0, 8(%rax)
 	jne	.LBB5_39
 # BB#36:
-	movl	$589861, %edi           # imm = 0x90025
+	movl	$1, %edi
 	callq	enqueue_signature
 	movabsq	$.L.str.4, %rdi
 	callq	perror
 # BB#37:
-	movl	$589862, %edi           # imm = 0x90026
+	movl	$1, %edi
 	callq	enqueue_signature
 	xorl	%edi, %edi
 	callq	exit
 # BB#38:
-	movl	$589863, %edi           # imm = 0x90027
+	xorl	%edi, %edi
 	callq	enqueue_signature_with_return
 .LBB5_39:                               #   in Loop: Header=BB5_25 Depth=1
-	movl	$589864, %edi           # imm = 0x90028
+	movl	$5, %edi
 	callq	enqueue_signature
 	movq	-32(%rbp), %rax
 	movq	8(%rax), %rdi
@@ -1506,7 +1506,7 @@ main:                                   # @main
 	movl	$16, %edx
 	callq	memset
 # BB#40:                                #   in Loop: Header=BB5_25 Depth=1
-	movl	$589865, %edi           # imm = 0x90029
+	movl	$8, %edi
 	callq	enqueue_signature
 	movq	-32(%rbp), %rax
 	movq	8(%rax), %rax
@@ -1515,7 +1515,7 @@ main:                                   # @main
 	callq	malloc
 	movq	%rax, %rbx
 # BB#41:                                #   in Loop: Header=BB5_25 Depth=1
-	movl	$589866, %edi           # imm = 0x9002A
+	movl	$12, %edi
 	callq	enqueue_signature
 	movq	-48(%rbp), %rax
 	movq	%rbx, 8(%rax)
@@ -1523,20 +1523,20 @@ main:                                   # @main
 	cmpq	$0, 8(%rax)
 	jne	.LBB5_45
 # BB#42:
-	movl	$589867, %edi           # imm = 0x9002B
+	movl	$1, %edi
 	callq	enqueue_signature
 	movabsq	$.L.str.5, %rdi
 	callq	perror
 # BB#43:
-	movl	$589868, %edi           # imm = 0x9002C
+	movl	$1, %edi
 	callq	enqueue_signature
 	xorl	%edi, %edi
 	callq	exit
 # BB#44:
-	movl	$589869, %edi           # imm = 0x9002D
+	xorl	%edi, %edi
 	callq	enqueue_signature_with_return
 .LBB5_45:                               #   in Loop: Header=BB5_25 Depth=1
-	movl	$589870, %edi           # imm = 0x9002E
+	movl	$5, %edi
 	callq	enqueue_signature
 	movq	-48(%rbp), %rax
 	movq	8(%rax), %rdi
@@ -1544,7 +1544,7 @@ main:                                   # @main
 	movl	$1, %edx
 	callq	memset
 # BB#46:                                #   in Loop: Header=BB5_25 Depth=1
-	movl	$589871, %edi           # imm = 0x9002F
+	movl	$10, %edi
 	callq	enqueue_signature
 	movl	-40(%rbp), %eax
 	movq	-32(%rbp), %rcx
@@ -1554,7 +1554,7 @@ main:                                   # @main
 	callq	htonl
 	movl	%eax, %ebx
 # BB#47:                                #   in Loop: Header=BB5_25 Depth=1
-	movl	$589872, %edi           # imm = 0x90030
+	movl	$12, %edi
 	callq	enqueue_signature_with_call
 	movl	%ebx, %eax
 	movq	-32(%rbp), %rcx
@@ -1565,7 +1565,7 @@ main:                                   # @main
 	callq	pat_search
 	movq	%rax, %rbx
 # BB#48:                                #   in Loop: Header=BB5_25 Depth=1
-	movl	$589873, %edi           # imm = 0x90031
+	movl	$12, %edi
 	callq	enqueue_signature
 	movq	%rbx, -80(%rbp)
 	movq	-80(%rbp), %rax
@@ -1574,38 +1574,38 @@ main:                                   # @main
 	cmpq	%rcx, %rax
 	jne	.LBB5_50
 # BB#49:                                #   in Loop: Header=BB5_25 Depth=1
-	movl	$589874, %edi           # imm = 0x90032
+	movl	$1, %edi
 	callq	enqueue_signature
 	jmp	.LBB5_51
 .LBB5_50:                               #   in Loop: Header=BB5_25 Depth=1
-	movl	$589875, %edi           # imm = 0x90033
+	movl	$1, %edi
 	callq	enqueue_signature
 .LBB5_51:                               #   in Loop: Header=BB5_25 Depth=1
-	movl	$589876, %edi           # imm = 0x90034
+	movl	$5, %edi
 	callq	enqueue_signature
 	cmpq	$0, -32(%rbp)
 	jne	.LBB5_53
 # BB#52:                                #   in Loop: Header=BB5_25 Depth=1
-	movl	$589877, %edi           # imm = 0x90035
+	movl	$1, %edi
 	callq	enqueue_signature
 .LBB5_53:                               #   in Loop: Header=BB5_25 Depth=1
-	movl	$589878, %edi           # imm = 0x90036
+	movl	$1, %edi
 	callq	enqueue_signature
 	jmp	.LBB5_25
 .LBB5_54:
-	movl	$589879, %edi           # imm = 0x90037
+	movl	$1, %edi
 	callq	enqueue_signature
 	movabsq	$.L.str.7, %rdi
 	movb	$0, %al
 	callq	printf
 # BB#55:
-	movl	$589880, %edi           # imm = 0x90038
+	movl	$1, %edi
 	callq	enqueue_signature
 	leaq	-112(%rbp), %rdi
 	xorl	%esi, %esi
 	callq	gettimeofday
 # BB#56:
-	movl	$589881, %edi           # imm = 0x90039
+	movl	$16, %edi
 	callq	enqueue_signature
 	movabsq	$.L.str.8, %rdi
 	movq	-112(%rbp), %rax
@@ -1617,7 +1617,7 @@ main:                                   # @main
 	movb	$0, %al
 	callq	printf
 # BB#57:
-	movl	$589882, %edi           # imm = 0x9003A
+	movl	$6, %edi
 	callq	enqueue_signature_with_remainder_process
 	movl	$1, is_signature_queue_full
 	movl	-52(%rbp), %eax

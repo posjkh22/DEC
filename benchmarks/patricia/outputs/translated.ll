@@ -25,7 +25,7 @@ target triple = "x86_64-unknown-linux-gnu"
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
-  call void @enqueue_signature(i32 65537)
+  call void @enqueue_signature(i32 19)
   %3 = alloca %struct.ptree*, align 8
   %4 = alloca %struct.ptree*, align 8
   %5 = alloca %struct.ptree*, align 8
@@ -41,13 +41,13 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %12, label %13, label %21
 
 ; <label>:13:                                     ; preds = %2
-  call void @enqueue_signature(i32 65538)
+  call void @enqueue_signature(i32 5)
   %14 = load %struct.ptree*, %struct.ptree** %4, align 8
   %15 = icmp ne %struct.ptree* %14, null
   br i1 %15, label %16, label %21
 
 ; <label>:16:                                     ; preds = %13
-  call void @enqueue_signature(i32 65539)
+  call void @enqueue_signature(i32 7)
   %17 = load %struct.ptree*, %struct.ptree** %4, align 8
   %18 = getelementptr inbounds %struct.ptree, %struct.ptree* %17, i32 0, i32 1
   %19 = load %struct.ptree_mask*, %struct.ptree_mask** %18, align 8
@@ -55,12 +55,12 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %20, label %22, label %21
 
 ; <label>:21:                                     ; preds = %16, %13, %2
-  call void @enqueue_signature(i32 65540)
+  call void @enqueue_signature(i32 4)
   store %struct.ptree* null, %struct.ptree** %3, align 8
   br label %276
 
 ; <label>:22:                                     ; preds = %16
-  call void @enqueue_signature(i32 65541)
+  call void @enqueue_signature(i32 19)
   %23 = load %struct.ptree*, %struct.ptree** %4, align 8
   %24 = getelementptr inbounds %struct.ptree, %struct.ptree* %23, i32 0, i32 1
   %25 = load %struct.ptree_mask*, %struct.ptree_mask** %24, align 8
@@ -76,7 +76,7 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br label %33
 
 ; <label>:33:                                     ; preds = %58, %22
-  call void @enqueue_signature_with_call(i32 65542)
+  call void @enqueue_signature_with_call(i32 16)
   %34 = load %struct.ptree*, %struct.ptree** %6, align 8
   %35 = getelementptr inbounds %struct.ptree, %struct.ptree* %34, i32 0, i32 3
   %36 = load i8, i8* %35, align 1
@@ -93,19 +93,19 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br label %46
 
 ; <label>:46:                                     ; preds = %33
-  call void @enqueue_signature(i32 65543)
+  call void @enqueue_signature(i32 3)
   %47 = icmp ne i64 %45, 0
   br i1 %47, label %48, label %52
 
 ; <label>:48:                                     ; preds = %46
-  call void @enqueue_signature(i32 65544)
+  call void @enqueue_signature(i32 5)
   %49 = load %struct.ptree*, %struct.ptree** %6, align 8
   %50 = getelementptr inbounds %struct.ptree, %struct.ptree* %49, i32 0, i32 5
   %51 = load %struct.ptree*, %struct.ptree** %50, align 8
   br label %56
 
 ; <label>:52:                                     ; preds = %46
-  call void @enqueue_signature(i32 65545)
+  call void @enqueue_signature(i32 5)
   %53 = load %struct.ptree*, %struct.ptree** %6, align 8
   %54 = getelementptr inbounds %struct.ptree, %struct.ptree* %53, i32 0, i32 4
   %55 = load %struct.ptree*, %struct.ptree** %54, align 8
@@ -113,12 +113,12 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
 
 ; <label>:56:                                     ; preds = %52, %48
   %57 = phi %struct.ptree* [ %51, %48 ], [ %55, %52 ]
-  call void @enqueue_signature(i32 65546)
+  call void @enqueue_signature(i32 4)
   store %struct.ptree* %57, %struct.ptree** %6, align 8
   br label %58
 
 ; <label>:58:                                     ; preds = %56
-  call void @enqueue_signature(i32 65547)
+  call void @enqueue_signature(i32 9)
   %59 = load i32, i32* %9, align 4
   %60 = load %struct.ptree*, %struct.ptree** %6, align 8
   %61 = getelementptr inbounds %struct.ptree, %struct.ptree* %60, i32 0, i32 3
@@ -128,7 +128,7 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %64, label %33, label %65
 
 ; <label>:65:                                     ; preds = %58
-  call void @enqueue_signature(i32 65548)
+  call void @enqueue_signature(i32 11)
   %66 = load %struct.ptree*, %struct.ptree** %4, align 8
   %67 = getelementptr inbounds %struct.ptree, %struct.ptree* %66, i32 0, i32 0
   %68 = load i64, i64* %67, align 8
@@ -139,12 +139,12 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %72, label %73, label %217
 
 ; <label>:73:                                     ; preds = %65
-  call void @enqueue_signature(i32 65549)
+  call void @enqueue_signature(i32 4)
   store i32 0, i32* %9, align 4
   br label %74
 
 ; <label>:74:                                     ; preds = %119, %73
-  call void @enqueue_signature(i32 65550)
+  call void @enqueue_signature(i32 9)
   %75 = load i32, i32* %9, align 4
   %76 = load %struct.ptree*, %struct.ptree** %6, align 8
   %77 = getelementptr inbounds %struct.ptree, %struct.ptree* %76, i32 0, i32 2
@@ -154,7 +154,7 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %80, label %81, label %122
 
 ; <label>:81:                                     ; preds = %74
-  call void @enqueue_signature(i32 65551)
+  call void @enqueue_signature(i32 17)
   %82 = load %struct.ptree*, %struct.ptree** %4, align 8
   %83 = getelementptr inbounds %struct.ptree, %struct.ptree* %82, i32 0, i32 1
   %84 = load %struct.ptree_mask*, %struct.ptree_mask** %83, align 8
@@ -172,7 +172,7 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %95, label %96, label %118
 
 ; <label>:96:                                     ; preds = %81
-  call void @enqueue_signature(i32 65552)
+  call void @enqueue_signature(i32 20)
   %97 = load %struct.ptree*, %struct.ptree** %4, align 8
   %98 = getelementptr inbounds %struct.ptree, %struct.ptree* %97, i32 0, i32 1
   %99 = load %struct.ptree_mask*, %struct.ptree_mask** %98, align 8
@@ -194,32 +194,32 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br label %113
 
 ; <label>:113:                                    ; preds = %96
-  call void @enqueue_signature(i32 65553)
+  call void @enqueue_signature(i32 3)
   %114 = load %struct.ptree*, %struct.ptree** %4, align 8
   %115 = bitcast %struct.ptree* %114 to i8*
   call void @free(i8* %115) #6
   br label %116
 
 ; <label>:116:                                    ; preds = %113
-  call void @enqueue_signature(i32 65554)
+  call void @enqueue_signature(i32 9)
   store %struct.ptree* null, %struct.ptree** %4, align 8
   %117 = load %struct.ptree*, %struct.ptree** %6, align 8
   store %struct.ptree* %117, %struct.ptree** %3, align 8
   br label %276
 
 ; <label>:118:                                    ; preds = %81
-  call void @enqueue_signature(i32 65555)
+  call void @enqueue_signature(i32 1)
   br label %119
 
 ; <label>:119:                                    ; preds = %118
-  call void @enqueue_signature(i32 65556)
+  call void @enqueue_signature(i32 9)
   %120 = load i32, i32* %9, align 4
   %121 = add nsw i32 %120, 1
   store i32 %121, i32* %9, align 4
   br label %74
 
 ; <label>:122:                                    ; preds = %74
-  call void @enqueue_signature(i32 65557)
+  call void @enqueue_signature(i32 12)
   %123 = load %struct.ptree*, %struct.ptree** %6, align 8
   %124 = getelementptr inbounds %struct.ptree, %struct.ptree* %123, i32 0, i32 2
   %125 = load i8, i8* %124, align 8
@@ -231,7 +231,7 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br label %131
 
 ; <label>:131:                                    ; preds = %122
-  call void @enqueue_signature(i32 65558)
+  call void @enqueue_signature(i32 15)
   %132 = bitcast i8* %130 to %struct.ptree_mask*
   store %struct.ptree_mask* %132, %struct.ptree_mask** %7, align 8
   store i32 0, i32* %10, align 4
@@ -241,7 +241,7 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br label %134
 
 ; <label>:134:                                    ; preds = %182, %131
-  call void @enqueue_signature(i32 65559)
+  call void @enqueue_signature(i32 9)
   %135 = load i32, i32* %9, align 4
   %136 = load %struct.ptree*, %struct.ptree** %6, align 8
   %137 = getelementptr inbounds %struct.ptree, %struct.ptree* %136, i32 0, i32 2
@@ -251,7 +251,7 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %140, label %141, label %185
 
 ; <label>:141:                                    ; preds = %134
-  call void @enqueue_signature(i32 65560)
+  call void @enqueue_signature(i32 17)
   %142 = load %struct.ptree*, %struct.ptree** %4, align 8
   %143 = getelementptr inbounds %struct.ptree, %struct.ptree* %142, i32 0, i32 1
   %144 = load %struct.ptree_mask*, %struct.ptree_mask** %143, align 8
@@ -269,7 +269,7 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %155, label %156, label %169
 
 ; <label>:156:                                    ; preds = %141
-  call void @enqueue_signature(i32 65561)
+  call void @enqueue_signature(i32 9)
   %157 = load %struct.ptree*, %struct.ptree** %6, align 8
   %158 = getelementptr inbounds %struct.ptree, %struct.ptree* %157, i32 0, i32 1
   %159 = load %struct.ptree_mask*, %struct.ptree_mask** %158, align 8
@@ -283,14 +283,14 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br label %166
 
 ; <label>:166:                                    ; preds = %156
-  call void @enqueue_signature(i32 65562)
+  call void @enqueue_signature(i32 9)
   %167 = load i32, i32* %9, align 4
   %168 = add nsw i32 %167, 1
   store i32 %168, i32* %9, align 4
   br label %181
 
 ; <label>:169:                                    ; preds = %141
-  call void @enqueue_signature(i32 65563)
+  call void @enqueue_signature(i32 7)
   %170 = load %struct.ptree*, %struct.ptree** %4, align 8
   %171 = getelementptr inbounds %struct.ptree, %struct.ptree* %170, i32 0, i32 1
   %172 = load %struct.ptree_mask*, %struct.ptree_mask** %171, align 8
@@ -301,7 +301,7 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br label %176
 
 ; <label>:176:                                    ; preds = %169
-  call void @enqueue_signature(i32 65564)
+  call void @enqueue_signature(i32 11)
   %177 = load %struct.ptree*, %struct.ptree** %4, align 8
   %178 = getelementptr inbounds %struct.ptree, %struct.ptree* %177, i32 0, i32 1
   %179 = load %struct.ptree_mask*, %struct.ptree_mask** %178, align 8
@@ -311,24 +311,24 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br label %181
 
 ; <label>:181:                                    ; preds = %176, %166
-  call void @enqueue_signature(i32 65565)
+  call void @enqueue_signature(i32 1)
   br label %182
 
 ; <label>:182:                                    ; preds = %181
-  call void @enqueue_signature(i32 65566)
+  call void @enqueue_signature(i32 6)
   %183 = load %struct.ptree_mask*, %struct.ptree_mask** %8, align 8
   %184 = getelementptr inbounds %struct.ptree_mask, %struct.ptree_mask* %183, i32 1
   store %struct.ptree_mask* %184, %struct.ptree_mask** %8, align 8
   br label %134
 
 ; <label>:185:                                    ; preds = %134
-  call void @enqueue_signature(i32 65567)
+  call void @enqueue_signature(i32 5)
   %186 = load i32, i32* %10, align 4
   %187 = icmp ne i32 %186, 0
   br i1 %187, label %195, label %188
 
 ; <label>:188:                                    ; preds = %185
-  call void @enqueue_signature(i32 65568)
+  call void @enqueue_signature(i32 7)
   %189 = load %struct.ptree*, %struct.ptree** %4, align 8
   %190 = getelementptr inbounds %struct.ptree, %struct.ptree* %189, i32 0, i32 1
   %191 = load %struct.ptree_mask*, %struct.ptree_mask** %190, align 8
@@ -339,7 +339,7 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br label %195
 
 ; <label>:195:                                    ; preds = %188, %185
-  call void @enqueue_signature(i32 65569)
+  call void @enqueue_signature(i32 5)
   %196 = load %struct.ptree*, %struct.ptree** %4, align 8
   %197 = getelementptr inbounds %struct.ptree, %struct.ptree* %196, i32 0, i32 1
   %198 = load %struct.ptree_mask*, %struct.ptree_mask** %197, align 8
@@ -348,14 +348,14 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br label %200
 
 ; <label>:200:                                    ; preds = %195
-  call void @enqueue_signature(i32 65570)
+  call void @enqueue_signature(i32 3)
   %201 = load %struct.ptree*, %struct.ptree** %4, align 8
   %202 = bitcast %struct.ptree* %201 to i8*
   call void @free(i8* %202) #6
   br label %203
 
 ; <label>:203:                                    ; preds = %200
-  call void @enqueue_signature(i32 65571)
+  call void @enqueue_signature(i32 18)
   store %struct.ptree* null, %struct.ptree** %4, align 8
   %204 = load %struct.ptree*, %struct.ptree** %6, align 8
   %205 = getelementptr inbounds %struct.ptree, %struct.ptree* %204, i32 0, i32 2
@@ -370,7 +370,7 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br label %212
 
 ; <label>:212:                                    ; preds = %203
-  call void @enqueue_signature(i32 65572)
+  call void @enqueue_signature(i32 13)
   %213 = load %struct.ptree_mask*, %struct.ptree_mask** %7, align 8
   %214 = load %struct.ptree*, %struct.ptree** %6, align 8
   %215 = getelementptr inbounds %struct.ptree, %struct.ptree* %214, i32 0, i32 1
@@ -380,18 +380,18 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br label %276
 
 ; <label>:217:                                    ; preds = %65
-  call void @enqueue_signature(i32 65573)
+  call void @enqueue_signature(i32 4)
   store i32 1, i32* %9, align 4
   br label %218
 
 ; <label>:218:                                    ; preds = %238, %217
-  call void @enqueue_signature(i32 65574)
+  call void @enqueue_signature(i32 5)
   %219 = load i32, i32* %9, align 4
   %220 = icmp slt i32 %219, 32
   br i1 %220, label %221, label %235
 
 ; <label>:221:                                    ; preds = %218
-  call void @enqueue_signature_with_call(i32 65575)
+  call void @enqueue_signature_with_call(i32 7)
   %222 = load i32, i32* %9, align 4
   %223 = load %struct.ptree*, %struct.ptree** %4, align 8
   %224 = getelementptr inbounds %struct.ptree, %struct.ptree* %223, i32 0, i32 0
@@ -400,7 +400,7 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br label %227
 
 ; <label>:227:                                    ; preds = %221
-  call void @enqueue_signature_with_call(i32 65576)
+  call void @enqueue_signature_with_call(i32 7)
   %228 = load i32, i32* %9, align 4
   %229 = load %struct.ptree*, %struct.ptree** %6, align 8
   %230 = getelementptr inbounds %struct.ptree, %struct.ptree* %229, i32 0, i32 0
@@ -409,28 +409,28 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br label %233
 
 ; <label>:233:                                    ; preds = %227
-  call void @enqueue_signature(i32 65577)
+  call void @enqueue_signature(i32 3)
   %234 = icmp eq i64 %226, %232
   br label %235
 
 ; <label>:235:                                    ; preds = %233, %218
   %236 = phi i1 [ false, %218 ], [ %234, %233 ]
-  call void @enqueue_signature(i32 65578)
+  call void @enqueue_signature(i32 1)
   br i1 %236, label %237, label %241
 
 ; <label>:237:                                    ; preds = %235
-  call void @enqueue_signature(i32 65579)
+  call void @enqueue_signature(i32 1)
   br label %238
 
 ; <label>:238:                                    ; preds = %237
-  call void @enqueue_signature(i32 65580)
+  call void @enqueue_signature(i32 9)
   %239 = load i32, i32* %9, align 4
   %240 = add nsw i32 %239, 1
   store i32 %240, i32* %9, align 4
   br label %218
 
 ; <label>:241:                                    ; preds = %235
-  call void @enqueue_signature_with_call(i32 65581)
+  call void @enqueue_signature_with_call(i32 9)
   %242 = load %struct.ptree*, %struct.ptree** %5, align 8
   %243 = getelementptr inbounds %struct.ptree, %struct.ptree* %242, i32 0, i32 3
   %244 = load i8, i8* %243, align 1
@@ -442,12 +442,12 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br label %250
 
 ; <label>:250:                                    ; preds = %241
-  call void @enqueue_signature(i32 65582)
+  call void @enqueue_signature(i32 3)
   %251 = icmp ne i64 %249, 0
   br i1 %251, label %252, label %263
 
 ; <label>:252:                                    ; preds = %250
-  call void @enqueue_signature_with_call(i32 65583)
+  call void @enqueue_signature_with_call(i32 11)
   %253 = load %struct.ptree*, %struct.ptree** %5, align 8
   %254 = getelementptr inbounds %struct.ptree, %struct.ptree* %253, i32 0, i32 5
   %255 = load %struct.ptree*, %struct.ptree** %254, align 8
@@ -458,14 +458,14 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br label %260
 
 ; <label>:260:                                    ; preds = %252
-  call void @enqueue_signature(i32 65584)
+  call void @enqueue_signature(i32 6)
   %261 = load %struct.ptree*, %struct.ptree** %5, align 8
   %262 = getelementptr inbounds %struct.ptree, %struct.ptree* %261, i32 0, i32 5
   store %struct.ptree* %259, %struct.ptree** %262, align 8
   br label %274
 
 ; <label>:263:                                    ; preds = %250
-  call void @enqueue_signature_with_call(i32 65585)
+  call void @enqueue_signature_with_call(i32 11)
   %264 = load %struct.ptree*, %struct.ptree** %5, align 8
   %265 = getelementptr inbounds %struct.ptree, %struct.ptree* %264, i32 0, i32 4
   %266 = load %struct.ptree*, %struct.ptree** %265, align 8
@@ -476,27 +476,27 @@ define %struct.ptree* @pat_insert(%struct.ptree*, %struct.ptree*) #0 {
   br label %271
 
 ; <label>:271:                                    ; preds = %263
-  call void @enqueue_signature(i32 65586)
+  call void @enqueue_signature(i32 6)
   %272 = load %struct.ptree*, %struct.ptree** %5, align 8
   %273 = getelementptr inbounds %struct.ptree, %struct.ptree* %272, i32 0, i32 4
   store %struct.ptree* %270, %struct.ptree** %273, align 8
   br label %274
 
 ; <label>:274:                                    ; preds = %271, %260
-  call void @enqueue_signature(i32 65587)
+  call void @enqueue_signature(i32 6)
   %275 = load %struct.ptree*, %struct.ptree** %4, align 8
   store %struct.ptree* %275, %struct.ptree** %3, align 8
   br label %276
 
 ; <label>:276:                                    ; preds = %274, %212, %116, %21
-  call void @enqueue_signature_with_return(i32 65588)
+  call void @enqueue_signature_with_return(i32 3)
   %277 = load %struct.ptree*, %struct.ptree** %3, align 8
   ret %struct.ptree* %277
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define internal i64 @bit(i32, i64) #0 {
-  call void @enqueue_signature_with_return(i32 131073)
+  call void @enqueue_signature_with_return(i32 13)
   %3 = alloca i32, align 4
   %4 = alloca i64, align 8
   store i32 %0, i32* %3, align 4
@@ -521,7 +521,7 @@ declare void @bcopy(i8*, i8*, i64) #1
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define internal %struct.ptree* @insertR(%struct.ptree*, %struct.ptree*, i32, %struct.ptree*) #0 {
-  call void @enqueue_signature(i32 393217)
+  call void @enqueue_signature(i32 26)
   %5 = alloca %struct.ptree*, align 8
   %6 = alloca %struct.ptree*, align 8
   %7 = alloca %struct.ptree*, align 8
@@ -540,7 +540,7 @@ define internal %struct.ptree* @insertR(%struct.ptree*, %struct.ptree*, i32, %st
   br i1 %15, label %26, label %16
 
 ; <label>:16:                                     ; preds = %4
-  call void @enqueue_signature(i32 393218)
+  call void @enqueue_signature(i32 11)
   %17 = load %struct.ptree*, %struct.ptree** %6, align 8
   %18 = getelementptr inbounds %struct.ptree, %struct.ptree* %17, i32 0, i32 3
   %19 = load i8, i8* %18, align 1
@@ -553,7 +553,7 @@ define internal %struct.ptree* @insertR(%struct.ptree*, %struct.ptree*, i32, %st
   br i1 %25, label %26, label %62
 
 ; <label>:26:                                     ; preds = %16, %4
-  call void @enqueue_signature_with_call(i32 393219)
+  call void @enqueue_signature_with_call(i32 14)
   %27 = load i32, i32* %8, align 4
   %28 = trunc i32 %27 to i8
   %29 = load %struct.ptree*, %struct.ptree** %7, align 8
@@ -567,23 +567,23 @@ define internal %struct.ptree* @insertR(%struct.ptree*, %struct.ptree*, i32, %st
   br label %36
 
 ; <label>:36:                                     ; preds = %26
-  call void @enqueue_signature(i32 393220)
+  call void @enqueue_signature(i32 3)
   %37 = icmp ne i64 %35, 0
   br i1 %37, label %38, label %40
 
 ; <label>:38:                                     ; preds = %36
-  call void @enqueue_signature(i32 393221)
+  call void @enqueue_signature(i32 3)
   %39 = load %struct.ptree*, %struct.ptree** %6, align 8
   br label %42
 
 ; <label>:40:                                     ; preds = %36
-  call void @enqueue_signature(i32 393222)
+  call void @enqueue_signature(i32 3)
   %41 = load %struct.ptree*, %struct.ptree** %7, align 8
   br label %42
 
 ; <label>:42:                                     ; preds = %40, %38
   %43 = phi %struct.ptree* [ %39, %38 ], [ %41, %40 ]
-  call void @enqueue_signature_with_call(i32 393223)
+  call void @enqueue_signature_with_call(i32 12)
   %44 = load %struct.ptree*, %struct.ptree** %7, align 8
   %45 = getelementptr inbounds %struct.ptree, %struct.ptree* %44, i32 0, i32 4
   store %struct.ptree* %43, %struct.ptree** %45, align 8
@@ -595,23 +595,23 @@ define internal %struct.ptree* @insertR(%struct.ptree*, %struct.ptree*, i32, %st
   br label %51
 
 ; <label>:51:                                     ; preds = %42
-  call void @enqueue_signature(i32 393224)
+  call void @enqueue_signature(i32 3)
   %52 = icmp ne i64 %50, 0
   br i1 %52, label %53, label %55
 
 ; <label>:53:                                     ; preds = %51
-  call void @enqueue_signature(i32 393225)
+  call void @enqueue_signature(i32 3)
   %54 = load %struct.ptree*, %struct.ptree** %7, align 8
   br label %57
 
 ; <label>:55:                                     ; preds = %51
-  call void @enqueue_signature(i32 393226)
+  call void @enqueue_signature(i32 3)
   %56 = load %struct.ptree*, %struct.ptree** %6, align 8
   br label %57
 
 ; <label>:57:                                     ; preds = %55, %53
   %58 = phi %struct.ptree* [ %54, %53 ], [ %56, %55 ]
-  call void @enqueue_signature(i32 393227)
+  call void @enqueue_signature(i32 11)
   %59 = load %struct.ptree*, %struct.ptree** %7, align 8
   %60 = getelementptr inbounds %struct.ptree, %struct.ptree* %59, i32 0, i32 5
   store %struct.ptree* %58, %struct.ptree** %60, align 8
@@ -620,7 +620,7 @@ define internal %struct.ptree* @insertR(%struct.ptree*, %struct.ptree*, i32, %st
   br label %97
 
 ; <label>:62:                                     ; preds = %16
-  call void @enqueue_signature_with_call(i32 393228)
+  call void @enqueue_signature_with_call(i32 9)
   %63 = load %struct.ptree*, %struct.ptree** %6, align 8
   %64 = getelementptr inbounds %struct.ptree, %struct.ptree* %63, i32 0, i32 3
   %65 = load i8, i8* %64, align 1
@@ -632,12 +632,12 @@ define internal %struct.ptree* @insertR(%struct.ptree*, %struct.ptree*, i32, %st
   br label %71
 
 ; <label>:71:                                     ; preds = %62
-  call void @enqueue_signature(i32 393229)
+  call void @enqueue_signature(i32 3)
   %72 = icmp ne i64 %70, 0
   br i1 %72, label %73, label %84
 
 ; <label>:73:                                     ; preds = %71
-  call void @enqueue_signature_with_call(i32 393230)
+  call void @enqueue_signature_with_call(i32 11)
   %74 = load %struct.ptree*, %struct.ptree** %6, align 8
   %75 = getelementptr inbounds %struct.ptree, %struct.ptree* %74, i32 0, i32 5
   %76 = load %struct.ptree*, %struct.ptree** %75, align 8
@@ -648,14 +648,14 @@ define internal %struct.ptree* @insertR(%struct.ptree*, %struct.ptree*, i32, %st
   br label %81
 
 ; <label>:81:                                     ; preds = %73
-  call void @enqueue_signature(i32 393231)
+  call void @enqueue_signature(i32 6)
   %82 = load %struct.ptree*, %struct.ptree** %6, align 8
   %83 = getelementptr inbounds %struct.ptree, %struct.ptree* %82, i32 0, i32 5
   store %struct.ptree* %80, %struct.ptree** %83, align 8
   br label %95
 
 ; <label>:84:                                     ; preds = %71
-  call void @enqueue_signature_with_call(i32 393232)
+  call void @enqueue_signature_with_call(i32 11)
   %85 = load %struct.ptree*, %struct.ptree** %6, align 8
   %86 = getelementptr inbounds %struct.ptree, %struct.ptree* %85, i32 0, i32 4
   %87 = load %struct.ptree*, %struct.ptree** %86, align 8
@@ -666,27 +666,27 @@ define internal %struct.ptree* @insertR(%struct.ptree*, %struct.ptree*, i32, %st
   br label %92
 
 ; <label>:92:                                     ; preds = %84
-  call void @enqueue_signature(i32 393233)
+  call void @enqueue_signature(i32 6)
   %93 = load %struct.ptree*, %struct.ptree** %6, align 8
   %94 = getelementptr inbounds %struct.ptree, %struct.ptree* %93, i32 0, i32 4
   store %struct.ptree* %91, %struct.ptree** %94, align 8
   br label %95
 
 ; <label>:95:                                     ; preds = %92, %81
-  call void @enqueue_signature(i32 393234)
+  call void @enqueue_signature(i32 6)
   %96 = load %struct.ptree*, %struct.ptree** %6, align 8
   store %struct.ptree* %96, %struct.ptree** %5, align 8
   br label %97
 
 ; <label>:97:                                     ; preds = %95, %57
-  call void @enqueue_signature_with_return(i32 393235)
+  call void @enqueue_signature_with_return(i32 3)
   %98 = load %struct.ptree*, %struct.ptree** %5, align 8
   ret %struct.ptree* %98
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
-  call void @enqueue_signature(i32 458753)
+  call void @enqueue_signature(i32 22)
   %3 = alloca i32, align 4
   %4 = alloca %struct.ptree*, align 8
   %5 = alloca %struct.ptree*, align 8
@@ -705,7 +705,7 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %15, label %16, label %24
 
 ; <label>:16:                                     ; preds = %2
-  call void @enqueue_signature(i32 458754)
+  call void @enqueue_signature(i32 7)
   %17 = load %struct.ptree*, %struct.ptree** %4, align 8
   %18 = getelementptr inbounds %struct.ptree, %struct.ptree* %17, i32 0, i32 1
   %19 = load %struct.ptree_mask*, %struct.ptree_mask** %18, align 8
@@ -713,18 +713,18 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %20, label %21, label %24
 
 ; <label>:21:                                     ; preds = %16
-  call void @enqueue_signature(i32 458755)
+  call void @enqueue_signature(i32 5)
   %22 = load %struct.ptree*, %struct.ptree** %10, align 8
   %23 = icmp ne %struct.ptree* %22, null
   br i1 %23, label %25, label %24
 
 ; <label>:24:                                     ; preds = %21, %16, %2
-  call void @enqueue_signature(i32 458756)
+  call void @enqueue_signature(i32 4)
   store i32 0, i32* %3, align 4
   br label %347
 
 ; <label>:25:                                     ; preds = %21
-  call void @enqueue_signature(i32 458757)
+  call void @enqueue_signature(i32 12)
   %26 = load %struct.ptree*, %struct.ptree** %5, align 8
   store %struct.ptree* %26, %struct.ptree** %10, align 8
   store %struct.ptree* %26, %struct.ptree** %6, align 8
@@ -732,7 +732,7 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br label %27
 
 ; <label>:27:                                     ; preds = %54, %25
-  call void @enqueue_signature_with_call(i32 458758)
+  call void @enqueue_signature_with_call(i32 26)
   %28 = load %struct.ptree*, %struct.ptree** %10, align 8
   %29 = getelementptr inbounds %struct.ptree, %struct.ptree* %28, i32 0, i32 3
   %30 = load i8, i8* %29, align 1
@@ -753,19 +753,19 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br label %42
 
 ; <label>:42:                                     ; preds = %27
-  call void @enqueue_signature(i32 458759)
+  call void @enqueue_signature(i32 3)
   %43 = icmp ne i64 %41, 0
   br i1 %43, label %44, label %48
 
 ; <label>:44:                                     ; preds = %42
-  call void @enqueue_signature(i32 458760)
+  call void @enqueue_signature(i32 5)
   %45 = load %struct.ptree*, %struct.ptree** %10, align 8
   %46 = getelementptr inbounds %struct.ptree, %struct.ptree* %45, i32 0, i32 5
   %47 = load %struct.ptree*, %struct.ptree** %46, align 8
   br label %52
 
 ; <label>:48:                                     ; preds = %42
-  call void @enqueue_signature(i32 458761)
+  call void @enqueue_signature(i32 5)
   %49 = load %struct.ptree*, %struct.ptree** %10, align 8
   %50 = getelementptr inbounds %struct.ptree, %struct.ptree* %49, i32 0, i32 4
   %51 = load %struct.ptree*, %struct.ptree** %50, align 8
@@ -773,12 +773,12 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
 
 ; <label>:52:                                     ; preds = %48, %44
   %53 = phi %struct.ptree* [ %47, %44 ], [ %51, %48 ]
-  call void @enqueue_signature(i32 458762)
+  call void @enqueue_signature(i32 4)
   store %struct.ptree* %53, %struct.ptree** %10, align 8
   br label %54
 
 ; <label>:54:                                     ; preds = %52
-  call void @enqueue_signature(i32 458763)
+  call void @enqueue_signature(i32 9)
   %55 = load i32, i32* %13, align 4
   %56 = load %struct.ptree*, %struct.ptree** %10, align 8
   %57 = getelementptr inbounds %struct.ptree, %struct.ptree* %56, i32 0, i32 3
@@ -788,7 +788,7 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %60, label %27, label %61
 
 ; <label>:61:                                     ; preds = %54
-  call void @enqueue_signature(i32 458764)
+  call void @enqueue_signature(i32 11)
   %62 = load %struct.ptree*, %struct.ptree** %10, align 8
   %63 = getelementptr inbounds %struct.ptree, %struct.ptree* %62, i32 0, i32 0
   %64 = load i64, i64* %63, align 8
@@ -799,12 +799,12 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %68, label %69, label %70
 
 ; <label>:69:                                     ; preds = %61
-  call void @enqueue_signature(i32 458765)
+  call void @enqueue_signature(i32 4)
   store i32 0, i32* %3, align 4
   br label %347
 
 ; <label>:70:                                     ; preds = %61
-  call void @enqueue_signature(i32 458766)
+  call void @enqueue_signature(i32 7)
   %71 = load %struct.ptree*, %struct.ptree** %10, align 8
   %72 = getelementptr inbounds %struct.ptree, %struct.ptree* %71, i32 0, i32 2
   %73 = load i8, i8* %72, align 8
@@ -813,7 +813,7 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %75, label %76, label %249
 
 ; <label>:76:                                     ; preds = %70
-  call void @enqueue_signature(i32 458767)
+  call void @enqueue_signature(i32 7)
   %77 = load %struct.ptree*, %struct.ptree** %10, align 8
   %78 = getelementptr inbounds %struct.ptree, %struct.ptree* %77, i32 0, i32 3
   %79 = load i8, i8* %78, align 1
@@ -822,12 +822,12 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %81, label %82, label %83
 
 ; <label>:82:                                     ; preds = %76
-  call void @enqueue_signature(i32 458768)
+  call void @enqueue_signature(i32 4)
   store i32 0, i32* %3, align 4
   br label %347
 
 ; <label>:83:                                     ; preds = %76
-  call void @enqueue_signature(i32 458769)
+  call void @enqueue_signature(i32 15)
   %84 = load %struct.ptree*, %struct.ptree** %10, align 8
   %85 = getelementptr inbounds %struct.ptree, %struct.ptree* %84, i32 0, i32 1
   %86 = load %struct.ptree_mask*, %struct.ptree_mask** %85, align 8
@@ -842,19 +842,19 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %94, label %95, label %96
 
 ; <label>:95:                                     ; preds = %83
-  call void @enqueue_signature(i32 458770)
+  call void @enqueue_signature(i32 4)
   store i32 0, i32* %3, align 4
   br label %347
 
 ; <label>:96:                                     ; preds = %83
-  call void @enqueue_signature(i32 458771)
+  call void @enqueue_signature(i32 9)
   %97 = load %struct.ptree*, %struct.ptree** %6, align 8
   store %struct.ptree* %97, %struct.ptree** %8, align 8
   store %struct.ptree* %97, %struct.ptree** %9, align 8
   br label %98
 
 ; <label>:98:                                     ; preds = %124, %96
-  call void @enqueue_signature_with_call(i32 458772)
+  call void @enqueue_signature_with_call(i32 21)
   %99 = load %struct.ptree*, %struct.ptree** %8, align 8
   %100 = getelementptr inbounds %struct.ptree, %struct.ptree* %99, i32 0, i32 3
   %101 = load i8, i8* %100, align 1
@@ -873,19 +873,19 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br label %112
 
 ; <label>:112:                                    ; preds = %98
-  call void @enqueue_signature(i32 458773)
+  call void @enqueue_signature(i32 3)
   %113 = icmp ne i64 %111, 0
   br i1 %113, label %114, label %118
 
 ; <label>:114:                                    ; preds = %112
-  call void @enqueue_signature(i32 458774)
+  call void @enqueue_signature(i32 5)
   %115 = load %struct.ptree*, %struct.ptree** %8, align 8
   %116 = getelementptr inbounds %struct.ptree, %struct.ptree* %115, i32 0, i32 5
   %117 = load %struct.ptree*, %struct.ptree** %116, align 8
   br label %122
 
 ; <label>:118:                                    ; preds = %112
-  call void @enqueue_signature(i32 458775)
+  call void @enqueue_signature(i32 5)
   %119 = load %struct.ptree*, %struct.ptree** %8, align 8
   %120 = getelementptr inbounds %struct.ptree, %struct.ptree* %119, i32 0, i32 4
   %121 = load %struct.ptree*, %struct.ptree** %120, align 8
@@ -893,12 +893,12 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
 
 ; <label>:122:                                    ; preds = %118, %114
   %123 = phi %struct.ptree* [ %117, %114 ], [ %121, %118 ]
-  call void @enqueue_signature(i32 458776)
+  call void @enqueue_signature(i32 4)
   store %struct.ptree* %123, %struct.ptree** %8, align 8
   br label %124
 
 ; <label>:124:                                    ; preds = %122
-  call void @enqueue_signature(i32 458777)
+  call void @enqueue_signature(i32 9)
   %125 = load i32, i32* %13, align 4
   %126 = load %struct.ptree*, %struct.ptree** %8, align 8
   %127 = getelementptr inbounds %struct.ptree, %struct.ptree* %126, i32 0, i32 3
@@ -908,7 +908,7 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %130, label %98, label %131
 
 ; <label>:131:                                    ; preds = %124
-  call void @enqueue_signature_with_call(i32 458778)
+  call void @enqueue_signature_with_call(i32 9)
   %132 = load %struct.ptree*, %struct.ptree** %9, align 8
   %133 = getelementptr inbounds %struct.ptree, %struct.ptree* %132, i32 0, i32 3
   %134 = load i8, i8* %133, align 1
@@ -920,12 +920,12 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br label %140
 
 ; <label>:140:                                    ; preds = %131
-  call void @enqueue_signature(i32 458779)
+  call void @enqueue_signature(i32 3)
   %141 = icmp ne i64 %139, 0
   br i1 %141, label %142, label %146
 
 ; <label>:142:                                    ; preds = %140
-  call void @enqueue_signature(i32 458780)
+  call void @enqueue_signature(i32 8)
   %143 = load %struct.ptree*, %struct.ptree** %10, align 8
   %144 = load %struct.ptree*, %struct.ptree** %9, align 8
   %145 = getelementptr inbounds %struct.ptree, %struct.ptree* %144, i32 0, i32 5
@@ -933,7 +933,7 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br label %150
 
 ; <label>:146:                                    ; preds = %140
-  call void @enqueue_signature(i32 458781)
+  call void @enqueue_signature(i32 8)
   %147 = load %struct.ptree*, %struct.ptree** %10, align 8
   %148 = load %struct.ptree*, %struct.ptree** %9, align 8
   %149 = getelementptr inbounds %struct.ptree, %struct.ptree* %148, i32 0, i32 4
@@ -941,7 +941,7 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br label %150
 
 ; <label>:150:                                    ; preds = %146, %142
-  call void @enqueue_signature_with_call(i32 458782)
+  call void @enqueue_signature_with_call(i32 9)
   %151 = load %struct.ptree*, %struct.ptree** %7, align 8
   %152 = getelementptr inbounds %struct.ptree, %struct.ptree* %151, i32 0, i32 3
   %153 = load i8, i8* %152, align 1
@@ -953,12 +953,12 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br label %159
 
 ; <label>:159:                                    ; preds = %150
-  call void @enqueue_signature(i32 458783)
+  call void @enqueue_signature(i32 3)
   %160 = icmp ne i64 %158, 0
   br i1 %160, label %161, label %184
 
 ; <label>:161:                                    ; preds = %159
-  call void @enqueue_signature_with_call(i32 458784)
+  call void @enqueue_signature_with_call(i32 9)
   %162 = load %struct.ptree*, %struct.ptree** %6, align 8
   %163 = getelementptr inbounds %struct.ptree, %struct.ptree* %162, i32 0, i32 3
   %164 = load i8, i8* %163, align 1
@@ -970,19 +970,19 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br label %170
 
 ; <label>:170:                                    ; preds = %161
-  call void @enqueue_signature(i32 458785)
+  call void @enqueue_signature(i32 3)
   %171 = icmp ne i64 %169, 0
   br i1 %171, label %172, label %176
 
 ; <label>:172:                                    ; preds = %170
-  call void @enqueue_signature(i32 458786)
+  call void @enqueue_signature(i32 5)
   %173 = load %struct.ptree*, %struct.ptree** %6, align 8
   %174 = getelementptr inbounds %struct.ptree, %struct.ptree* %173, i32 0, i32 4
   %175 = load %struct.ptree*, %struct.ptree** %174, align 8
   br label %180
 
 ; <label>:176:                                    ; preds = %170
-  call void @enqueue_signature(i32 458787)
+  call void @enqueue_signature(i32 5)
   %177 = load %struct.ptree*, %struct.ptree** %6, align 8
   %178 = getelementptr inbounds %struct.ptree, %struct.ptree* %177, i32 0, i32 5
   %179 = load %struct.ptree*, %struct.ptree** %178, align 8
@@ -990,14 +990,14 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
 
 ; <label>:180:                                    ; preds = %176, %172
   %181 = phi %struct.ptree* [ %175, %172 ], [ %179, %176 ]
-  call void @enqueue_signature(i32 458788)
+  call void @enqueue_signature(i32 6)
   %182 = load %struct.ptree*, %struct.ptree** %7, align 8
   %183 = getelementptr inbounds %struct.ptree, %struct.ptree* %182, i32 0, i32 5
   store %struct.ptree* %181, %struct.ptree** %183, align 8
   br label %207
 
 ; <label>:184:                                    ; preds = %159
-  call void @enqueue_signature_with_call(i32 458789)
+  call void @enqueue_signature_with_call(i32 9)
   %185 = load %struct.ptree*, %struct.ptree** %6, align 8
   %186 = getelementptr inbounds %struct.ptree, %struct.ptree* %185, i32 0, i32 3
   %187 = load i8, i8* %186, align 1
@@ -1009,19 +1009,19 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br label %193
 
 ; <label>:193:                                    ; preds = %184
-  call void @enqueue_signature(i32 458790)
+  call void @enqueue_signature(i32 3)
   %194 = icmp ne i64 %192, 0
   br i1 %194, label %195, label %199
 
 ; <label>:195:                                    ; preds = %193
-  call void @enqueue_signature(i32 458791)
+  call void @enqueue_signature(i32 5)
   %196 = load %struct.ptree*, %struct.ptree** %6, align 8
   %197 = getelementptr inbounds %struct.ptree, %struct.ptree* %196, i32 0, i32 4
   %198 = load %struct.ptree*, %struct.ptree** %197, align 8
   br label %203
 
 ; <label>:199:                                    ; preds = %193
-  call void @enqueue_signature(i32 458792)
+  call void @enqueue_signature(i32 5)
   %200 = load %struct.ptree*, %struct.ptree** %6, align 8
   %201 = getelementptr inbounds %struct.ptree, %struct.ptree* %200, i32 0, i32 5
   %202 = load %struct.ptree*, %struct.ptree** %201, align 8
@@ -1029,14 +1029,14 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
 
 ; <label>:203:                                    ; preds = %199, %195
   %204 = phi %struct.ptree* [ %198, %195 ], [ %202, %199 ]
-  call void @enqueue_signature(i32 458793)
+  call void @enqueue_signature(i32 6)
   %205 = load %struct.ptree*, %struct.ptree** %7, align 8
   %206 = getelementptr inbounds %struct.ptree, %struct.ptree* %205, i32 0, i32 4
   store %struct.ptree* %204, %struct.ptree** %206, align 8
   br label %207
 
 ; <label>:207:                                    ; preds = %203, %180
-  call void @enqueue_signature(i32 458794)
+  call void @enqueue_signature(i32 9)
   %208 = load %struct.ptree*, %struct.ptree** %10, align 8
   %209 = getelementptr inbounds %struct.ptree, %struct.ptree* %208, i32 0, i32 1
   %210 = load %struct.ptree_mask*, %struct.ptree_mask** %209, align 8
@@ -1046,7 +1046,7 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %213, label %214, label %220
 
 ; <label>:214:                                    ; preds = %207
-  call void @enqueue_signature(i32 458795)
+  call void @enqueue_signature(i32 7)
   %215 = load %struct.ptree*, %struct.ptree** %10, align 8
   %216 = getelementptr inbounds %struct.ptree, %struct.ptree* %215, i32 0, i32 1
   %217 = load %struct.ptree_mask*, %struct.ptree_mask** %216, align 8
@@ -1056,7 +1056,7 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br label %220
 
 ; <label>:220:                                    ; preds = %214, %207
-  call void @enqueue_signature(i32 458796)
+  call void @enqueue_signature(i32 5)
   %221 = load %struct.ptree*, %struct.ptree** %10, align 8
   %222 = getelementptr inbounds %struct.ptree, %struct.ptree* %221, i32 0, i32 1
   %223 = load %struct.ptree_mask*, %struct.ptree_mask** %222, align 8
@@ -1065,14 +1065,14 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br label %225
 
 ; <label>:225:                                    ; preds = %220
-  call void @enqueue_signature(i32 458797)
+  call void @enqueue_signature(i32 7)
   %226 = load %struct.ptree*, %struct.ptree** %10, align 8
   %227 = load %struct.ptree*, %struct.ptree** %6, align 8
   %228 = icmp ne %struct.ptree* %226, %227
   br i1 %228, label %229, label %245
 
 ; <label>:229:                                    ; preds = %225
-  call void @enqueue_signature(i32 458798)
+  call void @enqueue_signature(i32 28)
   %230 = load %struct.ptree*, %struct.ptree** %6, align 8
   %231 = getelementptr inbounds %struct.ptree, %struct.ptree* %230, i32 0, i32 0
   %232 = load i64, i64* %231, align 8
@@ -1094,24 +1094,24 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br label %245
 
 ; <label>:245:                                    ; preds = %229, %225
-  call void @enqueue_signature(i32 458799)
+  call void @enqueue_signature(i32 3)
   %246 = load %struct.ptree*, %struct.ptree** %6, align 8
   %247 = bitcast %struct.ptree* %246 to i8*
   call void @free(i8* %247) #6
   br label %248
 
 ; <label>:248:                                    ; preds = %245
-  call void @enqueue_signature(i32 458800)
+  call void @enqueue_signature(i32 4)
   store i32 1, i32* %3, align 4
   br label %347
 
 ; <label>:249:                                    ; preds = %70
-  call void @enqueue_signature(i32 458801)
+  call void @enqueue_signature(i32 4)
   store i32 0, i32* %13, align 4
   br label %250
 
 ; <label>:250:                                    ; preds = %274, %249
-  call void @enqueue_signature(i32 458802)
+  call void @enqueue_signature(i32 9)
   %251 = load i32, i32* %13, align 4
   %252 = load %struct.ptree*, %struct.ptree** %10, align 8
   %253 = getelementptr inbounds %struct.ptree, %struct.ptree* %252, i32 0, i32 2
@@ -1121,7 +1121,7 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %256, label %257, label %277
 
 ; <label>:257:                                    ; preds = %250
-  call void @enqueue_signature(i32 458803)
+  call void @enqueue_signature(i32 17)
   %258 = load %struct.ptree*, %struct.ptree** %4, align 8
   %259 = getelementptr inbounds %struct.ptree, %struct.ptree* %258, i32 0, i32 1
   %260 = load %struct.ptree_mask*, %struct.ptree_mask** %259, align 8
@@ -1139,22 +1139,22 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %271, label %272, label %273
 
 ; <label>:272:                                    ; preds = %257
-  call void @enqueue_signature(i32 458804)
+  call void @enqueue_signature(i32 1)
   br label %277
 
 ; <label>:273:                                    ; preds = %257
-  call void @enqueue_signature(i32 458805)
+  call void @enqueue_signature(i32 1)
   br label %274
 
 ; <label>:274:                                    ; preds = %273
-  call void @enqueue_signature(i32 458806)
+  call void @enqueue_signature(i32 9)
   %275 = load i32, i32* %13, align 4
   %276 = add nsw i32 %275, 1
   store i32 %276, i32* %13, align 4
   br label %250
 
 ; <label>:277:                                    ; preds = %272, %250
-  call void @enqueue_signature(i32 458807)
+  call void @enqueue_signature(i32 9)
   %278 = load i32, i32* %13, align 4
   %279 = load %struct.ptree*, %struct.ptree** %10, align 8
   %280 = getelementptr inbounds %struct.ptree, %struct.ptree* %279, i32 0, i32 2
@@ -1164,12 +1164,12 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %283, label %284, label %285
 
 ; <label>:284:                                    ; preds = %277
-  call void @enqueue_signature(i32 458808)
+  call void @enqueue_signature(i32 4)
   store i32 0, i32* %3, align 4
   br label %347
 
 ; <label>:285:                                    ; preds = %277
-  call void @enqueue_signature(i32 458809)
+  call void @enqueue_signature(i32 9)
   %286 = load %struct.ptree*, %struct.ptree** %10, align 8
   %287 = getelementptr inbounds %struct.ptree, %struct.ptree* %286, i32 0, i32 2
   %288 = load i8, i8* %287, align 8
@@ -1181,7 +1181,7 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br label %294
 
 ; <label>:294:                                    ; preds = %285
-  call void @enqueue_signature(i32 458810)
+  call void @enqueue_signature(i32 12)
   %295 = bitcast i8* %293 to %struct.ptree_mask*
   store %struct.ptree_mask* %295, %struct.ptree_mask** %11, align 8
   store i32 0, i32* %13, align 4
@@ -1190,7 +1190,7 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br label %297
 
 ; <label>:297:                                    ; preds = %331, %294
-  call void @enqueue_signature(i32 458811)
+  call void @enqueue_signature(i32 9)
   %298 = load i32, i32* %13, align 4
   %299 = load %struct.ptree*, %struct.ptree** %10, align 8
   %300 = getelementptr inbounds %struct.ptree, %struct.ptree* %299, i32 0, i32 2
@@ -1200,7 +1200,7 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %303, label %304, label %334
 
 ; <label>:304:                                    ; preds = %297
-  call void @enqueue_signature(i32 458812)
+  call void @enqueue_signature(i32 17)
   %305 = load %struct.ptree*, %struct.ptree** %4, align 8
   %306 = getelementptr inbounds %struct.ptree, %struct.ptree* %305, i32 0, i32 1
   %307 = load %struct.ptree_mask*, %struct.ptree_mask** %306, align 8
@@ -1218,7 +1218,7 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br i1 %318, label %319, label %330
 
 ; <label>:319:                                    ; preds = %304
-  call void @enqueue_signature(i32 458813)
+  call void @enqueue_signature(i32 12)
   %320 = load %struct.ptree*, %struct.ptree** %10, align 8
   %321 = getelementptr inbounds %struct.ptree, %struct.ptree* %320, i32 0, i32 1
   %322 = load %struct.ptree_mask*, %struct.ptree_mask** %321, align 8
@@ -1234,18 +1234,18 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br label %330
 
 ; <label>:330:                                    ; preds = %319, %304
-  call void @enqueue_signature(i32 458814)
+  call void @enqueue_signature(i32 1)
   br label %331
 
 ; <label>:331:                                    ; preds = %330
-  call void @enqueue_signature(i32 458815)
+  call void @enqueue_signature(i32 9)
   %332 = load i32, i32* %13, align 4
   %333 = add nsw i32 %332, 1
   store i32 %333, i32* %13, align 4
   br label %297
 
 ; <label>:334:                                    ; preds = %297
-  call void @enqueue_signature(i32 458816)
+  call void @enqueue_signature(i32 15)
   %335 = load %struct.ptree*, %struct.ptree** %10, align 8
   %336 = getelementptr inbounds %struct.ptree, %struct.ptree* %335, i32 0, i32 2
   %337 = load i8, i8* %336, align 8
@@ -1259,7 +1259,7 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br label %343
 
 ; <label>:343:                                    ; preds = %334
-  call void @enqueue_signature(i32 458817)
+  call void @enqueue_signature(i32 11)
   %344 = load %struct.ptree_mask*, %struct.ptree_mask** %11, align 8
   %345 = load %struct.ptree*, %struct.ptree** %10, align 8
   %346 = getelementptr inbounds %struct.ptree, %struct.ptree* %345, i32 0, i32 1
@@ -1268,14 +1268,14 @@ define i32 @pat_remove(%struct.ptree*, %struct.ptree*) #0 {
   br label %347
 
 ; <label>:347:                                    ; preds = %343, %284, %248, %95, %82, %69, %24
-  call void @enqueue_signature_with_return(i32 458818)
+  call void @enqueue_signature_with_return(i32 3)
   %348 = load i32, i32* %3, align 4
   ret i32 %348
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define %struct.ptree* @pat_search(i64, %struct.ptree*) #0 {
-  call void @enqueue_signature(i32 524289)
+  call void @enqueue_signature(i32 25)
   %3 = alloca %struct.ptree*, align 8
   %4 = alloca i64, align 8
   %5 = alloca %struct.ptree*, align 8
@@ -1292,16 +1292,16 @@ define %struct.ptree* @pat_search(i64, %struct.ptree*) #0 {
   br i1 %11, label %13, label %12
 
 ; <label>:12:                                     ; preds = %2
-  call void @enqueue_signature(i32 524290)
+  call void @enqueue_signature(i32 4)
   store %struct.ptree* null, %struct.ptree** %3, align 8
   br label %76
 
 ; <label>:13:                                     ; preds = %2
-  call void @enqueue_signature(i32 524291)
+  call void @enqueue_signature(i32 1)
   br label %14
 
 ; <label>:14:                                     ; preds = %51, %13
-  call void @enqueue_signature(i32 524292)
+  call void @enqueue_signature(i32 15)
   %15 = load %struct.ptree*, %struct.ptree** %7, align 8
   %16 = getelementptr inbounds %struct.ptree, %struct.ptree* %15, i32 0, i32 0
   %17 = load i64, i64* %16, align 8
@@ -1316,13 +1316,13 @@ define %struct.ptree* @pat_search(i64, %struct.ptree*) #0 {
   br i1 %25, label %26, label %28
 
 ; <label>:26:                                     ; preds = %14
-  call void @enqueue_signature(i32 524293)
+  call void @enqueue_signature(i32 6)
   %27 = load %struct.ptree*, %struct.ptree** %7, align 8
   store %struct.ptree* %27, %struct.ptree** %6, align 8
   br label %28
 
 ; <label>:28:                                     ; preds = %26, %14
-  call void @enqueue_signature_with_call(i32 524294)
+  call void @enqueue_signature_with_call(i32 14)
   %29 = load %struct.ptree*, %struct.ptree** %7, align 8
   %30 = getelementptr inbounds %struct.ptree, %struct.ptree* %29, i32 0, i32 3
   %31 = load i8, i8* %30, align 1
@@ -1337,19 +1337,19 @@ define %struct.ptree* @pat_search(i64, %struct.ptree*) #0 {
   br label %39
 
 ; <label>:39:                                     ; preds = %28
-  call void @enqueue_signature(i32 524295)
+  call void @enqueue_signature(i32 3)
   %40 = icmp ne i64 %38, 0
   br i1 %40, label %41, label %45
 
 ; <label>:41:                                     ; preds = %39
-  call void @enqueue_signature(i32 524296)
+  call void @enqueue_signature(i32 5)
   %42 = load %struct.ptree*, %struct.ptree** %7, align 8
   %43 = getelementptr inbounds %struct.ptree, %struct.ptree* %42, i32 0, i32 5
   %44 = load %struct.ptree*, %struct.ptree** %43, align 8
   br label %49
 
 ; <label>:45:                                     ; preds = %39
-  call void @enqueue_signature(i32 524297)
+  call void @enqueue_signature(i32 5)
   %46 = load %struct.ptree*, %struct.ptree** %7, align 8
   %47 = getelementptr inbounds %struct.ptree, %struct.ptree* %46, i32 0, i32 4
   %48 = load %struct.ptree*, %struct.ptree** %47, align 8
@@ -1357,12 +1357,12 @@ define %struct.ptree* @pat_search(i64, %struct.ptree*) #0 {
 
 ; <label>:49:                                     ; preds = %45, %41
   %50 = phi %struct.ptree* [ %44, %41 ], [ %48, %45 ]
-  call void @enqueue_signature(i32 524298)
+  call void @enqueue_signature(i32 4)
   store %struct.ptree* %50, %struct.ptree** %7, align 8
   br label %51
 
 ; <label>:51:                                     ; preds = %49
-  call void @enqueue_signature(i32 524299)
+  call void @enqueue_signature(i32 9)
   %52 = load i32, i32* %8, align 4
   %53 = load %struct.ptree*, %struct.ptree** %7, align 8
   %54 = getelementptr inbounds %struct.ptree, %struct.ptree* %53, i32 0, i32 3
@@ -1372,7 +1372,7 @@ define %struct.ptree* @pat_search(i64, %struct.ptree*) #0 {
   br i1 %57, label %14, label %58
 
 ; <label>:58:                                     ; preds = %51
-  call void @enqueue_signature(i32 524300)
+  call void @enqueue_signature(i32 15)
   %59 = load %struct.ptree*, %struct.ptree** %7, align 8
   %60 = getelementptr inbounds %struct.ptree, %struct.ptree* %59, i32 0, i32 0
   %61 = load i64, i64* %60, align 8
@@ -1387,23 +1387,23 @@ define %struct.ptree* @pat_search(i64, %struct.ptree*) #0 {
   br i1 %69, label %70, label %72
 
 ; <label>:70:                                     ; preds = %58
-  call void @enqueue_signature(i32 524301)
+  call void @enqueue_signature(i32 3)
   %71 = load %struct.ptree*, %struct.ptree** %7, align 8
   br label %74
 
 ; <label>:72:                                     ; preds = %58
-  call void @enqueue_signature(i32 524302)
+  call void @enqueue_signature(i32 3)
   %73 = load %struct.ptree*, %struct.ptree** %6, align 8
   br label %74
 
 ; <label>:74:                                     ; preds = %72, %70
   %75 = phi %struct.ptree* [ %71, %70 ], [ %73, %72 ]
-  call void @enqueue_signature(i32 524303)
+  call void @enqueue_signature(i32 4)
   store %struct.ptree* %75, %struct.ptree** %3, align 8
   br label %76
 
 ; <label>:76:                                     ; preds = %74, %12
-  call void @enqueue_signature_with_return(i32 524304)
+  call void @enqueue_signature_with_return(i32 3)
   %77 = load %struct.ptree*, %struct.ptree** %3, align 8
   ret %struct.ptree* %77
 }
@@ -1411,7 +1411,7 @@ define %struct.ptree* @pat_search(i64, %struct.ptree*) #0 {
 ; Function Attrs: noinline nounwind optnone uwtable
 define i32 @main(i32, i8**) #0 {
   call void @init_monitor()
-  call void @enqueue_signature(i32 589825)
+  call void @enqueue_signature(i32 28)
   %3 = alloca i32, align 4
   %4 = alloca i32, align 4
   %5 = alloca i8**, align 8
@@ -1435,18 +1435,18 @@ define i32 @main(i32, i8**) #0 {
   br label %19
 
 ; <label>:19:                                     ; preds = %2
-  call void @enqueue_signature(i32 589826)
+  call void @enqueue_signature(i32 1)
   %20 = call %struct._IO_FILE* @fopen(i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.1, i32 0, i32 0))
   br label %21
 
 ; <label>:21:                                     ; preds = %19
-  call void @enqueue_signature(i32 589827)
+  call void @enqueue_signature(i32 6)
   store %struct._IO_FILE* %20, %struct._IO_FILE** %10, align 8
   %22 = icmp eq %struct._IO_FILE* %20, null
   br i1 %22, label %23, label %30
 
 ; <label>:23:                                     ; preds = %21
-  call void @enqueue_signature(i32 589828)
+  call void @enqueue_signature(i32 5)
   %24 = load i8**, i8*** %5, align 8
   %25 = getelementptr inbounds i8*, i8** %24, i64 1
   %26 = load i8*, i8** %25, align 8
@@ -1454,21 +1454,21 @@ define i32 @main(i32, i8**) #0 {
   br label %28
 
 ; <label>:28:                                     ; preds = %23
-  call void @enqueue_signature(i32 589829)
+  call void @enqueue_signature(i32 1)
   call void @exit(i32 0) #7
   br label %29
 
 ; <label>:29:                                     ; preds = %28
-  call void @enqueue_signature_with_return(i32 589830)
+  call void @enqueue_signature_with_return(i32 0)
   unreachable
 
 ; <label>:30:                                     ; preds = %21
-  call void @enqueue_signature(i32 589831)
+  call void @enqueue_signature(i32 1)
   %31 = call noalias i8* @malloc(i64 40) #6
   br label %32
 
 ; <label>:32:                                     ; preds = %30
-  call void @enqueue_signature(i32 589832)
+  call void @enqueue_signature(i32 8)
   %33 = bitcast i8* %31 to %struct.ptree*
   store %struct.ptree* %33, %struct.ptree** %6, align 8
   %34 = load %struct.ptree*, %struct.ptree** %6, align 8
@@ -1476,33 +1476,33 @@ define i32 @main(i32, i8**) #0 {
   br i1 %35, label %39, label %36
 
 ; <label>:36:                                     ; preds = %32
-  call void @enqueue_signature(i32 589833)
+  call void @enqueue_signature(i32 1)
   call void @perror(i8* getelementptr inbounds ([23 x i8], [23 x i8]* @.str.3, i32 0, i32 0))
   br label %37
 
 ; <label>:37:                                     ; preds = %36
-  call void @enqueue_signature(i32 589834)
+  call void @enqueue_signature(i32 1)
   call void @exit(i32 0) #7
   br label %38
 
 ; <label>:38:                                     ; preds = %37
-  call void @enqueue_signature_with_return(i32 589835)
+  call void @enqueue_signature_with_return(i32 0)
   unreachable
 
 ; <label>:39:                                     ; preds = %32
-  call void @enqueue_signature(i32 589836)
+  call void @enqueue_signature(i32 3)
   %40 = load %struct.ptree*, %struct.ptree** %6, align 8
   %41 = bitcast %struct.ptree* %40 to i8*
   call void @llvm.memset.p0i8.i64(i8* %41, i8 0, i64 40, i32 8, i1 false)
   br label %42
 
 ; <label>:42:                                     ; preds = %39
-  call void @enqueue_signature(i32 589837)
+  call void @enqueue_signature(i32 1)
   %43 = call noalias i8* @malloc(i64 16) #6
   br label %44
 
 ; <label>:44:                                     ; preds = %42
-  call void @enqueue_signature(i32 589838)
+  call void @enqueue_signature(i32 12)
   %45 = bitcast i8* %43 to %struct.ptree_mask*
   %46 = load %struct.ptree*, %struct.ptree** %6, align 8
   %47 = getelementptr inbounds %struct.ptree, %struct.ptree* %46, i32 0, i32 1
@@ -1514,21 +1514,21 @@ define i32 @main(i32, i8**) #0 {
   br i1 %51, label %55, label %52
 
 ; <label>:52:                                     ; preds = %44
-  call void @enqueue_signature(i32 589839)
+  call void @enqueue_signature(i32 1)
   call void @perror(i8* getelementptr inbounds ([28 x i8], [28 x i8]* @.str.4, i32 0, i32 0))
   br label %53
 
 ; <label>:53:                                     ; preds = %52
-  call void @enqueue_signature(i32 589840)
+  call void @enqueue_signature(i32 1)
   call void @exit(i32 0) #7
   br label %54
 
 ; <label>:54:                                     ; preds = %53
-  call void @enqueue_signature_with_return(i32 589841)
+  call void @enqueue_signature_with_return(i32 0)
   unreachable
 
 ; <label>:55:                                     ; preds = %44
-  call void @enqueue_signature(i32 589842)
+  call void @enqueue_signature(i32 5)
   %56 = load %struct.ptree*, %struct.ptree** %6, align 8
   %57 = getelementptr inbounds %struct.ptree, %struct.ptree* %56, i32 0, i32 1
   %58 = load %struct.ptree_mask*, %struct.ptree_mask** %57, align 8
@@ -1537,7 +1537,7 @@ define i32 @main(i32, i8**) #0 {
   br label %60
 
 ; <label>:60:                                     ; preds = %55
-  call void @enqueue_signature(i32 589843)
+  call void @enqueue_signature(i32 8)
   %61 = load %struct.ptree*, %struct.ptree** %6, align 8
   %62 = getelementptr inbounds %struct.ptree, %struct.ptree* %61, i32 0, i32 1
   %63 = load %struct.ptree_mask*, %struct.ptree_mask** %62, align 8
@@ -1546,7 +1546,7 @@ define i32 @main(i32, i8**) #0 {
   br label %65
 
 ; <label>:65:                                     ; preds = %60
-  call void @enqueue_signature(i32 589844)
+  call void @enqueue_signature(i32 12)
   %66 = bitcast i8* %64 to %struct.MyNode*
   %67 = bitcast %struct.MyNode* %66 to i8*
   %68 = load %struct.ptree_mask*, %struct.ptree_mask** %9, align 8
@@ -1559,21 +1559,21 @@ define i32 @main(i32, i8**) #0 {
   br i1 %73, label %77, label %74
 
 ; <label>:74:                                     ; preds = %65
-  call void @enqueue_signature(i32 589845)
+  call void @enqueue_signature(i32 1)
   call void @perror(i8* getelementptr inbounds ([35 x i8], [35 x i8]* @.str.5, i32 0, i32 0))
   br label %75
 
 ; <label>:75:                                     ; preds = %74
-  call void @enqueue_signature(i32 589846)
+  call void @enqueue_signature(i32 1)
   call void @exit(i32 0) #7
   br label %76
 
 ; <label>:76:                                     ; preds = %75
-  call void @enqueue_signature_with_return(i32 589847)
+  call void @enqueue_signature_with_return(i32 0)
   unreachable
 
 ; <label>:77:                                     ; preds = %65
-  call void @enqueue_signature(i32 589848)
+  call void @enqueue_signature(i32 5)
   %78 = load %struct.ptree_mask*, %struct.ptree_mask** %9, align 8
   %79 = getelementptr inbounds %struct.ptree_mask, %struct.ptree_mask* %78, i32 0, i32 1
   %80 = load i8*, i8** %79, align 8
@@ -1581,7 +1581,7 @@ define i32 @main(i32, i8**) #0 {
   br label %81
 
 ; <label>:81:                                     ; preds = %77
-  call void @enqueue_signature(i32 589849)
+  call void @enqueue_signature(i32 18)
   %82 = load %struct.ptree*, %struct.ptree** %6, align 8
   %83 = getelementptr inbounds %struct.ptree, %struct.ptree* %82, i32 0, i32 2
   store i8 1, i8* %83, align 8
@@ -1595,31 +1595,31 @@ define i32 @main(i32, i8**) #0 {
   br label %89
 
 ; <label>:89:                                     ; preds = %184, %81
-  call void @enqueue_signature(i32 589850)
+  call void @enqueue_signature(i32 3)
   %90 = getelementptr inbounds [128 x i8], [128 x i8]* %11, i32 0, i32 0
   %91 = load %struct._IO_FILE*, %struct._IO_FILE** %10, align 8
   %92 = call i8* @fgets(i8* %90, i32 128, %struct._IO_FILE* %91)
   br label %93
 
 ; <label>:93:                                     ; preds = %89
-  call void @enqueue_signature(i32 589851)
+  call void @enqueue_signature(i32 3)
   %94 = icmp ne i8* %92, null
   br i1 %94, label %95, label %185
 
 ; <label>:95:                                     ; preds = %93
-  call void @enqueue_signature(i32 589852)
+  call void @enqueue_signature(i32 1)
   %96 = getelementptr inbounds [128 x i8], [128 x i8]* %11, i32 0, i32 0
   %97 = bitcast %struct.in_addr* %13 to i32*
   %98 = call i32 (i8*, i8*, ...) @__isoc99_sscanf(i8* %96, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.6, i32 0, i32 0), float* %15, i32* %97) #6
   br label %99
 
 ; <label>:99:                                     ; preds = %95
-  call void @enqueue_signature(i32 589853)
+  call void @enqueue_signature(i32 1)
   %100 = call noalias i8* @malloc(i64 40) #6
   br label %101
 
 ; <label>:101:                                    ; preds = %99
-  call void @enqueue_signature(i32 589854)
+  call void @enqueue_signature(i32 8)
   %102 = bitcast i8* %100 to %struct.ptree*
   store %struct.ptree* %102, %struct.ptree** %7, align 8
   %103 = load %struct.ptree*, %struct.ptree** %7, align 8
@@ -1627,33 +1627,33 @@ define i32 @main(i32, i8**) #0 {
   br i1 %104, label %108, label %105
 
 ; <label>:105:                                    ; preds = %101
-  call void @enqueue_signature(i32 589855)
+  call void @enqueue_signature(i32 1)
   call void @perror(i8* getelementptr inbounds ([23 x i8], [23 x i8]* @.str.3, i32 0, i32 0))
   br label %106
 
 ; <label>:106:                                    ; preds = %105
-  call void @enqueue_signature(i32 589856)
+  call void @enqueue_signature(i32 1)
   call void @exit(i32 0) #7
   br label %107
 
 ; <label>:107:                                    ; preds = %106
-  call void @enqueue_signature_with_return(i32 589857)
+  call void @enqueue_signature_with_return(i32 0)
   unreachable
 
 ; <label>:108:                                    ; preds = %101
-  call void @enqueue_signature(i32 589858)
+  call void @enqueue_signature(i32 3)
   %109 = load %struct.ptree*, %struct.ptree** %7, align 8
   %110 = bitcast %struct.ptree* %109 to i8*
   call void @llvm.memset.p0i8.i64(i8* %110, i8 0, i64 40, i32 8, i1 false)
   br label %111
 
 ; <label>:111:                                    ; preds = %108
-  call void @enqueue_signature(i32 589859)
+  call void @enqueue_signature(i32 1)
   %112 = call noalias i8* @malloc(i64 16) #6
   br label %113
 
 ; <label>:113:                                    ; preds = %111
-  call void @enqueue_signature(i32 589860)
+  call void @enqueue_signature(i32 12)
   %114 = bitcast i8* %112 to %struct.ptree_mask*
   %115 = load %struct.ptree*, %struct.ptree** %7, align 8
   %116 = getelementptr inbounds %struct.ptree, %struct.ptree* %115, i32 0, i32 1
@@ -1665,21 +1665,21 @@ define i32 @main(i32, i8**) #0 {
   br i1 %120, label %124, label %121
 
 ; <label>:121:                                    ; preds = %113
-  call void @enqueue_signature(i32 589861)
+  call void @enqueue_signature(i32 1)
   call void @perror(i8* getelementptr inbounds ([28 x i8], [28 x i8]* @.str.4, i32 0, i32 0))
   br label %122
 
 ; <label>:122:                                    ; preds = %121
-  call void @enqueue_signature(i32 589862)
+  call void @enqueue_signature(i32 1)
   call void @exit(i32 0) #7
   br label %123
 
 ; <label>:123:                                    ; preds = %122
-  call void @enqueue_signature_with_return(i32 589863)
+  call void @enqueue_signature_with_return(i32 0)
   unreachable
 
 ; <label>:124:                                    ; preds = %113
-  call void @enqueue_signature(i32 589864)
+  call void @enqueue_signature(i32 5)
   %125 = load %struct.ptree*, %struct.ptree** %7, align 8
   %126 = getelementptr inbounds %struct.ptree, %struct.ptree* %125, i32 0, i32 1
   %127 = load %struct.ptree_mask*, %struct.ptree_mask** %126, align 8
@@ -1688,7 +1688,7 @@ define i32 @main(i32, i8**) #0 {
   br label %129
 
 ; <label>:129:                                    ; preds = %124
-  call void @enqueue_signature(i32 589865)
+  call void @enqueue_signature(i32 8)
   %130 = load %struct.ptree*, %struct.ptree** %7, align 8
   %131 = getelementptr inbounds %struct.ptree, %struct.ptree* %130, i32 0, i32 1
   %132 = load %struct.ptree_mask*, %struct.ptree_mask** %131, align 8
@@ -1697,7 +1697,7 @@ define i32 @main(i32, i8**) #0 {
   br label %134
 
 ; <label>:134:                                    ; preds = %129
-  call void @enqueue_signature(i32 589866)
+  call void @enqueue_signature(i32 12)
   %135 = bitcast i8* %133 to %struct.MyNode*
   %136 = bitcast %struct.MyNode* %135 to i8*
   %137 = load %struct.ptree_mask*, %struct.ptree_mask** %9, align 8
@@ -1710,21 +1710,21 @@ define i32 @main(i32, i8**) #0 {
   br i1 %142, label %146, label %143
 
 ; <label>:143:                                    ; preds = %134
-  call void @enqueue_signature(i32 589867)
+  call void @enqueue_signature(i32 1)
   call void @perror(i8* getelementptr inbounds ([35 x i8], [35 x i8]* @.str.5, i32 0, i32 0))
   br label %144
 
 ; <label>:144:                                    ; preds = %143
-  call void @enqueue_signature(i32 589868)
+  call void @enqueue_signature(i32 1)
   call void @exit(i32 0) #7
   br label %145
 
 ; <label>:145:                                    ; preds = %144
-  call void @enqueue_signature_with_return(i32 589869)
+  call void @enqueue_signature_with_return(i32 0)
   unreachable
 
 ; <label>:146:                                    ; preds = %134
-  call void @enqueue_signature(i32 589870)
+  call void @enqueue_signature(i32 5)
   %147 = load %struct.ptree_mask*, %struct.ptree_mask** %9, align 8
   %148 = getelementptr inbounds %struct.ptree_mask, %struct.ptree_mask* %147, i32 0, i32 1
   %149 = load i8*, i8** %148, align 8
@@ -1732,7 +1732,7 @@ define i32 @main(i32, i8**) #0 {
   br label %150
 
 ; <label>:150:                                    ; preds = %146
-  call void @enqueue_signature(i32 589871)
+  call void @enqueue_signature(i32 10)
   %151 = getelementptr inbounds %struct.in_addr, %struct.in_addr* %13, i32 0, i32 0
   %152 = load i32, i32* %151, align 4
   %153 = zext i32 %152 to i64
@@ -1745,7 +1745,7 @@ define i32 @main(i32, i8**) #0 {
   br label %159
 
 ; <label>:159:                                    ; preds = %150
-  call void @enqueue_signature_with_call(i32 589872)
+  call void @enqueue_signature_with_call(i32 12)
   %160 = zext i32 %158 to i64
   %161 = load %struct.ptree*, %struct.ptree** %7, align 8
   %162 = getelementptr inbounds %struct.ptree, %struct.ptree* %161, i32 0, i32 1
@@ -1760,7 +1760,7 @@ define i32 @main(i32, i8**) #0 {
   br label %170
 
 ; <label>:170:                                    ; preds = %159
-  call void @enqueue_signature(i32 589873)
+  call void @enqueue_signature(i32 12)
   store %struct.ptree* %169, %struct.ptree** %8, align 8
   %171 = load %struct.ptree*, %struct.ptree** %8, align 8
   %172 = getelementptr inbounds %struct.ptree, %struct.ptree* %171, i32 0, i32 0
@@ -1772,39 +1772,39 @@ define i32 @main(i32, i8**) #0 {
   br i1 %177, label %178, label %179
 
 ; <label>:178:                                    ; preds = %170
-  call void @enqueue_signature(i32 589874)
+  call void @enqueue_signature(i32 1)
   br label %180
 
 ; <label>:179:                                    ; preds = %170
-  call void @enqueue_signature(i32 589875)
+  call void @enqueue_signature(i32 1)
   br label %180
 
 ; <label>:180:                                    ; preds = %179, %178
-  call void @enqueue_signature(i32 589876)
+  call void @enqueue_signature(i32 5)
   %181 = load %struct.ptree*, %struct.ptree** %7, align 8
   %182 = icmp ne %struct.ptree* %181, null
   br i1 %182, label %184, label %183
 
 ; <label>:183:                                    ; preds = %180
-  call void @enqueue_signature(i32 589877)
+  call void @enqueue_signature(i32 1)
   br label %184
 
 ; <label>:184:                                    ; preds = %183, %180
-  call void @enqueue_signature(i32 589878)
+  call void @enqueue_signature(i32 1)
   br label %89
 
 ; <label>:185:                                    ; preds = %93
-  call void @enqueue_signature(i32 589879)
+  call void @enqueue_signature(i32 1)
   %186 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([21 x i8], [21 x i8]* @.str.7, i32 0, i32 0))
   br label %187
 
 ; <label>:187:                                    ; preds = %185
-  call void @enqueue_signature(i32 589880)
+  call void @enqueue_signature(i32 1)
   %188 = call i32 @gettimeofday(%struct.timeval* %17, %struct.timezone* null) #6
   br label %189
 
 ; <label>:189:                                    ; preds = %187
-  call void @enqueue_signature(i32 589881)
+  call void @enqueue_signature(i32 16)
   %190 = getelementptr inbounds %struct.timeval, %struct.timeval* %17, i32 0, i32 0
   %191 = load i64, i64* %190, align 8
   %192 = getelementptr inbounds %struct.timeval, %struct.timeval* %16, i32 0, i32 0
@@ -1821,7 +1821,7 @@ define i32 @main(i32, i8**) #0 {
   br label %203
 
 ; <label>:203:                                    ; preds = %189
-  call void @enqueue_signature_with_remainder_process(i32 589882)
+  call void @enqueue_signature_with_remainder_process(i32 6)
   store i32 1, i32* @is_signature_queue_full, align 4
   %204 = load i32, i32* %3, align 4
   ret i32 %204

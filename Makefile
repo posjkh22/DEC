@@ -31,7 +31,17 @@ link: result_clean
 	-o $(TARGET) \
 	`llvm-config --cxxflags --libs --ldflags --system-libs`
 	cp $(TARGET) benchmarks/test/
-		
+	cp $(TARGET) benchmarks/basicmath/
+	cp $(TARGET) benchmarks/crc32/
+	cp $(TARGET) benchmarks/dijkstra/
+	cp $(TARGET) benchmarks/dhrystone/
+	cp $(TARGET) benchmarks/fft/
+	cp $(TARGET) benchmarks/patricia/
+	cp $(TARGET) benchmarks/sha/
+	cp $(TARGET) benchmarks/stringsearch/
+	cp $(TARGET) benchmarks/whetstone/
+	
+
 
 all: clean \
 		main \
@@ -55,6 +65,15 @@ all: clean \
 	$(LIB)/DEC.o \
 	-o $(TARGET) \
 	`llvm-config --cxxflags --libs --ldflags --system-libs`
+	cp $(TARGET) benchmarks/basicmath/
+	cp $(TARGET) benchmarks/crc32/
+	cp $(TARGET) benchmarks/dijkstra/
+	cp $(TARGET) benchmarks/dhrystone/
+	cp $(TARGET) benchmarks/fft/
+	cp $(TARGET) benchmarks/patricia/
+	cp $(TARGET) benchmarks/sha/
+	cp $(TARGET) benchmarks/stringsearch/
+	cp $(TARGET) benchmarks/whetstone/
 
 DEC:
 	clang++ -std=c++11 \

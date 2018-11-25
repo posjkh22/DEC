@@ -23,7 +23,7 @@ updateCRC32:                            # @updateCRC32
 	.cfi_offset %r14, -24
 	movq	%rsi, %r14
 	movl	%edi, %ebx
-	movl	$65537, %edi            # imm = 0x10001
+	movl	$17, %edi
 	callq	enqueue_signature_with_return
 	movb	%bl, -17(%rbp)
 	movq	%r14, -32(%rbp)
@@ -71,7 +71,7 @@ crc32file:                              # @crc32file
 	movq	%rdx, %r14
 	movq	%rsi, %r15
 	movq	%rdi, %rbx
-	movl	$131073, %edi           # imm = 0x20001
+	movl	$27, %edi
 	callq	enqueue_signature
 	movabsq	$.L.str, %rsi
 	movl	$4294967295, %eax       # imm = 0xFFFFFFFF
@@ -85,38 +85,38 @@ crc32file:                              # @crc32file
 	callq	fopen
 	movq	%rax, %rbx
 # BB#1:
-	movl	$131074, %edi           # imm = 0x20002
+	movl	$6, %edi
 	callq	enqueue_signature
 	movq	%rbx, -48(%rbp)
 	cmpq	$0, %rbx
 	jne	.LBB1_4
 # BB#2:
-	movl	$131075, %edi           # imm = 0x20003
+	movl	$3, %edi
 	callq	enqueue_signature
 	movq	-64(%rbp), %rdi
 	callq	perror
 # BB#3:
-	movl	$131076, %edi           # imm = 0x20004
+	movl	$4, %edi
 	callq	enqueue_signature
 	movl	$-1, -36(%rbp)
 	jmp	.LBB1_14
 .LBB1_4:
-	movl	$131077, %edi           # imm = 0x20005
+	movl	$1, %edi
 	callq	enqueue_signature
 .LBB1_5:                                # =>This Inner Loop Header: Depth=1
-	movl	$131078, %edi           # imm = 0x20006
+	movl	$3, %edi
 	callq	enqueue_signature
 	movq	-48(%rbp), %rdi
 	callq	_IO_getc
 	movl	%eax, %ebx
 # BB#6:                                 #   in Loop: Header=BB1_5 Depth=1
-	movl	$131079, %edi           # imm = 0x20007
+	movl	$6, %edi
 	callq	enqueue_signature
 	movl	%ebx, -68(%rbp)
 	cmpl	$-1, %ebx
 	je	.LBB1_8
 # BB#7:                                 #   in Loop: Header=BB1_5 Depth=1
-	movl	$131080, %edi           # imm = 0x20008
+	movl	$22, %edi
 	callq	enqueue_signature
 	movq	-56(%rbp), %rax
 	movq	(%rax), %rcx
@@ -134,33 +134,33 @@ crc32file:                              # @crc32file
 	movq	%rcx, -32(%rbp)
 	jmp	.LBB1_5
 .LBB1_8:
-	movl	$131081, %edi           # imm = 0x20009
+	movl	$3, %edi
 	callq	enqueue_signature
 	movq	-48(%rbp), %rdi
 	callq	ferror
 	movl	%eax, %ebx
 # BB#9:
-	movl	$131082, %edi           # imm = 0x2000A
+	movl	$3, %edi
 	callq	enqueue_signature
 	cmpl	$0, %ebx
 	je	.LBB1_12
 # BB#10:
-	movl	$131083, %edi           # imm = 0x2000B
+	movl	$3, %edi
 	callq	enqueue_signature
 	movq	-64(%rbp), %rdi
 	callq	perror
 # BB#11:
-	movl	$131084, %edi           # imm = 0x2000C
+	movl	$6, %edi
 	callq	enqueue_signature
 	movq	-56(%rbp), %rax
 	movq	$-1, (%rax)
 .LBB1_12:
-	movl	$131085, %edi           # imm = 0x2000D
+	movl	$3, %edi
 	callq	enqueue_signature
 	movq	-48(%rbp), %rdi
 	callq	fclose
 # BB#13:
-	movl	$131086, %edi           # imm = 0x2000E
+	movl	$14, %edi
 	callq	enqueue_signature
 	movq	-32(%rbp), %rax
 	xorq	$-1, %rax
@@ -169,7 +169,7 @@ crc32file:                              # @crc32file
 	movq	%rax, (%rcx)
 	movl	$0, -36(%rbp)
 .LBB1_14:
-	movl	$131087, %edi           # imm = 0x2000F
+	movl	$3, %edi
 	callq	enqueue_signature_with_return
 	movl	-36(%rbp), %eax
 	addq	$56, %rsp
@@ -205,19 +205,19 @@ crc32buf:                               # @crc32buf
 	.cfi_offset %r14, -24
 	movq	%rsi, %r14
 	movq	%rdi, %rbx
-	movl	$524289, %edi           # imm = 0x80001
+	movl	$13, %edi
 	callq	enqueue_signature
 	movl	$4294967295, %eax       # imm = 0xFFFFFFFF
 	movq	%rbx, -40(%rbp)
 	movq	%r14, -32(%rbp)
 	movq	%rax, -24(%rbp)
 .LBB2_1:                                # =>This Inner Loop Header: Depth=1
-	movl	$524290, %edi           # imm = 0x80002
+	movl	$5, %edi
 	callq	enqueue_signature
 	cmpq	$0, -32(%rbp)
 	je	.LBB2_4
 # BB#2:                                 #   in Loop: Header=BB2_1 Depth=1
-	movl	$524291, %edi           # imm = 0x80003
+	movl	$14, %edi
 	callq	enqueue_signature
 	movq	-24(%rbp), %rax
 	movq	-40(%rbp), %rcx
@@ -230,7 +230,7 @@ crc32buf:                               # @crc32buf
 	xorq	%rax, %rcx
 	movq	%rcx, -24(%rbp)
 # BB#3:                                 #   in Loop: Header=BB2_1 Depth=1
-	movl	$524292, %edi           # imm = 0x80004
+	movl	$14, %edi
 	callq	enqueue_signature
 	movq	-32(%rbp), %rax
 	addq	$-1, %rax
@@ -240,7 +240,7 @@ crc32buf:                               # @crc32buf
 	movq	%rax, -40(%rbp)
 	jmp	.LBB2_1
 .LBB2_4:
-	movl	$524293, %edi           # imm = 0x80005
+	movl	$3, %edi
 	callq	enqueue_signature_with_return
 	movq	-24(%rbp), %rax
 	xorq	$-1, %rax
@@ -277,7 +277,7 @@ main:                                   # @main
 	movq	%rsi, %r14
 	movl	%edi, %ebx
 	callq	init_monitor
-	movl	$589825, %edi           # imm = 0x90001
+	movl	$21, %edi
 	callq	enqueue_signature
 	leaq	-72(%rbp), %rdi
 	movl	$0, -36(%rbp)
@@ -287,7 +287,7 @@ main:                                   # @main
 	xorl	%esi, %esi
 	callq	gettimeofday
 .LBB3_1:                                # =>This Inner Loop Header: Depth=1
-	movl	$589826, %edi           # imm = 0x90002
+	movl	$11, %edi
 	callq	enqueue_signature
 	movl	-24(%rbp), %eax
 	addl	$-1, %eax
@@ -295,7 +295,7 @@ main:                                   # @main
 	cmpl	$0, %eax
 	jle	.LBB3_4
 # BB#2:                                 #   in Loop: Header=BB3_1 Depth=1
-	movl	$589827, %edi           # imm = 0x90003
+	movl	$8, %edi
 	callq	enqueue_signature_with_call
 	leaq	-88(%rbp), %rsi
 	leaq	-80(%rbp), %rdx
@@ -306,25 +306,25 @@ main:                                   # @main
 	callq	crc32file
 	movl	%eax, %ebx
 # BB#3:                                 #   in Loop: Header=BB3_1 Depth=1
-	movl	$589828, %edi           # imm = 0x90004
+	movl	$6, %edi
 	callq	enqueue_signature
 	orl	-20(%rbp), %ebx
 	movl	%ebx, -20(%rbp)
 	jmp	.LBB3_1
 .LBB3_4:
-	movl	$589829, %edi           # imm = 0x90005
+	movl	$1, %edi
 	callq	enqueue_signature
 	movabsq	$.L.str.1, %rdi
 	movb	$0, %al
 	callq	printf
 # BB#5:
-	movl	$589830, %edi           # imm = 0x90006
+	movl	$1, %edi
 	callq	enqueue_signature
 	leaq	-56(%rbp), %rdi
 	xorl	%esi, %esi
 	callq	gettimeofday
 # BB#6:
-	movl	$589831, %edi           # imm = 0x90007
+	movl	$16, %edi
 	callq	enqueue_signature
 	movabsq	$.L.str.2, %rdi
 	movq	-56(%rbp), %rax
@@ -336,7 +336,7 @@ main:                                   # @main
 	movb	$0, %al
 	callq	printf
 # BB#7:
-	movl	$589832, %edi           # imm = 0x90008
+	movl	$8, %edi
 	callq	enqueue_signature_with_remainder_process
 	movl	$1, is_signature_queue_full
 	cmpl	$0, -20(%rbp)
